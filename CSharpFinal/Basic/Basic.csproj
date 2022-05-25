@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comment.Designer.cs">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,12 +78,21 @@
     <Compile Include="RegisterPage.Designer.cs">
       <DependentUpon>RegisterPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reply.Designer.cs">
+      <DependentUpon>Reply.cs</DependentUpon>
+    </Compile>
     <Compile Include="Robot.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Robot.Designer.cs">
       <DependentUpon>Robot.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Comment.resx">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterPage.resx">
       <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reply.resx">
+      <DependentUpon>Reply.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Robot.resx">
       <DependentUpon>Robot.cs</DependentUpon>

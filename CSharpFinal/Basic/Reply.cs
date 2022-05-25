@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Basic
 {
-  public partial class Comment : Form
+  public partial class Reply : Form
   {
-    public Comment()
+    public Reply()
     {
       InitializeComponent();
     }
 
-    private void commentBtn_Click(object sender, EventArgs e)
+    private void uiButton1_Click(object sender, EventArgs e)
     {
-        Reply reply = new Reply();
+
     }
   }
 }

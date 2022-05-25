@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace ImportData
 {
-  //reply类是对评论的回复，二级评论
-  public class Reply
+  public class Share
   {
-    //评论id
+    //分享id
     public int Id { get; set; }
-    //用户id
+    //分享者id
     public int userId { get; set; }
-    //被回复人id
-    public int replyerId { get; set; }
+    //诗词
+    public Poem poem { get; set; }
+    public Comment comment { get; set; }
+    //创建时间
     public DateTime Created { get; set; }
-    public int prase { get; set; }
+   public List<Comment> Comments { get; set;}
   }
 }
