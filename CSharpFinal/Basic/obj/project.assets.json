@@ -1427,24 +1427,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zl\\.nuget\\packages\\": {},
+    "C:\\Users\\14025\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\Basic\\Basic.csproj",
+      "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Basic\\Basic.csproj",
       "projectName": "Basic",
-      "projectPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\Basic\\Basic.csproj",
-      "packagesPath": "C:\\Users\\zl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\Basic\\obj\\",
+      "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Basic\\Basic.csproj",
+      "packagesPath": "C:\\Users\\14025\\.nuget\\packages\\",
+      "outputPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Basic\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\zl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\14025\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1452,13 +1452,14 @@
         "net472"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
-              "projectPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\ImportData\\ImportData.csproj"
+            "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
+              "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj"
             }
           }
         }

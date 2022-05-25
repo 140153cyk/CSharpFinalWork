@@ -17,14 +17,11 @@ namespace PoemDataService.Controllers
 
         private readonly PoemContext db;
         private Timer reccommendTimer = new Timer();
-        private int hour;
-        private int minute;
+
 
         public PoemController(PoemContext context)
         {
             db = context;
-            hour = DateTime.Now.Hour;
-            minute = DateTime.Now.Minute;
             reccommendTimer.Interval = 60000;
             reccommendTimer.Elapsed += new ElapsedEventHandler(onTimer);
             reccommendTimer.Enabled = true;
@@ -123,11 +120,7 @@ namespace PoemDataService.Controllers
         }
         private void onTimer(object sender, ElapsedEventArgs e)
         {
-            minute += 1;
-            hour += minute % 60;
-            minute %= 60;
-            hour %= 24;
-            if (hour == 0 && minute == 0) Task.Run(UpdateRec);
+            if (DateTime.Now.Hour == 0 && DateTime.Now.Minute == 0) Task.Run(UpdateRec);
         }
         
 

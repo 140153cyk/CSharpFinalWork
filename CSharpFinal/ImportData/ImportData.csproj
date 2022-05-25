@@ -61,6 +61,7 @@
     <Compile Include="PoemContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="RawPoem.cs" />
+    <Compile Include="Recommend.cs" />
     <Compile Include="Reply.cs" />
     <Compile Include="UserInfo.cs" />
   </ItemGroup>
