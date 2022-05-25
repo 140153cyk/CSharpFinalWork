@@ -54,12 +54,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collect.cs" />
+    <Compile Include="Comment.cs" />
     <Compile Include="Finished.cs" />
     <Compile Include="Paragraph.cs" />
     <Compile Include="Poem.cs" />
     <Compile Include="PoemContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="RawPoem.cs" />
+    <Compile Include="Reply.cs" />
     <Compile Include="UserInfo.cs" />
   </ItemGroup>
   <ItemGroup>
