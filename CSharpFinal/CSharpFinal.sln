@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportData", "ImportData\Im
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic", "Basic\Basic.csproj", "{4DBD8273-4BE8-4BCD-8F78-00C101C827B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoemDataService", "PoemDataService\PoemDataService.csproj", "{A4D46930-6E4E-420F-A3C3-56B4B4521DFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyFlower", "FlyFlower\FlyFlower.csproj", "{3B1AD87C-1CE4-4230-8D28-3C00D91D2F74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{4DBD8273-4BE8-4BCD-8F78-00C101C827B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DBD8273-4BE8-4BCD-8F78-00C101C827B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DBD8273-4BE8-4BCD-8F78-00C101C827B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A4D46930-6E4E-420F-A3C3-56B4B4521DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A4D46930-6E4E-420F-A3C3-56B4B4521DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A4D46930-6E4E-420F-A3C3-56B4B4521DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A4D46930-6E4E-420F-A3C3-56B4B4521DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B1AD87C-1CE4-4230-8D28-3C00D91D2F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B1AD87C-1CE4-4230-8D28-3C00D91D2F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B1AD87C-1CE4-4230-8D28-3C00D91D2F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B1AD87C-1CE4-4230-8D28-3C00D91D2F74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
