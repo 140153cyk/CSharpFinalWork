@@ -35,7 +35,7 @@ namespace PoemDataService
                mySqlOptions => mySqlOptions
                .ServerVersion(new Version(5, 7, 30), ServerType.MySql)
           ));
-            services.AddControllers(); //创建控制器对象，创建时进行依赖注入
+            services.AddControllers(x => x.AllowEmptyInputInBodyModelBinding = true).AddNewtonsoftJson();//创建控制器对象，创建时进行依赖注入
 
 
         }

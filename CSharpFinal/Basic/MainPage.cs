@@ -40,7 +40,7 @@ namespace Basic
         private void GetRecommend()
         {
             
-            using(var db=new PoemContext())
+            /*using(var db=new PoemContext())
             {
                 UserInfo info = db.UserInfos.FirstOrDefault(userinfo => userinfo.account == account);
                 if (info.lastLoginMonth == DateTime.Now.Month && info.lastLoginDate == DateTime.Now.Day) return;
@@ -79,7 +79,7 @@ namespace Basic
                         .FirstOrDefault();
                 }
                 
-            }
+            }*/
             
         }
     }

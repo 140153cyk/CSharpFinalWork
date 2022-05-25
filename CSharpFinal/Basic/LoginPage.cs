@@ -1,10 +1,12 @@
 ﻿using ImportData;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,14 +38,17 @@ namespace Basic
         {
             String account = AccountText.Text;
             String password = PasswordText.Text;
-            using (var db = new PoemContext())
-            {
-                foreach (var info in db.UserInfos)
-                {
-                    if (info.account == account && info.password == password) return true;
-                }
-            }
-            return false;
+            string baseUrl = "https://localhost:5001/api/poem/userinfo";
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
+            HttpClient client = new HttpClient(handler);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+            var task= client.GetStringAsync(baseUrl + "/" + account);
+            UserInfo info = JsonConvert.DeserializeObject<UserInfo>(task.Result);
+            if (info == null || info.password != password) return false;
+            return true;
         }
 
         private void uiButton2_Click(object sender, EventArgs e)

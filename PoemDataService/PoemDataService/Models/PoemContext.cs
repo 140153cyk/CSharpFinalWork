@@ -19,6 +19,10 @@ namespace PoemDataService.Models
 
         public DbSet<Collect> Collects { get; set; }//用户收藏诗词
 
-        public DbSet<Finished> finisheds { get; set; }//用户读过的诗词
+        public DbSet<Finished> Finisheds { get; set; }//用户读过的诗词
+
+        public DbSet<Recommend> Recommends { get; set; }//向用户推荐的诗词
+
+     
     }
 }

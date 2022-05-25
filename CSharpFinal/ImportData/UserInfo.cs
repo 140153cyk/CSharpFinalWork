@@ -16,8 +16,6 @@ namespace ImportData
         public string account { get; set; }
         public string password { get; set; }
 
-        public int lastLoginMonth { get; set; }
-        public int lastLoginDate { get; set; }
 
         public UserInfo(string account, string password)
         {
