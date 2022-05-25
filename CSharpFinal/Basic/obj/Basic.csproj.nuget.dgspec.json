@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Basic\\Basic.csproj": {}
+    "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\Basic\\Basic.csproj": {}
   },
   "projects": {
-    "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Basic\\Basic.csproj": {
+    "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\Basic\\Basic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Basic\\Basic.csproj",
+        "projectUniqueName": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\Basic\\Basic.csproj",
         "projectName": "Basic",
-        "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Basic\\Basic.csproj",
-        "packagesPath": "C:\\Users\\14025\\.nuget\\packages\\",
-        "outputPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Basic\\obj\\",
+        "projectPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\Basic\\Basic.csproj",
+        "packagesPath": "C:\\Users\\zl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\Basic\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\14025\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,13 @@
           "net472"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
-                "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj"
+              "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
+                "projectPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\ImportData\\ImportData.csproj"
               }
             }
           }
@@ -73,21 +72,21 @@
         }
       }
     },
-    "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
+    "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj",
+        "projectUniqueName": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\ImportData\\ImportData.csproj",
         "projectName": "ImportData",
-        "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj",
-        "packagesPath": "C:\\Users\\14025\\.nuget\\packages\\",
-        "outputPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\obj\\",
+        "projectPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\ImportData\\ImportData.csproj",
+        "packagesPath": "C:\\Users\\zl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\ImportData\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\14025\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -95,7 +94,6 @@
           "net472"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -122,6 +120,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "SunnyUI": {
+              "target": "Package",
+              "version": "[3.1.9, )"
             }
           }
         }
