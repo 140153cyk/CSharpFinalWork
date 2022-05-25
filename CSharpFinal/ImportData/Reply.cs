@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace ImportData
 {
-  public class Share
+  
+  public class Reply
   {
-    //分享id
+    //评论id
     public int Id { get; set; }
-    //分享者id
+    //用户id
     public int userId { get; set; }
-    //诗词
-    public Poem poem { get; set; }
-    public Comment comment { get; set; }
-    //创建时间
+    public string content { get; set; }
     public DateTime Created { get; set; }
-   public List<Comment> Comments { get; set;}
+    public int prase { get; set; }
   }
 }
