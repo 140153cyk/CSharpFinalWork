@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "33c5aa1b-7483-49ff-ba4e-3f42f3ecf919": {
+      "ProjectGuid": "33c5aa1b-7483-49ff-ba4e-3f42f3ecf919",
+      "DisplayName": "ImportData",
+      "ColorIndex": 0
+    },
+    "4dbd8273-4be8-4bcd-8f78-00c101c827b5": {
+      "ProjectGuid": "4dbd8273-4be8-4bcd-8f78-00c101c827b5",
+      "DisplayName": "Basic",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
