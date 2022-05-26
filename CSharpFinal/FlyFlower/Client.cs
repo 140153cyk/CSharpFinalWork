@@ -17,11 +17,38 @@ namespace FlyFlower
 {
     public class Client
     {
-        /// <summary>
-        /// ***用来看输出的函数
-        /// </summary>
-        public Action<string> showMessage;
 
+        string keyWords;
+
+        /// <summary>
+        /// 展示胜利界面
+        /// </summary>
+        public Action<string> ShowWin = (s)=>{;};
+
+        /// <summary>
+        /// 展示失败界面
+        /// </summary>
+        public Action<string> ShowLose = (s) => {; };
+
+        /// <summary>
+        /// 在发言框中发言
+        /// </summary>
+        public Action<string> ShowWords = (s) => {; };
+
+        /// <summary>
+        /// 刷新玩家列表
+        /// </summary>
+        public Action<string> ShowPlayers = (s) => {; };
+
+        /// <summary>
+        /// 展示关键字
+        /// </summary>
+        public Action<string> ShowKeyWord = (s) => {; };
+        
+        /// <summary>
+        /// 刷新房间列表
+        /// </summary>
+        public Action<string> ShowRooms = (s) => {; };
 
         private Regex regex = new Regex(@"\w+");
         /// <summary>
@@ -74,6 +101,9 @@ namespace FlyFlower
         /// 7 代表本玩家失败了，无消息体
         /// 8 代表轮到本玩家飞花，无消息体
         /// 9 代表游戏胜利，无消息体
+        /// 10代表玩家列表，消息体为“{玩家姓名} {准备状态}”
+        /// 11代表游戏开始，消息体为“{飞花关键字}”
+        /// 12代表游戏结束，无消息体
         /// </summary>
         public void Receive()
         {
@@ -106,7 +136,7 @@ namespace FlyFlower
                     if (type == 3)
                     {
                         message = Encoding.UTF8.GetString(buffer, 0, r - 1);
-                        showMessage(message);
+                        ShowRooms(message);
                     }
                     //有玩家失败，消息体格式为“{玩家姓名}失败了”
                     if (type == 4)
@@ -140,6 +170,21 @@ namespace FlyFlower
                     if (type == 9)
                     {
                         
+                    }
+                    //玩家列表，消息体为“{玩家姓名} {准备状态}”
+                    if(type == 10)
+                    {
+
+                    }
+                    //游戏开始，消息体为“{飞花关键字}”
+                    if (type == 11)
+                    {
+
+                    }
+                    //游戏结束，无消息体
+                    if (type == 12)
+                    {
+
                     }
                 }
                 catch(Exception ex)
@@ -273,15 +318,6 @@ namespace FlyFlower
             buffer = Encoding.UTF8.GetBytes(message);
             newBuffer.AddRange(buffer);
             return newBuffer.ToArray();
-        }
-
-        /// <summary>
-        /// 展示失败警告
-        /// </summary>
-        /// <param name="warning"></param>
-        public void ShowWarn(string warning)
-        {
-            MessageBox.Show(warning);
         }
 
         public byte[] RemoveFirstByte(byte[] buffer)

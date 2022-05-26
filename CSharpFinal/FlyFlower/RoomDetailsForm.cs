@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace FlyFlower
 {
-    public partial class FlyingFlower : Form
+    public partial class RoomDetailsForm : Form
     {
-        public FlyingFlower()
+        public string roomName { get; set; }
+        public int maxMem { get; set; } = 10;
+        public RoomDetailsForm()
         {
             InitializeComponent();
-        }
-
-        private void btnQuitRoom_Click(object sender, EventArgs e)
-        {
-
+            txtRoomName.DataBindings.Add("Text", this, "roomName");
+            txtMaxMem.DataBindings.Add("Text", this, "maxMem");
         }
     }
 }

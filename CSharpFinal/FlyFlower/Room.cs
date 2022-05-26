@@ -18,6 +18,7 @@ namespace FlyFlower
 {
     public class Room
     {
+        private System.Threading.Timer tmr;
         private readonly string[] KeyWords = { "月", "酒", "花", "风", "春", "夏", "秋", "冬", "夜", "叶" };
 
         private string currentKeyWord;
@@ -37,6 +38,10 @@ namespace FlyFlower
         /// 游戏开始后，轮到当前玩家
         /// </summary>
         private Socket currentPlayer = null;
+
+        /// <summary>
+        /// 存放访问过的诗句
+        /// </summary>
         public ConcurrentBag<string> visited { get; set; } = new ConcurrentBag<string>();
         public ConcurrentQueue<Socket> ActivePlayers { get; set; } = new ConcurrentQueue<Socket>();
         public ConcurrentDictionary<Socket, string> Players { get; set; } = new ConcurrentDictionary<Socket, string>();
@@ -48,9 +53,11 @@ namespace FlyFlower
 
         public Room(string name, int maxMem, int id)
         {
+
             Name = name;
             MaxMem = maxMem;
             RoomId = id;
+            IsPlaying = false;
         }
 
         /// <summary>
@@ -64,7 +71,20 @@ namespace FlyFlower
         /// <param name="player"></param>
         public void RemovePlayer(Socket player)
         {
+            //在玩家列表中删除该玩家
             Players.TryRemove(player, out string playerName);
+            //在准备队列中删除该玩家
+            Socket[] sockets = ActivePlayers.ToArray();
+            sockets = sockets.Where(s => s!= player).ToArray();
+            Socket socket;
+            while (!ActivePlayers.IsEmpty)
+            {
+                ActivePlayers.TryDequeue(out socket);
+            }
+            foreach (Socket s in sockets)
+            {
+                ActivePlayers.Enqueue(s);
+            }
             SendMessage(ConvertMessageForServer(playerName + "退出房间", 1));
         }
 
@@ -76,6 +96,20 @@ namespace FlyFlower
         public void AddPlayer(Socket player, string playerName)
         {
             Players.TryAdd(player, playerName);
+            Socket[] active = ActivePlayers.ToArray();
+            string playerList = "";
+            foreach(var p in Players)
+            {
+                if (active.FirstOrDefault(a => a == p.Key) != null)//处在准备队列中
+                {
+                    playerList += p.Key + " " + "已经准备";
+                }
+                else
+                {
+                    playerList += p.Key + " " + "没有准备";
+                }
+            }
+            player.Send(ConvertMessageForServer(playerList, 10));
             SendMessage(ConvertMessageForServer(playerName + "加入房间", 0));
         }
 
@@ -102,11 +136,14 @@ namespace FlyFlower
         {
             Random random = new Random();
             currentKeyWord = KeyWords[random.Next(0, 10)];
+            IsPlaying = true;
+            SendMessage(ConvertMessageForServer(currentKeyWord, 11));
             while(ActivePlayers.Count > 1)
             {
                 ActivePlayers.TryDequeue(out currentPlayer);
                 currentState = PlayerState.noResponse;
                 //开启一个时钟
+                tmr = new System.Threading.Timer(new TimerCallback(OutOfTime),null, Timeout.Infinite, 1000);
                 currentPlayer.Send(ConvertMessageForServer("", 8));
                 while(currentState == PlayerState.noResponse)
                 {
@@ -117,18 +154,35 @@ namespace FlyFlower
                     ActivePlayers.Enqueue(currentPlayer);
                     continue;
                 }
-                if(currentState == PlayerState.wrongResponse || currentState == PlayerState.noResponse)
+                if(currentState == PlayerState.wrongResponse)
                 {
                     currentPlayer.Send(ConvertMessageForServer("", 7));
                     continue;
                 }
+                tmr.Dispose();
             }
+            IsPlaying = false;
             Socket Winner;
             ActivePlayers.TryDequeue(out Winner);
             Winner.Send(ConvertMessageForServer("", 9));
+            SendMessage(ConvertMessageForServer("", 12));
         }
 
-        public void judge(Socket player, string message)
+        /// <summary>
+        /// 计时器超时
+        /// </summary>
+        /// <param name="o"></param>
+        private void OutOfTime(object o)
+        {
+            currentState = PlayerState.wrongResponse;
+        }
+
+        /// <summary>
+        /// 判断玩家发言是否正确
+        /// </summary>
+        /// <param name="player"></param>
+        /// <param name="message"></param>
+        public void Judge(Socket player, string message)
         {
             //如果没有轮到当前玩家发言，不做判断
             if(player == currentPlayer)
@@ -193,7 +247,10 @@ namespace FlyFlower
         /// 7 代表本玩家失败了，无消息体
         /// 8 代表轮到本玩家飞花，无消息体
         /// 9 代表某游戏胜利，无消息体
-        /// </summary>
+        /// 10 代表玩家列表，消息体为“{玩家姓名} {准备状态}”
+        /// 11 代表游戏开始，消息体为“{飞花关键字}”
+        /// 12 代表游戏结束，无消息体
+        /// </summary>{
         /// <param name="message"></param>
         /// <param name="type"></param>
         /// <returns></returns>

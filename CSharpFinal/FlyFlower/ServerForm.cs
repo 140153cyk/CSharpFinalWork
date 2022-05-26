@@ -29,7 +29,7 @@ namespace FlyFlower
         private void button1_Click(object sender, EventArgs e)
         {
             server.showMessage("加载服务器");
-            RoomForm roomForm = new RoomForm();
+            RoomForm roomForm = new RoomForm("bob");
             roomForm.Show();
         }
     }

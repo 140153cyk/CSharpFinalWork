@@ -160,7 +160,7 @@ namespace FlyFlower
                         Room room = DicRooms[Int32.Parse(RoomID)];
                         m = m.NextMatch();
                         string clientWords = m.Value;
-                        room.judge(client, clientWords);
+                        room.Judge(client, clientWords);
                     }
                     
                 }
@@ -208,8 +208,9 @@ namespace FlyFlower
         /// 5 代表玩家发言，消息体格式为“{玩家姓名} ： {玩家发言}”
         /// 6 代表发送房间ID，消息体格式为“{房间ID}”
         /// 7 代表本玩家失败了，无消息体
-        /// 8 代表轮到本玩家飞花，无消息体
+        /// 8 代表轮到本玩家飞花，消息体格式为“{飞花令关键字}”
         /// 9 代表某游戏胜利，无消息体
+        /// 10 代表玩家列表，消息体为“{玩家姓名} {准备状态}”
         /// </summary>
         /// <param name="message"></param>
         /// <param name="type"></param>
