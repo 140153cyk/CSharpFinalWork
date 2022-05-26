@@ -26,7 +26,25 @@ namespace PoemDataService.Controllers
             reccommendTimer.Elapsed += new ElapsedEventHandler(onTimer);
             reccommendTimer.Enabled = true;
         }
-
+        [HttpPost("poem")]//添加诗词到数据库，用于服务端数据库初始化
+        public ActionResult<Poem> ImportPoem([FromBody]Poem newPoem)
+        {
+            try
+            {
+                db.Poems.Add(newPoem);
+                db.SaveChanges();
+                return NoContent();
+            }catch(Exception e)
+            {
+                return BadRequest();
+            }
+            
+        }
+        [HttpGet("poem")]
+        public ActionResult<Poem>  GetPoem(String table)
+        {
+            return db.Poems.Include(p=>p.paragraphs).FirstOrDefault();         
+        }
         [HttpPost("userinfo")]
         public ActionResult<UserInfo> Register([FromBody]UserInfo info)
         {
@@ -34,7 +52,8 @@ namespace PoemDataService.Controllers
             if (db.UserInfos.FirstOrDefault(i => i.account == info.account) != null) return BadRequest();
             else
             {
-                db.UserInfos.Add(info);
+                db.UserInfos.Add(info);//添加用户登录信息
+                db.Recommends.Add(new Recommend(info.account, 1));//添加用户默认推荐诗词
                 db.SaveChanges();
                 return info;
             }
@@ -47,13 +66,58 @@ namespace PoemDataService.Controllers
             if (info != null) return info;
             return null;
         }
-
-        [HttpGet("poem")]
-        public ActionResult<Poem>  GetOrder(String table)
+        //根据Url后带的account 和 poemId加入收藏
+        [HttpPost("collect")]
+        public ActionResult<Collect> AddCollect(string account,int poemId)
         {
-            return db.Poems.Include(p=>p.paragraphs).FirstOrDefault();         
+            if (db.Collects.FirstOrDefault(c => c.account == account && c.PoemId == poemId) != null) return BadRequest();
+            
+            Collect collect = new Collect(account, poemId);
+            
+            try
+            {
+                db.Collects.Add(collect);
+                db.SaveChanges();
+                return NoContent();
+            }
+            catch(Exception e)
+            {
+                return BadRequest();
+            }
+        }
+        //根据Url后带的accout和poemId删除收藏
+        [HttpDelete("collect")]
+        public ActionResult<Collect> DeleteCollect(string account, int poemId)
+        {
+            try
+            {
+                db.Collects.Remove(
+                    db.Collects.FirstOrDefault(c => c.account == account && c.PoemId == poemId)
+                    ); 
+                db.SaveChanges();
+                return NoContent();
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
+        }
+        //根据Url后带的account获取某个用户的全部收藏
+        [HttpGet("collect")]
+        public ActionResult<List<Collect>> GetCollect(string account)
+        {
+            return db.Collects.Where(c => c.account == account).ToList();
+        }
+        [HttpGet("recommend")]
+        public ActionResult<Poem> GetRecommend(string account)
+        {
+            Recommend recommend=db.Recommends.FirstOrDefault(r => r.account == account);
+            return db.Poems.
+                Include(p=>p.paragraphs).
+                FirstOrDefault(p => p.id == recommend.PoemId);
         }
 
+        //更新用户的推荐诗词
         public void UpdateRec()
         {
             foreach(Recommend r in db.Recommends)
