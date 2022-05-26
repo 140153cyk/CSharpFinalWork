@@ -25,6 +25,7 @@ namespace Basic
             if (judgeLogin())
             {
                 MainPage main = new MainPage(AccountText.Text);
+                main.FormClosed += (x, y) => this.Close();
                 main.Show();
                 this.Visible=false;
             }

@@ -13,13 +13,10 @@ namespace Basic
     public partial class PoemSquare : Form
     {
         private string account;
-        public PoemSquare(string account,MainPage main)
+        public PoemSquare(string account)
         {
             this.account = account;
-            this.FormClosing += (x, y) =>
-            {
-                main.Visible = true;
-            };
+         
            
             InitializeComponent();
         }

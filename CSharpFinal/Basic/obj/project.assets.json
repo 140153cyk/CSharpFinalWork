@@ -234,6 +234,24 @@
           "lib/net45/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "DrawAndGuess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DrawAndGuess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DrawAndGuess.dll": {}
+        }
+      },
+      "FlyFlower/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/FlyFlower.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FlyFlower.dll": {}
+        }
+      },
       "ImportData/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
@@ -483,6 +501,24 @@
         },
         "runtime": {
           "lib/net45/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "DrawAndGuess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DrawAndGuess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DrawAndGuess.dll": {}
+        }
+      },
+      "FlyFlower/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/FlyFlower.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FlyFlower.dll": {}
         }
       },
       "ImportData/1.0.0": {
@@ -736,6 +772,24 @@
           "lib/net45/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "DrawAndGuess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DrawAndGuess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DrawAndGuess.dll": {}
+        }
+      },
+      "FlyFlower/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/FlyFlower.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FlyFlower.dll": {}
+        }
+      },
       "ImportData/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
@@ -985,6 +1039,24 @@
         },
         "runtime": {
           "lib/net45/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "DrawAndGuess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DrawAndGuess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DrawAndGuess.dll": {}
+        }
+      },
+      "FlyFlower/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/FlyFlower.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FlyFlower.dll": {}
         }
       },
       "ImportData/1.0.0": {
@@ -1411,6 +1483,16 @@
         "version.txt"
       ]
     },
+    "DrawAndGuess/1.0.0": {
+      "type": "project",
+      "path": "../DrawAndGuess/DrawAndGuess.csproj",
+      "msbuildProject": "../DrawAndGuess/DrawAndGuess.csproj"
+    },
+    "FlyFlower/1.0.0": {
+      "type": "project",
+      "path": "../FlyFlower/FlyFlower.csproj",
+      "msbuildProject": "../FlyFlower/FlyFlower.csproj"
+    },
     "ImportData/1.0.0": {
       "type": "project",
       "path": "../ImportData/ImportData.csproj",
@@ -1419,7 +1501,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "DrawAndGuess >= 1.0.0",
       "EntityFramework >= 6.4.4",
+      "FlyFlower >= 1.0.0",
       "ImportData >= 1.0.0",
       "MySql.Data >= 8.0.29",
       "MySql.Data.EntityFramework >= 8.0.29",
@@ -1458,6 +1542,12 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
+            "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\DrawAndGuess\\DrawAndGuess.csproj": {
+              "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\DrawAndGuess\\DrawAndGuess.csproj"
+            },
+            "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\FlyFlower\\FlyFlower.csproj": {
+              "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\FlyFlower\\FlyFlower.csproj"
+            },
             "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
               "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj"
             }

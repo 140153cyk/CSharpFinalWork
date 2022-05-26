@@ -23,3 +23,6 @@ D:\c#大作业\C-FinalWork\CSharpFinal\FlyFlower\obj\Debug\FlyFlower.csproj.Core
 D:\c#大作业\C-FinalWork\CSharpFinal\FlyFlower\obj\Debug\FlyFlower.csproj.CopyComplete
 D:\c#大作业\C-FinalWork\CSharpFinal\FlyFlower\obj\Debug\FlyFlower.exe
 D:\c#大作业\C-FinalWork\CSharpFinal\FlyFlower\obj\Debug\FlyFlower.pdb
+D:\c#大作业\C-FinalWork\CSharpFinal\FlyFlower\obj\Debug\FlyFlower.csproj.AssemblyReference.cache
+D:\c#大作业\C-FinalWork\CSharpFinal\FlyFlower\obj\Debug\FlyFlower.FlyingFlower.resources
+D:\c#大作业\C-FinalWork\CSharpFinal\FlyFlower\obj\Debug\FlyFlower.RoomDetailsForm.resources

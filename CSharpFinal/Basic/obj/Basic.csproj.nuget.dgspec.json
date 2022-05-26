@@ -32,6 +32,12 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
+              "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\DrawAndGuess\\DrawAndGuess.csproj": {
+                "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\DrawAndGuess\\DrawAndGuess.csproj"
+              },
+              "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\FlyFlower\\FlyFlower.csproj": {
+                "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\FlyFlower\\FlyFlower.csproj"
+              },
               "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
                 "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj"
               }
@@ -71,6 +77,26 @@
         "win-x86": {
           "#import": []
         }
+      }
+    },
+    "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\DrawAndGuess\\DrawAndGuess.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\DrawAndGuess\\DrawAndGuess.csproj",
+        "projectName": "DrawAndGuess",
+        "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\DrawAndGuess\\DrawAndGuess.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\FlyFlower\\FlyFlower.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\FlyFlower\\FlyFlower.csproj",
+        "projectName": "FlyFlower",
+        "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\FlyFlower\\FlyFlower.csproj"
+      },
+      "frameworks": {
+        "net472": {}
       }
     },
     "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
