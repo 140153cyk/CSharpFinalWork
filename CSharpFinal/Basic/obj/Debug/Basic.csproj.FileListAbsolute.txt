@@ -71,3 +71,4 @@ C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.cspro
 C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.exe
 C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.pdb
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.Robot.resources
+D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\ChineseT2S.dll

@@ -6,15 +6,24 @@ using System.Threading.Tasks;
 
 namespace PoemDataService.Models
 {
-   public class Paragraph
+    public class Paragraph
     {
+
         public int id { get; set; }
         public int PoemId { get; set; }
+
+        public int paraNum { get; set; }
         public string value { get; set; }
 
-        public Paragraph(string value)
+        public Paragraph(string value, int num)
         {
             this.value = value;
+            this.paraNum = num;
+        }
+
+        public Paragraph()
+        {
         }
     }
+
 }

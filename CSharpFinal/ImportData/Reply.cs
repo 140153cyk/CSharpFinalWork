@@ -13,9 +13,8 @@ namespace ImportData
     public int Id { get; set; }
     //用户id
     public int userId { get; set; }
-    //被回复评论id
+    //被回复人id
     public int replyerId { get; set; }
-    public string Content { get; set; }
     public DateTime Created { get; set; }
     public int prase { get; set; }
   }
