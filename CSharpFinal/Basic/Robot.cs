@@ -71,5 +71,10 @@ namespace Basic
                 
             }
     }
+
+    private void Robot_Load(object sender, EventArgs e)
+    {
+
+    }
   }
 }
