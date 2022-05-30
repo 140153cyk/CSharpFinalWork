@@ -25,4 +25,5 @@ namespace ImportData
     //发布时间
     public DateTime PostTime { get; set; }
   }
+
 }

@@ -1,24 +1,28 @@
 using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PoemDataService.Models
 {
     public class Comment
     {
-        //评论id
+        //帖子id
         public int Id { get; set; }
         //分享者id
-        public int userId { get; set; }
+        public string UserAccount { get; set; }
         //诗词
-        public Poem poem { get; set; }
-        //评论用户ID
-        public int CommnetId { get; set; }
-        //评论内容
-        public string Content { get; set; }
+
+        public int PoemId { get => Poems.id; set=>PoemId=Poems.id; }
+
+        [ForeignKey("PoemId")]
+        public Poem Poems { get; set; }
+
         //点赞数
         public int Prase { get; set; }
-        //评论时间
+        //创建时间
         public DateTime Created { get; set; }
-        //发布时间
-        public DateTime PostTime { get; set; }
+        public List<Reply> Replys { get; set; }
+
+
     }
 }
