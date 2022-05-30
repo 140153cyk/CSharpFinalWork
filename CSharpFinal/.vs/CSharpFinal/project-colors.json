@@ -10,7 +10,12 @@
       "ProjectGuid": "4dbd8273-4be8-4bcd-8f78-00c101c827b5",
       "DisplayName": "Basic",
       "ColorIndex": 1
+    },
+    "3b1ad87c-1ce4-4230-8d28-3c00d91d2f74": {
+      "ProjectGuid": "3b1ad87c-1ce4-4230-8d28-3c00d91d2f74",
+      "DisplayName": "FlyFlower",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }
