@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyFlower", "FlyFlower\FlyF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawAndGuess", "DrawAndGuess\DrawAndGuess.csproj", "{0EBF263C-D4ED-4D5C-B584-0E268BF0D242}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{22CA3EE7-4B21-4B50-BFA4-E153678BC9B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{B66E7022-13C2-42D4-9673-ED144F1A11BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{0EBF263C-D4ED-4D5C-B584-0E268BF0D242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EBF263C-D4ED-4D5C-B584-0E268BF0D242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EBF263C-D4ED-4D5C-B584-0E268BF0D242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22CA3EE7-4B21-4B50-BFA4-E153678BC9B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22CA3EE7-4B21-4B50-BFA4-E153678BC9B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22CA3EE7-4B21-4B50-BFA4-E153678BC9B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22CA3EE7-4B21-4B50-BFA4-E153678BC9B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B66E7022-13C2-42D4-9673-ED144F1A11BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66E7022-13C2-42D4-9673-ED144F1A11BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66E7022-13C2-42D4-9673-ED144F1A11BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66E7022-13C2-42D4-9673-ED144F1A11BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

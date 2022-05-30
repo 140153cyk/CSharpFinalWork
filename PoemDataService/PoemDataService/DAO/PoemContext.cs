@@ -1,8 +1,9 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PoemDataService.Models;
 
-namespace PoemDataService.Models
+namespace PoemDataService.DAO
 {
    public class PoemContext:DbContext
     {

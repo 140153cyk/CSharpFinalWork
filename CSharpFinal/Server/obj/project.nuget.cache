@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5gJUQf7oJb0lXaDI3VQUBDeWFiO7gQG41k9TR1JqTCtaAZYGuXnFkf4A3E0gDBS55osdN+7l2r8uJMNSQvc/lA==",
+  "dgSpecHash": "h4ZDykDZnl/xzNYl38gRRv+J5zUDLCWhldMG14JfhaPc7w8/romPIuac4kgb3b/BLW6Um4iHj2lPEoz50kFdIQ==",
   "success": true,
-  "projectFilePath": "D:\\C#\\CSharpFinalWork-main\\CSharpFinal\\Server\\Server.csproj",
+  "projectFilePath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Server\\Server.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

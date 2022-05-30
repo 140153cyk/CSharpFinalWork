@@ -78,3 +78,5 @@ D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\DrawAndGuess.pdb
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\DrawAndGuess.exe.config
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\FlyFlower.pdb
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\FlyFlower.exe.config
+D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.Comments.resources
+D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.Replys.resources

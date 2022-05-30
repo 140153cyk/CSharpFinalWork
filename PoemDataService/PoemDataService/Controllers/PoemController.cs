@@ -7,6 +7,7 @@ using System.Linq;
 using PoemDataService.Models;
 using System.Timers;
 using System.Threading.Tasks;
+using PoemDataService.DAO;
 
 namespace PoemDataService.Controllers
 {

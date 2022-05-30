@@ -58,7 +58,6 @@
     <Compile Include="Finished.cs" />
     <Compile Include="Paragraph.cs" />
     <Compile Include="Poem.cs" />
-    <Compile Include="PoemContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="RawPoem.cs" />
     <Compile Include="Recommend.cs" />

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\CSharpFinalWork-main\\CSharpFinal\\Server\\Server.csproj": {}
+    "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Server\\Server.csproj": {}
   },
   "projects": {
-    "D:\\C#\\CSharpFinalWork-main\\CSharpFinal\\Server\\Server.csproj": {
+    "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\CSharpFinalWork-main\\CSharpFinal\\Server\\Server.csproj",
+        "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "D:\\C#\\CSharpFinalWork-main\\CSharpFinal\\Server\\Server.csproj",
-        "packagesPath": "C:\\Users\\abc\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\CSharpFinalWork-main\\CSharpFinal\\Server\\obj\\",
+        "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Server\\Server.csproj",
+        "packagesPath": "C:\\Users\\14025\\.nuget\\packages\\",
+        "outputPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Server\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\abc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\14025\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,12 +53,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
