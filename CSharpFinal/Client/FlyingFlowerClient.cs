@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Client
 {
-    internal class FlyingFlowerClient : Client
+    public class FlyingFlowerClient : Client
     {        
         private List<string> PlayersInGame = new List<string>();
 
@@ -130,12 +131,13 @@ namespace Client
                             m = m.NextMatch();
                             m = m.NextMatch();//跳过准备状态
                         }
+                        break;
                     }
                     //代表玩家加入，消息体格式为“{玩家姓名} 加入房间”
                     if (type == 3)
                     {
                         message = Encoding.UTF8.GetString(buffer, 0, r - 1);
-                        ShowMessage(message);
+                        //ShowMessage(message);
                         Match match = regex.Match(message);
                         PlayersInRoom.Add(match.Value);
                         PlayerGetIn(match.Value);

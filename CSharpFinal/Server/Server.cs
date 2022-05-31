@@ -13,6 +13,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
+
+
 namespace Server
 {
     public class Server
@@ -161,7 +163,7 @@ namespace Server
                         Match m = regex.Match(message);
                         string RoomID = m.Value;
                         BasicRoom room = GetConcreteRoom(Int32.Parse(RoomID));
-                        room.PlayerGetReady(client);
+                        if (room.PlayerGetReady(client)) break;
                     }
                     //玩家发送了文字消息,消息体格式为“{房间ID} {玩家发的信息}”
                     if (type == 10)
@@ -214,6 +216,8 @@ namespace Server
                         FlyingFlowerRoom room = (FlyingFlowerRoom)GetConcreteRoom(RoomID);
                         room.AnswerWrong();
                     }
+                    //***
+                    Console.WriteLine(type.ToString()+" "+message);
                 }
                 catch (Exception ex)
                 {
@@ -257,14 +261,14 @@ namespace Server
             {
                 foreach (var room in DicFlyRoom)
                 {
-                    message += room.Value.ToString() + "\n";
+                    message += room.Value.ToString() + " ";
                 }
             }
             else
             {
                 foreach (var room in DicDrawRoom)
                 {
-                    message += room.Value.ToString() + "\n";
+                    message += room.Value.ToString() + " ";
                 }
             }
             target.Send(ConvertMessageForServer(0, message));
@@ -274,7 +278,7 @@ namespace Server
         /// 包装向客户端发送的信息
         /// 0 代表发送所有房间的列表，信息体格式为“{房间ID} {房间名} {游玩状态} {当前人数} {最大游玩人数}”
         /// 1 代表发送房间的ID，信息体格式为“{房间ID}”
-        /// 2 代表发送当前房间所有玩家的状态，消息体格式为“{玩家姓名} {准备状态}\n”
+        /// 2 代表发送当前房间所有玩家的状态，消息体格式为“{玩家姓名} {准备状态} ”
         /// 3 代表玩家加入，消息体格式为“{玩家姓名} 加入房间”
         /// 4 代表玩家准备，消息体格式为“{玩家姓名} 准备”
         /// 5 代表玩家退出，信息体格式为“{玩家姓名} 退出房间”

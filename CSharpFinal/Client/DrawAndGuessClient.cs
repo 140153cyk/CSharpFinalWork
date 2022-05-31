@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Client
 {
-    internal class DrawAndGuessClient : Client
+    public class DrawAndGuessClient : Client
     {
         /// <summary>
         /// 不是本人画画的回合

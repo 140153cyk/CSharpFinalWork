@@ -39,7 +39,7 @@ namespace Client
         public Action<string> CreateFormAndShowPlayerState = (s) => {};
 
         /// <summary>
-        /// 刷新房间列表,s格式为“{房间ID} {房间名} {游玩状态} {当前人数} {最大游玩人数}\n”
+        /// 刷新房间列表,s格式为“{房间ID} {房间名} {游玩状态} {当前人数} {最大游玩人数} ”
         /// </summary>
         public Action<string> ShowRooms = (s) => {};
 
@@ -127,9 +127,9 @@ namespace Client
 
         /// <summary>
         /// 接收服务端发送的信息
-        /// 0 代表接收所有房间的列表，信息体格式为“{房间ID} {房间名} {游玩状态} {当前人数} {最大游玩人数}\n”
+        /// 0 代表接收所有房间的列表，信息体格式为“{房间ID} {房间名} {游玩状态} {当前人数} {最大游玩人数} ”
         /// 1 代表接收房间的ID，信息体格式为“{房间ID}”
-        /// 2 代表接收当前房间所有玩家的状态，消息体格式为“{玩家姓名} {准备状态}\n”
+        /// 2 代表接收当前房间所有玩家的状态，消息体格式为“{玩家姓名} {准备状态} ”
         /// 3 代表玩家加入，消息体格式为“{玩家姓名} 加入房间”
         /// 4 代表玩家准备，消息体格式为“{玩家姓名} 准备”
         /// 5 代表玩家退出，信息体格式为“{玩家姓名} 退出房间”
@@ -141,7 +141,12 @@ namespace Client
         /// 11 代表玩家作画，消息体格式为“{画}”
         /// </summary>
         abstract protected void Receive();
-        
+        public void StartReceive()
+        {
+            Thread t = new Thread(Receive);
+            t.IsBackground = true;
+            t.Start();
+        }
 
         /// <summary>
         /// 向服务器发送文字，消息体为“{房间ID} {玩家发言}”
