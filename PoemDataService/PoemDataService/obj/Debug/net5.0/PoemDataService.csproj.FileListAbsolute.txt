@@ -1,4 +1,3 @@
-D:\c#大作业\C-FinalWork\PoemDataService\PoemDataService\obj\Debug\net5.0\PoemDataService.csproj.AssemblyReference.cache
 D:\c#大作业\C-FinalWork\PoemDataService\PoemDataService\obj\Debug\net5.0\PoemDataService.GeneratedMSBuildEditorConfig.editorconfig
 D:\c#大作业\C-FinalWork\PoemDataService\PoemDataService\obj\Debug\net5.0\PoemDataService.AssemblyInfoInputs.cache
 D:\c#大作业\C-FinalWork\PoemDataService\PoemDataService\obj\Debug\net5.0\PoemDataService.AssemblyInfo.cs
@@ -50,3 +49,4 @@ D:\c#大作业\C-FinalWork\PoemDataService\PoemDataService\obj\Debug\net5.0\Poem
 D:\c#大作业\C-FinalWork\PoemDataService\PoemDataService\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\c#大作业\C-FinalWork\PoemDataService\PoemDataService\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\c#大作业\C-FinalWork\PoemDataService\PoemDataService\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\c#大作业\C-FinalWork\PoemDataService\PoemDataService\obj\Debug\net5.0\PoemDataService.csproj.AssemblyReference.cache

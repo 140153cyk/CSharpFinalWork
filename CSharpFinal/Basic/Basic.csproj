@@ -64,6 +64,12 @@
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="PoemDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoemDetail.Designer.cs">
+      <DependentUpon>PoemDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="PoemSquare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoemDetail.resx">
+      <DependentUpon>PoemDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

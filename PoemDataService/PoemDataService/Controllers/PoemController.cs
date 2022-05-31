@@ -38,9 +38,24 @@ namespace PoemDataService.Controllers
             
         }
         [HttpGet]
-        public ActionResult<Poem>  GetPoem()
+        public ActionResult<List<Poem>>  GetPoem(string title,string author)
         {
-            return db.Poems.Include(p=>p.paragraphs).FirstOrDefault();         
+            IQueryable<Poem> query = db.Poems;
+            if (title != null)
+            {
+                query = query.Where(p =>
+                  p.title == title
+                );
+            }
+            if (author != null)
+            {
+                query = query.Where(p =>
+                  p.author == author
+                );
+            }
+
+            
+            return query.Include(p=>p.paragraphs).ToList();         
         }
 
 

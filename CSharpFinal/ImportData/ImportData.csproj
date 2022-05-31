@@ -53,16 +53,16 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Collect.cs" />
-    <Compile Include="Comment.cs" />
-    <Compile Include="Finished.cs" />
-    <Compile Include="Paragraph.cs" />
-    <Compile Include="Poem.cs" />
+    <Compile Include="Models\Collect.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Finished.cs" />
+    <Compile Include="Models\Paragraph.cs" />
+    <Compile Include="Models\Poem.cs" />
+    <Compile Include="Models\Recommend.cs" />
+    <Compile Include="Models\Reply.cs" />
+    <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="RawPoem.cs" />
-    <Compile Include="Recommend.cs" />
-    <Compile Include="Reply.cs" />
-    <Compile Include="UserInfo.cs" />
+    <Compile Include="Models\RawPoem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ChineseT2S, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

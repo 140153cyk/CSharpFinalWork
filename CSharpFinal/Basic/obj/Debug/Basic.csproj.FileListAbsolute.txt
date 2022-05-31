@@ -80,3 +80,4 @@ D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\FlyFlower.pdb
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\FlyFlower.exe.config
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.Comments.resources
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.Replys.resources
+D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.PoemDetail.resources

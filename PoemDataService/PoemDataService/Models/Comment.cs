@@ -12,7 +12,7 @@ namespace PoemDataService.Models
         public string UserAccount { get; set; }
         //诗词
 
-        public int PoemId { get => Poems.id; set=>PoemId=Poems.id; }
+        public int PoemId { get; set; }
 
         [ForeignKey("PoemId")]
         public Poem Poems { get; set; }
@@ -22,7 +22,6 @@ namespace PoemDataService.Models
         //创建时间
         public DateTime Created { get; set; }
         public List<Reply> Replys { get; set; }
-
 
     }
 }

@@ -65,7 +65,11 @@ namespace PoemDataService.Controllers
         {
             return db.Collects.Where(c => c.account == account).ToList();
         }
-
-
+        //判断用户是否有某首诗的收藏
+        [HttpGet]
+        public bool JudgeCollect(string account, int poemId)
+        {
+            return db.Collects.Any(c => c.account == account && c.PoemId == poemId);
+        }
     }
 }

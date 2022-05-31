@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Microsoft.VisualBasic;
 using ChineseT2S;
+using Models;
 
 namespace ImportData
 {
@@ -16,27 +17,7 @@ namespace ImportData
     {
         static void Main()
         {
-            /*using (var db=new PoemContext())
-            {
-                for (int i = 1; i <= 100; i++)
-                {
-                    string path = $"json\\" + (i / 100) + ((i % 100) / 10) + (i % 10) + ".json";
-                    List<RawPoem> rawPoems = ReadPoem(path);
-                    rawPoems.ForEach(rawPoem =>
-                    {
-                        Poem poem = new Poem(rawPoem.title, rawPoem.author, rawPoem.biography, rawPoem.volume);
-                        rawPoem.paragraphs.ForEach(paragragh =>
-                        {
-                            poem.paragraphs.Add(new Paragraph(paragragh));
-                        });
-                        db.Poems.Add(poem);
-                        db.SaveChanges();
-                        Console.WriteLine(i);
-                    });
-                }
-                db.SaveChanges();
-            }*/
-            string baseUrl = "https://localhost:5001/api/poem/poem";
+            string baseUrl = "https://localhost:5001/api/poem";
             HttpClientHandler handler = new HttpClientHandler();
             handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
             HttpClient client = new HttpClient(handler);
@@ -69,9 +50,6 @@ namespace ImportData
             }
 
             
-            
-
-
         }
 
         public static List<RawPoem> ReadPoem(string path)

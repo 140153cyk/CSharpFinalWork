@@ -13,3 +13,4 @@ D:\c#大作业\C-FinalWork\CSharpFinal\DrawAndGuess\obj\Debug\DrawAndGuess.cspro
 D:\c#大作业\C-FinalWork\CSharpFinal\DrawAndGuess\obj\Debug\DrawAndGuess.csproj.CopyComplete
 D:\c#大作业\C-FinalWork\CSharpFinal\DrawAndGuess\obj\Debug\DrawAndGuess.exe
 D:\c#大作业\C-FinalWork\CSharpFinal\DrawAndGuess\obj\Debug\DrawAndGuess.pdb
+D:\c#大作业\C-FinalWork\CSharpFinal\DrawAndGuess\obj\Debug\DrawAndGuess.csproj.AssemblyReference.cache

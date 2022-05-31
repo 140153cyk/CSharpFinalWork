@@ -1,4 +1,5 @@
 ﻿using ImportData;
+using Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,7 @@ namespace Basic
         {
             String account = AccountText.Text;
             String password = PasswordText.Text;
-            string baseUrl = "https://localhost:5001/api/poem/userinfo";
+            string baseUrl = "https://localhost:5001/api/userinfo";
             HttpClientHandler handler = new HttpClientHandler();
             handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
             HttpClient client = new HttpClient(handler);

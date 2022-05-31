@@ -35,9 +35,9 @@ namespace DrawAndGuess
             this.buttonSend = new Sunny.UI.UIButton();
             this.pictureBoxDrawing = new System.Windows.Forms.PictureBox();
             this.panelWindow = new Sunny.UI.UIPanel();
+            this.labelPoem = new Sunny.UI.UILabel();
             this.buttonReady = new Sunny.UI.UIButton();
             this.RadioButtonGroupPen = new Sunny.UI.UIRadioButtonGroup();
-            this.labelPoem = new Sunny.UI.UILabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDrawing)).BeginInit();
             this.panelWindow.SuspendLayout();
             this.SuspendLayout();
@@ -131,11 +131,21 @@ namespace DrawAndGuess
             this.panelWindow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelWindow.MinimumSize = new System.Drawing.Size(1, 1);
             this.panelWindow.Name = "panelWindow";
-            this.panelWindow.Size = new System.Drawing.Size(3004, 1959);
+            this.panelWindow.Size = new System.Drawing.Size(2564, 1559);
             this.panelWindow.TabIndex = 9;
             this.panelWindow.Text = "uiPanel1";
             this.panelWindow.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.panelWindow.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // labelPoem
+            // 
+            this.labelPoem.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelPoem.Location = new System.Drawing.Point(301, 24);
+            this.labelPoem.Name = "labelPoem";
+            this.labelPoem.Size = new System.Drawing.Size(367, 25);
+            this.labelPoem.TabIndex = 12;
+            this.labelPoem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelPoem.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // buttonReady
             // 
@@ -170,23 +180,13 @@ namespace DrawAndGuess
             this.RadioButtonGroupPen.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.RadioButtonGroupPen.ValueChanged += new Sunny.UI.UIRadioButtonGroup.OnValueChanged(this.PenOrEraser);
             // 
-            // labelPoem
-            // 
-            this.labelPoem.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelPoem.Location = new System.Drawing.Point(301, 24);
-            this.labelPoem.Name = "labelPoem";
-            this.labelPoem.Size = new System.Drawing.Size(367, 25);
-            this.labelPoem.TabIndex = 12;
-            this.labelPoem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelPoem.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // DrawAndGuess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(3004, 1959);
+            this.ClientSize = new System.Drawing.Size(2564, 1559);
             this.Controls.Add(this.panelWindow);
-            this.MinimumSize = new System.Drawing.Size(2998, 1918);
+            this.MinimumSize = new System.Drawing.Size(2558, 1518);
             this.Name = "DrawAndGuess";
             this.Text = "DrawAndGuess";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDrawing)).EndInit();
