@@ -13,12 +13,13 @@ using System.Windows.Forms;
 
 namespace tempDetail
 {
-    public partial class Form1 : Form
+    public partial class PoemDetail : Form
     {
         private Poem poem;
         private HttpClient client;
         private string account;
-        public Form1(string account,Poem poem1)
+        private bool alreadyCollect;
+        public PoemDetail(string account,Poem po)
         {
             //this.poem = poem;
             HttpClientHandler handler = new HttpClientHandler();
@@ -27,8 +28,9 @@ namespace tempDetail
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-            var task = client.GetStringAsync("https://localhost:5001/api/poem?author=李白&title=静夜思");
-            this.poem = JsonConvert.DeserializeObject<List<Poem>>(task.Result)[0];
+            /*            var task = client.GetStringAsync("https://localhost:5001/api/poem?author=李白");
+                        this.poem = JsonConvert.DeserializeObject<List<Poem>>(task.Result)[0];*/
+            this.poem = po;
             this.account = account;
 
             InitializeComponent();
@@ -54,11 +56,10 @@ namespace tempDetail
         public void JudeCollect()
         {
           var task=  client.GetStringAsync("https://localhost:5001/api/collect?account=" + account + "&poemId=" + poem.id);
-            bool collect = Boolean.Parse(task.Result);
-            if (collect)
+          alreadyCollect = Boolean.Parse(task.Result);
+            if (alreadyCollect)
             {
-                collectBtn.Text = "已收藏";
-                collectBtn.Enabled = false;
+                collectBtn.Text = "取消收藏";
             }
             else collectBtn.Text = "收藏";
         }
@@ -66,9 +67,19 @@ namespace tempDetail
         //用户点击收藏按钮
         private void collectBtn_Click(object sender, EventArgs e)
         {
-            var task = client.PostAsync("https://localhost:5001/api/collect?account=" + account + "&poemId=" + poem.id, null);
-            task.Wait();
-            JudeCollect();
+            if (alreadyCollect)
+            {
+                var task = client.DeleteAsync("https://localhost:5001/api/collect?account=" + account + "&poemId=" + poem.id);
+                task.Wait();
+                JudeCollect();
+            }
+            else
+            {
+                var task = client.PostAsync("https://localhost:5001/api/collect?account=" + account + "&poemId=" + poem.id, null);
+                task.Wait();
+                JudeCollect();
+            }
+
         }
     }
 }

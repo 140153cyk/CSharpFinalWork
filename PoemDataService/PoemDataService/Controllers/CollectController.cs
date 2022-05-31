@@ -43,7 +43,7 @@ namespace PoemDataService.Controllers
             }
         }
         //根据Url后带的accout和poemId删除收藏
-        [HttpDelete("{account}")]
+        [HttpDelete]
         public ActionResult<Collect> DeleteCollect(string account, int poemId)
         {
             try

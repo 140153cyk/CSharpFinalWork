@@ -16,7 +16,7 @@ namespace tempDetail
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1("2",null));
+            Application.Run(new PoemDetail("2",null));
         }
     }
 }

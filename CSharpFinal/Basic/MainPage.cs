@@ -27,9 +27,9 @@ namespace Basic
             client = new HttpClient(handler);
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-
-            GetRecommend();
             InitializeComponent();
+            GetRecommend();
+
             GetStyles();
         }
         public void GetStyles()
@@ -50,11 +50,10 @@ namespace Basic
 
         private void GetRecommend()
         {
-            string baseUrl = "https://localhost:5001/api/poem/recommend?account=" + account;
+            string baseUrl = "https://localhost:5001/api/reccommend/" + account;
             var task= client.GetStringAsync(baseUrl);
             recommend = JsonConvert.DeserializeObject<Poem>(task.Result);
-            string s = "";
-            
+            reccomendText.Text = recommend.title;
         }
 
         private void uiPanel3_Click(object sender, EventArgs e)
@@ -79,6 +78,12 @@ namespace Basic
             robot.FormClosing += (x, y) => this.Visible = true;
             robot.Show();
             this.Visible = false;
+        }
+
+        private void openReccommend(object sender, EventArgs e)
+        {
+            PoemDetail detail = new PoemDetail(account,recommend);
+            detail.Show();
         }
     }
 }

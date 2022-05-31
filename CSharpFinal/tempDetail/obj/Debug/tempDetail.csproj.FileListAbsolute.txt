@@ -1,6 +1,5 @@
 D:\c#大作业\C-FinalWork\CSharpFinal\tempDetail\obj\Debug\tempDetail.csproj.AssemblyReference.cache
 D:\c#大作业\C-FinalWork\CSharpFinal\tempDetail\obj\Debug\tempDetail.exe.config
-D:\c#大作业\C-FinalWork\CSharpFinal\tempDetail\obj\Debug\tempDetail.Form1.resources
 D:\c#大作业\C-FinalWork\CSharpFinal\tempDetail\obj\Debug\tempDetail.Properties.Resources.resources
 D:\c#大作业\C-FinalWork\CSharpFinal\tempDetail\obj\Debug\tempDetail.csproj.GenerateResource.cache
 D:\c#大作业\C-FinalWork\CSharpFinal\tempDetail\obj\Debug\tempDetail.csproj.CoreCompileInputs.cache
@@ -33,3 +32,4 @@ D:\c#大作业\C-FinalWork\CSharpFinal\tempDetail\bin\Debug\ImportData.exe.confi
 D:\c#大作业\C-FinalWork\CSharpFinal\tempDetail\obj\Debug\tempDetail.csproj.CopyComplete
 D:\c#大作业\C-FinalWork\CSharpFinal\tempDetail\obj\Debug\tempDetail.exe
 D:\c#大作业\C-FinalWork\CSharpFinal\tempDetail\obj\Debug\tempDetail.pdb
+D:\c#大作业\C-FinalWork\CSharpFinal\tempDetail\obj\Debug\tempDetail.PoemDetail.resources
