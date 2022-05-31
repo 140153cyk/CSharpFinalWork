@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollectsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CollectsPage.Designer.cs">
+      <DependentUpon>CollectsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Comments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Robot.Designer.cs">
       <DependentUpon>Robot.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CollectsPage.resx">
+      <DependentUpon>CollectsPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Comments.resx">
       <DependentUpon>Comments.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +135,7 @@
     <EmbeddedResource Include="Robot.resx">
       <DependentUpon>Robot.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Models.Poem.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

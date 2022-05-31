@@ -85,5 +85,11 @@ namespace Basic
             PoemDetail detail = new PoemDetail(account,recommend);
             detail.Show();
         }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            CollectsPage collects = new CollectsPage(account);
+            collects.Show();
+        }
     }
 }

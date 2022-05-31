@@ -61,9 +61,11 @@ namespace PoemDataService.Controllers
         }
         //根据Url后带的account获取某个用户的全部收藏
         [HttpGet("{account}")]
-        public ActionResult<List<Collect>> GetCollect(string account)
+        public ActionResult<List<Poem>> GetCollect(string account)
         {
-            return db.Collects.Where(c => c.account == account).ToList();
+            return db.Poems.Where(p =>
+            db.Collects.Any(c => c.account == account && c.PoemId == p.id)
+            ).Include(p=>p.paragraphs).ToList(); 
         }
         //判断用户是否有某首诗的收藏
         [HttpGet]
