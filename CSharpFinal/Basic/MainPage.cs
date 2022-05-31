@@ -58,18 +58,18 @@ namespace Basic
 
         private void uiPanel3_Click(object sender, EventArgs e)
         {
-            FlyFlower.RoomForm flyForm = new FlyFlower.RoomForm(account);
+/*            FlyFlower.RoomForm flyForm = new FlyFlower.RoomForm(account);
             flyForm.FormClosing += (x, y) => this.Visible = true;
             flyForm.Show();
-            this.Visible = false;
+            this.Visible = false;*/
         }
 
         private void uiPanel4_Click(object sender, EventArgs e)
         {
-            DrawAndGuess.RoomForm guessRoom = new DrawAndGuess.RoomForm(account);
+/*            DrawAndGuess.RoomForm guessRoom = new DrawAndGuess.RoomForm(account);
             guessRoom.FormClosing += (x, y) => this.Visible = true;
             guessRoom.Show();
-            this.Visible = false;
+            this.Visible = false;*/
         }
 
         private void uipanel2_Click(object sender, EventArgs e)

@@ -1,0 +1,14 @@
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\obj\Debug\netcoreapp3.1\GameServer.csproj.AssemblyReference.cache
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\obj\Debug\netcoreapp3.1\GameServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\obj\Debug\netcoreapp3.1\GameServer.AssemblyInfoInputs.cache
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\obj\Debug\netcoreapp3.1\GameServer.AssemblyInfo.cs
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\obj\Debug\netcoreapp3.1\GameServer.csproj.CoreCompileInputs.cache
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\bin\Debug\netcoreapp3.1\GameServer.exe
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\bin\Debug\netcoreapp3.1\GameServer.deps.json
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\bin\Debug\netcoreapp3.1\GameServer.runtimeconfig.json
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\bin\Debug\netcoreapp3.1\GameServer.runtimeconfig.dev.json
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\bin\Debug\netcoreapp3.1\GameServer.dll
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\bin\Debug\netcoreapp3.1\GameServer.pdb
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\obj\Debug\netcoreapp3.1\GameServer.dll
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\obj\Debug\netcoreapp3.1\GameServer.pdb
+D:\c#大作业\C-FinalWork\PoemDataService\GameServer\obj\Debug\netcoreapp3.1\GameServer.genruntimeconfig.cache

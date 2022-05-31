@@ -52,4 +52,3 @@ C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\ImportData\obj\Debug\Import
 C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\ImportData\obj\Debug\ImportData.pdb
 D:\c#大作业\C-FinalWork\CSharpFinal\ImportData\bin\Debug\SunnyUI.dll
 D:\c#大作业\C-FinalWork\CSharpFinal\ImportData\bin\Debug\SunnyUI.Common.dll
-D:\c#大作业\C-FinalWork\CSharpFinal\ImportData\obj\Debug\ImportData.csproj.AssemblyReference.cache

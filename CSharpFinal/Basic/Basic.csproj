@@ -164,14 +164,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DrawAndGuess\DrawAndGuess.csproj">
-      <Project>{0ebf263c-d4ed-4d5c-b584-0e268bf0d242}</Project>
-      <Name>DrawAndGuess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FlyFlower\FlyFlower.csproj">
-      <Project>{3b1ad87c-1ce4-4230-8d28-3c00d91d2f74}</Project>
-      <Name>FlyFlower</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ImportData\ImportData.csproj">
       <Project>{33c5aa1b-7483-49ff-ba4e-3f42f3ecf919}</Project>
       <Name>ImportData</Name>
