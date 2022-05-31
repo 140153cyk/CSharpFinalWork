@@ -29,6 +29,7 @@ namespace Server
 
         public override void StartGame()
         {
+            Thread.Sleep(3000);
             IsPlaying = true;
             while (ReadyPlayers.Count > 0)
             {

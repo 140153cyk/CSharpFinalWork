@@ -58,15 +58,16 @@ namespace Server
             {
                 if (ready.FirstOrDefault(a => a == p.Key) != null)//处在准备队列中
                 {
-                    playerList += p.Value + " 已准备\n";
+                    playerList += p.Value + " 已准备 ";
                 }
                 else
                 {
-                    playerList += p.Value + " 未准备\n";
+                    playerList += p.Value + " 未准备 ";
                 }
             }
             player.Send(ConvertMessageForServer(2, playerList));
             Players.TryAdd(player, playerName);
+            Thread.Sleep(1000);
             SendMessage(ConvertMessageForServer(3, playerName + " 加入房间"));
         }
 
@@ -97,7 +98,7 @@ namespace Server
         /// 玩家准备
         /// </summary>
         /// <param name="player"></param>
-        public void PlayerGetReady(Socket player)
+        public bool PlayerGetReady(Socket player)
         {
             ReadyPlayers.Enqueue(player);
             SendMessage(ConvertMessageForServer(4, Players[player]+" 准备"));
@@ -106,7 +107,9 @@ namespace Server
                 Thread t = new Thread(StartGame);
                 t.IsBackground = true;
                 t.Start();
+                return true;
             }
+            return false;
         }
 
         /// <summary>
@@ -135,8 +138,10 @@ namespace Server
             {
                 foreach (var player in Players)
                 {
+                    Console.WriteLine("Value:" + player.Value);
                     player.Key.Send(buffer);
                 }
+                Console.WriteLine("数量:" + Players.Count);
             });
             task1.Start();
         }
