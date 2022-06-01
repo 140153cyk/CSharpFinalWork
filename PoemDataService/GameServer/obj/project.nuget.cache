@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vv/VwrH6+z7n4NEVqeKT6ZxEgf5ty/kRNZWEeznag2fQia5q+FVl9vvMLlSZuss66xSdpSBgvgWeAMlKXw2O7A==",
+  "dgSpecHash": "iasXPs46d6i/cT/qeq8XXHoGgQXXQvQ6bc8OqbFn4q3l4Mk+qwFqPLSs9VIay0mBHgGn2/bMQIFmeY1CZynZYw==",
   "success": true,
-  "projectFilePath": "D:\\c#大作业\\C-FinalWork\\PoemDataService\\GameServer\\GameServer.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\PoemDataService\\GameServer\\GameServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zl\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
   "logs": []
 }

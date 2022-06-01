@@ -76,3 +76,8 @@ D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.Comments.resources
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.Replys.resources
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.PoemDetail.resources
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.CollectsPage.resources
+C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\bin\Debug\ChineseT2S.dll
+C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.CollectsPage.resources
+C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.Comments.resources
+C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.PoemDetail.resources
+C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.Replys.resources
