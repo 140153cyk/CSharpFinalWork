@@ -37,10 +37,10 @@ namespace Basic
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiScrollingText1 = new Sunny.UI.UIScrollingText();
             this.collectsGridView = new Sunny.UI.UIDataGridView();
-            this.poemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.poemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.collectsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.poemBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,9 @@ namespace Basic
             // 
             // collectsGridView
             // 
+            this.collectsGridView.AllowUserToAddRows = false;
+            this.collectsGridView.AllowUserToDeleteRows = false;
+            this.collectsGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.collectsGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.collectsGridView.AutoGenerateColumns = false;
@@ -127,10 +130,6 @@ namespace Basic
             this.collectsGridView.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.collectsGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.goToCollectDetail);
             // 
-            // poemBindingSource
-            // 
-            this.poemBindingSource.DataSource = typeof(Models.Poem);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -160,6 +159,10 @@ namespace Basic
             this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
             this.authorDataGridViewTextBoxColumn.ReadOnly = true;
             this.authorDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // poemBindingSource
+            // 
+            this.poemBindingSource.DataSource = typeof(Models.Poem);
             // 
             // CollectsPage
             // 

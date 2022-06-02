@@ -32,6 +32,9 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
+              "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\GamesWinForm\\GamesWinForm.csproj": {
+                "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\GamesWinForm\\GamesWinForm.csproj"
+              },
               "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
                 "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj"
               }
@@ -71,6 +74,35 @@
         "win-x86": {
           "#import": []
         }
+      }
+    },
+    "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Client\\Client.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Client\\Client.csproj",
+        "projectName": "Client",
+        "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Client\\Client.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\GamesWinForm\\GamesWinForm.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\GamesWinForm\\GamesWinForm.csproj",
+        "projectName": "GamesWinForm",
+        "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\GamesWinForm\\GamesWinForm.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Client\\Client.csproj": {
+                "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Client\\Client.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     },
     "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {

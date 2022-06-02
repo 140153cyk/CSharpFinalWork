@@ -1,4 +1,5 @@
-﻿using ImportData;
+﻿using GameWinForm;
+using ImportData;
 using Models;
 using Newtonsoft.Json;
 using System;
@@ -11,6 +12,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Basic
 {
@@ -19,8 +21,14 @@ namespace Basic
         private string account;
         private Poem recommend;
         private HttpClient client;
+        private string baseUrl;
         public MainPage( string account)
         {
+            XmlDocument serverDoc = new XmlDocument();
+            serverDoc.Load("../../../serverIp.xml");
+            XmlNode node = serverDoc.SelectSingleNode("serverIp");
+           baseUrl = "https://" + node.InnerText + ":5001/api";
+
             this.account = account;
             HttpClientHandler handler = new HttpClientHandler();
             handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
@@ -50,26 +58,28 @@ namespace Basic
 
         private void GetRecommend()
         {
-            string baseUrl = "https://localhost:5001/api/reccommend/" + account;
-            var task= client.GetStringAsync(baseUrl);
+            string url = baseUrl+"/reccommend/" + account;
+            var task= client.GetStringAsync(url);
             recommend = JsonConvert.DeserializeObject<Poem>(task.Result);
             reccomendText.Text = recommend.title;
         }
 
         private void uiPanel3_Click(object sender, EventArgs e)
         {
-/*            FlyFlower.RoomForm flyForm = new FlyFlower.RoomForm(account);
+            
+            RoomForm flyForm = new RoomForm(account, 0);
             flyForm.FormClosing += (x, y) => this.Visible = true;
             flyForm.Show();
-            this.Visible = false;*/
+            this.Visible = false;
+
         }
 
         private void uiPanel4_Click(object sender, EventArgs e)
         {
-/*            DrawAndGuess.RoomForm guessRoom = new DrawAndGuess.RoomForm(account);
+           RoomForm guessRoom = new RoomForm(account,1);
             guessRoom.FormClosing += (x, y) => this.Visible = true;
             guessRoom.Show();
-            this.Visible = false;*/
+            this.Visible = false;
         }
 
         private void uipanel2_Click(object sender, EventArgs e)

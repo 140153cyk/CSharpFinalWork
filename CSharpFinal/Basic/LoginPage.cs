@@ -11,6 +11,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Basic
 {
@@ -40,7 +41,11 @@ namespace Basic
         {
             String account = AccountText.Text;
             String password = PasswordText.Text;
-            string baseUrl = "https://localhost:5001/api/userinfo";
+            XmlDocument serverDoc = new XmlDocument();
+            serverDoc.Load("../../../serverIp.xml");
+            XmlNode node=serverDoc.SelectSingleNode("serverIp");
+            string baseUrl = "https://"+node.InnerText+":5001/api/userinfo";
+
             HttpClientHandler handler = new HttpClientHandler();
             handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
             HttpClient client = new HttpClient(handler);

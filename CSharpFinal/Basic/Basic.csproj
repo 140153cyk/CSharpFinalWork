@@ -117,6 +117,9 @@
     <EmbeddedResource Include="PoemDetail.resx">
       <DependentUpon>PoemDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PoemSquare.resx">
+      <DependentUpon>PoemSquare.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -164,6 +167,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GamesWinForm\GamesWinForm.csproj">
+      <Project>{a4e8a12d-0a9d-420a-a6e8-73c511c67961}</Project>
+      <Name>GamesWinForm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ImportData\ImportData.csproj">
       <Project>{33c5aa1b-7483-49ff-ba4e-3f42f3ecf919}</Project>
       <Name>ImportData</Name>

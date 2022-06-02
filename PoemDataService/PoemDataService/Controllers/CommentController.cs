@@ -50,6 +50,7 @@ namespace PoemDataService.Controllers
                     query = query.Where(c =>
                       c.UserAccount == account
                     );
+
                 }
                 if (poemId != null)
                 {

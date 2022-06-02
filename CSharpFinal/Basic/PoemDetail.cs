@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Basic
 {
@@ -19,8 +20,13 @@ namespace Basic
         private HttpClient client;
         private string account;
         private bool alreadyCollect;
+        private string baseUrl;
         public PoemDetail(string account,Poem po)
         {
+            XmlDocument serverDoc = new XmlDocument();
+            serverDoc.Load("../../../serverIp.xml");
+            XmlNode node = serverDoc.SelectSingleNode("serverIp");
+            baseUrl = "https://" + node.InnerText + ":5001/api";
             //this.poem = poem;
             HttpClientHandler handler = new HttpClientHandler();
             handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
@@ -55,7 +61,7 @@ namespace Basic
 
         public void JudeCollect()
         {
-          var task=  client.GetStringAsync("https://localhost:5001/api/collect?account=" + account + "&poemId=" + poem.id);
+          var task=  client.GetStringAsync(baseUrl+"/collect?account=" + account + "&poemId=" + poem.id);
           alreadyCollect = Boolean.Parse(task.Result);
             if (alreadyCollect)
             {
@@ -69,13 +75,13 @@ namespace Basic
         {
             if (alreadyCollect)
             {
-                var task = client.DeleteAsync("https://localhost:5001/api/collect?account=" + account + "&poemId=" + poem.id);
+                var task = client.DeleteAsync(baseUrl+"/collect?account=" + account + "&poemId=" + poem.id);
                 task.Wait();
                 JudeCollect();
             }
             else
             {
-                var task = client.PostAsync("https://localhost:5001/api/collect?account=" + account + "&poemId=" + poem.id, null);
+                var task = client.PostAsync(baseUrl+"/collect?account=" + account + "&poemId=" + poem.id, null);
                 task.Wait();
                 JudeCollect();
             }

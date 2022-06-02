@@ -29,10 +29,17 @@ namespace Basic
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // PoemSquare
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(957, 638);
+            this.Name = "PoemSquare";
             this.Text = "PoemSquare";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

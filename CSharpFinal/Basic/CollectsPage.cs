@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Basic
 {
@@ -17,8 +18,14 @@ namespace Basic
     {
         private string account;
         private HttpClient client;
+        private string baseUrl;
         public CollectsPage(string account)
         {
+            XmlDocument serverDoc = new XmlDocument();
+            serverDoc.Load("../../../serverIp.xml");
+            XmlNode node = serverDoc.SelectSingleNode("serverIp");
+            baseUrl = "https://" + node.InnerText + ":5001/api";
+
             this.account = account;
             InitializeComponent();
             HttpClientHandler handler = new HttpClientHandler();
@@ -40,7 +47,7 @@ namespace Basic
 
         public void GetCollects()
         {
-            var task = client.GetStringAsync("https://localhost:5001/api/collect/" + account);
+            var task = client.GetStringAsync(baseUrl+"/collect/" + account);
             poemBindingSource.DataSource =
                 JsonConvert.DeserializeObject<List<Poem>>(task.Result);
             collectsGridView.DataSource = poemBindingSource;
