@@ -61,7 +61,7 @@ namespace PoemDataService.Controllers
                 if (skip != null) query = query.Skip((int)skip);
                 if (take != null) query = query.Take((int)take);
 
-                return query.Include(c=>c.Replys).ToList();
+                return query.Include(c=>c.Replys).Include(c=>c.Poems).ThenInclude(p=>p.paragraphs).ToList();
             }catch(Exception e)
             {
                 return NoContent();
