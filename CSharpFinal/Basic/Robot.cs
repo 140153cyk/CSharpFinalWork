@@ -13,27 +13,29 @@ using System.Windows.Forms;
 
 namespace Basic
 {
-    
-    public partial class Robot : Form
+
+  public partial class Robot : Form
+  {
+    public class Newslists
     {
-      public class Newslists
-      {
-        public string List { get; set; }
-      }
-      public class Content
-      {
-        public int Code { get; set; }
-        public string Msg { get; set; }
-        public List<Newslists> Newslist { get; set; }
-      }
-      public Robot()
-      {
-        InitializeComponent();
-        //this.BackgroundImage = Image.FromFile("D:\\loginView\\500.jpg");
-        uiTextBox2.Multiline = true;
-        uiTextBox2.AutoSize = false;
-        uiTextBox2.Height = 200;
-      }
+      public string List { get; set; }
+    }
+    public class Content
+    {
+      public int Code { get; set; }
+      public string Msg { get; set; }
+      public List<Newslists> Newslist { get; set; }
+    }
+    public Robot()
+    {
+      InitializeComponent();
+      //this.BackgroundImage = Image.FromFile("D:\\loginView\\500.jpg");
+      this.Size = new System.Drawing.Size(1000, 600);
+      uiTextBox2.Multiline = true;
+      uiTextBox2.AutoSize = false;
+      uiTextBox2.Height = 200;
+   
+    }
     public static string HttpGet(string word)
     {
       //ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(CheckValidationResult);
@@ -49,11 +51,20 @@ namespace Basic
         return reader.ReadToEnd();
       }
     }
-    private void uiTextBox2_TextChanged(object sender, EventArgs e)
+ 
+    private void uiLabel1_Click(object sender, EventArgs e)
     {
     }
+   
 
-    private void uiTextBox1_TextChanged(object sender, EventArgs e)
+  
+
+    private void Robot_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void uiTextBox2_TextChanged_1(object sender, EventArgs e)
     {
 
     }
@@ -61,20 +72,16 @@ namespace Basic
     private void uiButton1_Click(object sender, EventArgs e)
     {
       var ss = HttpGet(uiTextBox1.Text);
-            JavaScriptSerializer js = new JavaScriptSerializer();
-            var model = js.Deserialize<Content>(ss);
-            foreach (var temp in model.Newslist)
-            {
-               
-                //MessageBox.Show(temp.List);
-                uiTextBox2.AppendText (temp.List+ Environment.NewLine);
-                
-            }
-    }
+      JavaScriptSerializer js = new JavaScriptSerializer();
+      var model = js.Deserialize<Content>(ss);
+      foreach (var temp in model.Newslist)
+      {
 
-    private void Robot_Load(object sender, EventArgs e)
-    {
+        //MessageBox.Show(temp.List);
+        uiTextBox2.AppendText(temp.List + Environment.NewLine);
 
+      }
     }
   }
 }
+

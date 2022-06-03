@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PoemDataService"
   ],
-  "SelectedNode": "\\PoemDataService.sln",
+  "SelectedNode": "\\PoemDataService\\Server.sln",
   "PreviewInSolutionExplorer": false
 }
