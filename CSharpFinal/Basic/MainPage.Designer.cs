@@ -443,9 +443,9 @@ namespace Basic
             this.uiScrollingText1.Location = new System.Drawing.Point(15, 32);
             this.uiScrollingText1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiScrollingText1.Name = "uiScrollingText1";
-            this.uiScrollingText1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiScrollingText1.RectColor = System.Drawing.Color.Transparent;
             this.uiScrollingText1.Size = new System.Drawing.Size(371, 71);
-            this.uiScrollingText1.Style = Sunny.UI.UIStyle.Orange;
+            this.uiScrollingText1.Style = Sunny.UI.UIStyle.Custom;
             this.uiScrollingText1.TabIndex = 0;
             this.uiScrollingText1.Text = "今 日 推 荐";
             this.uiScrollingText1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
