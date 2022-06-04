@@ -135,18 +135,15 @@ namespace Basic
             // uiPanel3
             // 
             this.uiPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.uiPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel3.Font = new System.Drawing.Font("隶书", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel3.Location = new System.Drawing.Point(15, 15);
             this.uiPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel3.Name = "uiPanel3";
             this.uiPanel3.Radius = 30;
-            this.uiPanel3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiPanel3.RectSize = 2;
             this.uiPanel3.Size = new System.Drawing.Size(217, 145);
-            this.uiPanel3.Style = Sunny.UI.UIStyle.Orange;
+            this.uiPanel3.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel3.TabIndex = 0;
             this.uiPanel3.Text = "飞 花 令";
             this.uiPanel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -176,18 +173,15 @@ namespace Basic
             // uiPanel4
             // 
             this.uiPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.uiPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel4.Font = new System.Drawing.Font("隶书", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel4.Location = new System.Drawing.Point(15, 15);
             this.uiPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel4.Name = "uiPanel4";
             this.uiPanel4.Radius = 30;
-            this.uiPanel4.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiPanel4.RectSize = 2;
             this.uiPanel4.Size = new System.Drawing.Size(217, 145);
-            this.uiPanel4.Style = Sunny.UI.UIStyle.Orange;
+            this.uiPanel4.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel4.TabIndex = 0;
             this.uiPanel4.Text = "你 画 我 猜";
             this.uiPanel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,16 +203,13 @@ namespace Basic
             this.uipanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uipanel2.BackgroundImage")));
             this.uipanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.uipanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uipanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.uipanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uipanel2.Font = new System.Drawing.Font("隶书", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uipanel2.Location = new System.Drawing.Point(45, 15);
             this.uipanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uipanel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uipanel2.Name = "uipanel2";
-            this.uipanel2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uipanel2.Size = new System.Drawing.Size(579, 150);
-            this.uipanel2.Style = Sunny.UI.UIStyle.Orange;
+            this.uipanel2.Style = Sunny.UI.UIStyle.Custom;
             this.uipanel2.TabIndex = 0;
             this.uipanel2.Text = "吟 诗 作 赋";
             this.uipanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -241,8 +232,6 @@ namespace Basic
             this.uiPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uiPanel1.BackgroundImage")));
             this.uiPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.uiPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.uiPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel1.Font = new System.Drawing.Font("隶书", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel1.Location = new System.Drawing.Point(45, 15);
             this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -250,9 +239,8 @@ namespace Basic
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.Padding = new System.Windows.Forms.Padding(10);
             this.uiPanel1.Radius = 20;
-            this.uiPanel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiPanel1.Size = new System.Drawing.Size(579, 150);
-            this.uiPanel1.Style = Sunny.UI.UIStyle.Orange;
+            this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel1.TabIndex = 0;
             this.uiPanel1.Text = "诗 词 广 场";
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,20 +250,18 @@ namespace Basic
             // AbilityTitle
             // 
             this.AbilityTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AbilityTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.AbilityTitle.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.AbilityTitle.Font = new System.Drawing.Font("华文行楷", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.AbilityTitle.Location = new System.Drawing.Point(0, 0);
             this.AbilityTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AbilityTitle.MinimumSize = new System.Drawing.Size(1, 1);
             this.AbilityTitle.Name = "AbilityTitle";
-            this.AbilityTitle.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.AbilityTitle.Size = new System.Drawing.Size(669, 84);
-            this.AbilityTitle.Style = Sunny.UI.UIStyle.Orange;
+            this.AbilityTitle.Style = Sunny.UI.UIStyle.Custom;
             this.AbilityTitle.TabIndex = 0;
             this.AbilityTitle.Text = "诗 会 雅 集";
             this.AbilityTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.AbilityTitle.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.AbilityTitle.Click += new System.EventHandler(this.AbilityTitle_Click);
             // 
             // RecPanel
             // 
@@ -307,18 +293,15 @@ namespace Basic
             this.uiPanel6.Controls.Add(this.uiButton2);
             this.uiPanel6.Controls.Add(this.uiButton1);
             this.uiPanel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.uiPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.uiPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel6.Location = new System.Drawing.Point(20, 588);
             this.uiPanel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel6.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel6.Name = "uiPanel6";
             this.uiPanel6.Padding = new System.Windows.Forms.Padding(15);
-            this.uiPanel6.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiPanel6.RectSize = 2;
             this.uiPanel6.Size = new System.Drawing.Size(401, 81);
-            this.uiPanel6.Style = Sunny.UI.UIStyle.Orange;
+            this.uiPanel6.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel6.TabIndex = 2;
             this.uiPanel6.Text = null;
             this.uiPanel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -361,18 +344,15 @@ namespace Basic
             this.uiGroupBox1.Controls.Add(this.reccomendText);
             this.uiGroupBox1.Controls.Add(this.uiScrollingText1);
             this.uiGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uiGroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.uiGroupBox1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiGroupBox1.Location = new System.Drawing.Point(20, 116);
             this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(15, 32, 15, 15);
-            this.uiGroupBox1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiGroupBox1.RectSize = 2;
             this.uiGroupBox1.Size = new System.Drawing.Size(401, 431);
-            this.uiGroupBox1.Style = Sunny.UI.UIStyle.Orange;
+            this.uiGroupBox1.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox1.TabIndex = 1;
             this.uiGroupBox1.Text = null;
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -427,16 +407,13 @@ namespace Basic
             // uiPanel5
             // 
             this.uiPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uiPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.uiPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel5.Font = new System.Drawing.Font("华文行楷", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel5.Location = new System.Drawing.Point(20, 20);
             this.uiPanel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel5.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel5.Name = "uiPanel5";
-            this.uiPanel5.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiPanel5.Size = new System.Drawing.Size(401, 96);
-            this.uiPanel5.Style = Sunny.UI.UIStyle.Orange;
+            this.uiPanel5.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel5.TabIndex = 0;
             this.uiPanel5.Text = "诗 礼 之 训";
             this.uiPanel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;

@@ -5,7 +5,12 @@
       "ProjectGuid": "6beebbdb-de1b-4cbd-bdbf-44871a0c1562",
       "DisplayName": "PoemDataService",
       "ColorIndex": 0
+    },
+    "89baded6-d7da-4aed-b39a-d9f623620e28": {
+      "ProjectGuid": "89baded6-d7da-4aed-b39a-d9f623620e28",
+      "DisplayName": "GameServer",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

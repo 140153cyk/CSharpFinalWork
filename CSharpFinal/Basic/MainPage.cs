@@ -1,4 +1,4 @@
-﻿using ImportData;
+using ImportData;
 using Models;
 using Newtonsoft.Json;
 using System;
@@ -91,5 +91,10 @@ namespace Basic
             CollectsPage collects = new CollectsPage(account);
             collects.Show();
         }
+
+    private void AbilityTitle_Click(object sender, EventArgs e)
+    {
+
     }
+  }
 }

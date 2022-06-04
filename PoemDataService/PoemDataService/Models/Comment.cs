@@ -11,7 +11,7 @@ namespace PoemDataService.Models
         //分享者id
         public string UserAccount { get; set; }
         //诗词
-
+        //public string Detail { get; set; }
         public int PoemId { get; set; }
 
         [ForeignKey("PoemId")]

@@ -1,8 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\PoemDataService"
+    "\\CSharpFinal",
+    "\\CSharpFinal\\Basic",
+    "\\CSharpFinal\\ImportData",
+    "\\CSharpFinal\\ImportData\\Models",
+    "\\PoemDataService",
+    "\\PoemDataService\\PoemDataService",
+    "\\PoemDataService\\PoemDataService\\Controllers",
+    "\\PoemDataService\\PoemDataService\\Models"
   ],
-  "SelectedNode": "\\PoemDataService\\Server.sln",
+  "SelectedNode": "\\CSharpFinal\\CSharpFinal.sln",
   "PreviewInSolutionExplorer": false
 }

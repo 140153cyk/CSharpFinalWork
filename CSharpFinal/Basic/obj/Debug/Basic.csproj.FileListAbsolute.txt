@@ -81,3 +81,4 @@ C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.Colle
 C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.Comments.resources
 C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.PoemDetail.resources
 C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.Replys.resources
+C:\Users\zl\Source\Repos\CSharpFinalWork\CSharpFinal\Basic\obj\Debug\Basic.PostComment.resources

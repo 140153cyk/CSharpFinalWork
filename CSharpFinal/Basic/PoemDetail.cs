@@ -1,4 +1,4 @@
-﻿using Models;
+using Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -81,5 +81,16 @@ namespace Basic
             }
 
         }
+
+    private void commentBtn_Click(object sender, EventArgs e)
+    {
+       Comments comments= new Comments(account,poem.id);
+       comments.Show();
     }
+
+    private void Paragraph_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+  }
 }
