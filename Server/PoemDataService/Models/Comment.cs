@@ -12,6 +12,7 @@ namespace PoemDataService.Models
         public string UserAccount { get; set; }
         //诗词
         private string Detail { get; set; }
+
         public int PoemId { get; set; }
 
         [ForeignKey("PoemId")]

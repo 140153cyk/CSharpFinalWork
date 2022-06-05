@@ -12,6 +12,6 @@ namespace PoemDataService.Models
         public DateTime Created { get; set; }
         public int prase { get; set; }
 
-        public int CommentId { get; set; }
+        public int commentId { get; set; }
     }
 }

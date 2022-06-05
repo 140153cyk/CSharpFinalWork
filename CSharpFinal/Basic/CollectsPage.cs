@@ -1,4 +1,4 @@
-﻿using Models;
+using Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -53,5 +53,10 @@ namespace Basic
             collectsGridView.DataSource = poemBindingSource;
             Console.WriteLine(task.Result);
         }
+
+    private void collectsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    {
+
     }
+  }
 }

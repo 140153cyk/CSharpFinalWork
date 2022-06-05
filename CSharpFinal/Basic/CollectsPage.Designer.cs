@@ -51,11 +51,12 @@ namespace Basic
             this.uiScrollingText1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiScrollingText1.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiScrollingText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiScrollingText1.Location = new System.Drawing.Point(0, 20);
+            this.uiScrollingText1.Location = new System.Drawing.Point(0, 12);
+            this.uiScrollingText1.Margin = new System.Windows.Forms.Padding(2);
             this.uiScrollingText1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiScrollingText1.Name = "uiScrollingText1";
             this.uiScrollingText1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiScrollingText1.Size = new System.Drawing.Size(1179, 145);
+            this.uiScrollingText1.Size = new System.Drawing.Size(786, 91);
             this.uiScrollingText1.Style = Sunny.UI.UIStyle.Orange;
             this.uiScrollingText1.TabIndex = 0;
             this.uiScrollingText1.Text = "缀 玉 联 珠";
@@ -97,8 +98,9 @@ namespace Basic
             this.collectsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.collectsGridView.EnableHeadersVisualStyles = false;
             this.collectsGridView.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.collectsGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(169)))), ((int)(((byte)(69)))));
-            this.collectsGridView.Location = new System.Drawing.Point(0, 165);
+            this.collectsGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.collectsGridView.Location = new System.Drawing.Point(0, 103);
+            this.collectsGridView.Margin = new System.Windows.Forms.Padding(2);
             this.collectsGridView.Name = "collectsGridView";
             this.collectsGridView.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -123,11 +125,12 @@ namespace Basic
             this.collectsGridView.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.collectsGridView.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.collectsGridView.SelectedIndex = -1;
-            this.collectsGridView.Size = new System.Drawing.Size(1179, 606);
+            this.collectsGridView.Size = new System.Drawing.Size(786, 379);
             this.collectsGridView.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.collectsGridView.Style = Sunny.UI.UIStyle.Orange;
             this.collectsGridView.TabIndex = 1;
             this.collectsGridView.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.collectsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.collectsGridView_CellContentClick);
             this.collectsGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.goToCollectDetail);
             // 
             // idDataGridViewTextBoxColumn
@@ -138,7 +141,7 @@ namespace Basic
             this.idDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 190;
+            this.idDataGridViewTextBoxColumn.Width = 120;
             // 
             // titleDataGridViewTextBoxColumn
             // 
@@ -166,13 +169,14 @@ namespace Basic
             // 
             // CollectsPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 791);
+            this.ClientSize = new System.Drawing.Size(786, 494);
             this.Controls.Add(this.collectsGridView);
             this.Controls.Add(this.uiScrollingText1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CollectsPage";
-            this.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
+            this.Padding = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.Text = "我的收藏";
             ((System.ComponentModel.ISupportInitialize)(this.collectsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.poemBindingSource)).EndInit();

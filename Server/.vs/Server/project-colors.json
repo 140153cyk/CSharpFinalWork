@@ -5,7 +5,17 @@
       "ProjectGuid": "6beebbdb-de1b-4cbd-bdbf-44871a0c1562",
       "DisplayName": "PoemDataService",
       "ColorIndex": 0
+    },
+    "89baded6-d7da-4aed-b39a-d9f623620e28": {
+      "ProjectGuid": "89baded6-d7da-4aed-b39a-d9f623620e28",
+      "DisplayName": "GameServer",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "杂项文件",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
