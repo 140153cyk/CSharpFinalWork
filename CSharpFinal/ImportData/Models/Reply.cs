@@ -11,5 +11,6 @@ namespace Models
         public string Content { get; set; }
         public DateTime Created { get; set; }
         public int prase { get; set; }
+        public int commentId { get; set; }
     }
 }

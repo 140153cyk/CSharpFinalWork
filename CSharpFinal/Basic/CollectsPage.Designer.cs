@@ -52,7 +52,7 @@ namespace Basic
             this.uiScrollingText1.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiScrollingText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiScrollingText1.Location = new System.Drawing.Point(0, 12);
-            this.uiScrollingText1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uiScrollingText1.Margin = new System.Windows.Forms.Padding(2);
             this.uiScrollingText1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiScrollingText1.Name = "uiScrollingText1";
             this.uiScrollingText1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
@@ -95,9 +95,9 @@ namespace Basic
             this.collectsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.collectsGridView.EnableHeadersVisualStyles = false;
             this.collectsGridView.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.collectsGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(169)))), ((int)(((byte)(69)))));
+            this.collectsGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.collectsGridView.Location = new System.Drawing.Point(0, 103);
-            this.collectsGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.collectsGridView.Margin = new System.Windows.Forms.Padding(2);
             this.collectsGridView.Name = "collectsGridView";
             this.collectsGridView.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -171,7 +171,7 @@ namespace Basic
             this.ClientSize = new System.Drawing.Size(786, 494);
             this.Controls.Add(this.collectsGridView);
             this.Controls.Add(this.uiScrollingText1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CollectsPage";
             this.Padding = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.Text = "我的收藏";

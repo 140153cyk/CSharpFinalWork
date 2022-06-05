@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zl\\source\\repos\\CSharpFinalWork\\PoemDataService\\PoemDataService\\PoemDataService.csproj": {}
+    "C:\\Users\\zl\\source\\repos\\CSharpFinalWork\\PoemDataService\\POemDataService\\PoemDataService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zl\\source\\repos\\CSharpFinalWork\\PoemDataService\\PoemDataService\\PoemDataService.csproj": {
+    "C:\\Users\\zl\\source\\repos\\CSharpFinalWork\\PoemDataService\\POemDataService\\PoemDataService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zl\\source\\repos\\CSharpFinalWork\\PoemDataService\\PoemDataService\\PoemDataService.csproj",
+        "projectUniqueName": "C:\\Users\\zl\\source\\repos\\CSharpFinalWork\\PoemDataService\\POemDataService\\PoemDataService.csproj",
         "projectName": "PoemDataService",
-        "projectPath": "C:\\Users\\zl\\source\\repos\\CSharpFinalWork\\PoemDataService\\PoemDataService\\PoemDataService.csproj",
+        "projectPath": "C:\\Users\\zl\\source\\repos\\CSharpFinalWork\\PoemDataService\\POemDataService\\PoemDataService.csproj",
         "packagesPath": "C:\\Users\\zl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zl\\source\\repos\\CSharpFinalWork\\PoemDataService\\PoemDataService\\obj\\",
+        "outputPath": "C:\\Users\\zl\\source\\repos\\CSharpFinalWork\\PoemDataService\\POemDataService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

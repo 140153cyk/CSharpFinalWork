@@ -22,17 +22,19 @@ namespace Basic
 
       public string Account { get; set; }
       public int poemId { get; set; }
+      public DateTime created { get; set; }
       public newComment(string account, int poemId)
       {
 
         this.Account = account;
         this.poemId = poemId;
+        this.created = DateTime.Now;
       }
       public override string ToString()
 
       {
 
-        return $" {Account}:{poemId}";
+        return $" {Account}:{poemId}:{created}";
 
       }
     }

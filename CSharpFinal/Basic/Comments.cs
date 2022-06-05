@@ -20,7 +20,27 @@ namespace Basic
           private HttpClient client;
           private string account;
           private int poemId;
-          
+    public class newComment
+    {
+
+      public string Account { get; set; }
+      public int poemId { get; set; }
+      public DateTime created { get; set; }
+      public newComment(string account, int poemId)
+      {
+
+        this.Account = account;
+        this.poemId = poemId;
+        this.created = DateTime.Now;
+      }
+      public override string ToString()
+
+      {
+
+        return $" {Account}:{poemId}:{created}";
+
+      }
+    }
     public Comments(string account,int id)
         {
             InitializeComponent();
@@ -68,8 +88,12 @@ namespace Basic
 
     private void uiButton2_Click(object sender, EventArgs e)
     {
-      PostComment postComment = new PostComment(account,poemId);
-      postComment.Show();
+      var myComment = new newComment(account, poemId);
+      var json = JsonConvert.SerializeObject(myComment);
+      HttpContent data = new StringContent(json);
+      data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+      var task = client.PostAsync("https://localhost:5001/api/comment", data);
+      getComments(poemId);
     }
 
     private void commentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
