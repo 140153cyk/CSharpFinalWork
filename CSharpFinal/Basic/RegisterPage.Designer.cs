@@ -82,22 +82,12 @@ namespace Basic
             // 
             this.RegisterBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegisterBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RegisterBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.RegisterBtn.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.RegisterBtn.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.RegisterBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.RegisterBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.RegisterBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.RegisterBtn.Location = new System.Drawing.Point(100, 20);
             this.RegisterBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Radius = 1;
-            this.RegisterBtn.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.RegisterBtn.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.RegisterBtn.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.RegisterBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.RegisterBtn.Size = new System.Drawing.Size(494, 80);
-            this.RegisterBtn.Style = Sunny.UI.UIStyle.Orange;
             this.RegisterBtn.TabIndex = 0;
             this.RegisterBtn.Text = "注册";
             this.RegisterBtn.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -117,25 +107,15 @@ namespace Basic
             // 
             // AccountText
             // 
-            this.AccountText.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.AccountText.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.AccountText.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.AccountText.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.AccountText.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.AccountText.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.AccountText.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.AccountText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AccountText.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.AccountText.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.AccountText.Location = new System.Drawing.Point(200, 20);
             this.AccountText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AccountText.MinimumSize = new System.Drawing.Size(1, 16);
             this.AccountText.Name = "AccountText";
-            this.AccountText.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.AccountText.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.AccountText.ShowText = false;
             this.AccountText.Size = new System.Drawing.Size(474, 60);
-            this.AccountText.Style = Sunny.UI.UIStyle.Orange;
             this.AccountText.TabIndex = 1;
             this.AccountText.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.AccountText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -165,26 +145,16 @@ namespace Basic
             // 
             // PasswordText
             // 
-            this.PasswordText.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.PasswordText.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.PasswordText.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.PasswordText.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.PasswordText.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.PasswordText.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.PasswordText.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.PasswordText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PasswordText.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.PasswordText.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.PasswordText.Location = new System.Drawing.Point(200, 20);
             this.PasswordText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PasswordText.MinimumSize = new System.Drawing.Size(1, 16);
             this.PasswordText.Name = "PasswordText";
             this.PasswordText.PasswordChar = '*';
-            this.PasswordText.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.PasswordText.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.PasswordText.ShowText = false;
             this.PasswordText.Size = new System.Drawing.Size(474, 60);
-            this.PasswordText.Style = Sunny.UI.UIStyle.Orange;
             this.PasswordText.TabIndex = 1;
             this.PasswordText.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.PasswordText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -214,26 +184,16 @@ namespace Basic
             // 
             // ConfrimPas
             // 
-            this.ConfrimPas.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.ConfrimPas.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.ConfrimPas.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.ConfrimPas.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.ConfrimPas.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.ConfrimPas.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.ConfrimPas.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ConfrimPas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ConfrimPas.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.ConfrimPas.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ConfrimPas.Location = new System.Drawing.Point(200, 20);
             this.ConfrimPas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ConfrimPas.MinimumSize = new System.Drawing.Size(1, 16);
             this.ConfrimPas.Name = "ConfrimPas";
             this.ConfrimPas.PasswordChar = '*';
-            this.ConfrimPas.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.ConfrimPas.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.ConfrimPas.ShowText = false;
             this.ConfrimPas.Size = new System.Drawing.Size(474, 60);
-            this.ConfrimPas.Style = Sunny.UI.UIStyle.Orange;
             this.ConfrimPas.TabIndex = 1;
             this.ConfrimPas.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.ConfrimPas.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);

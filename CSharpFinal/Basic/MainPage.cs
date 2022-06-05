@@ -92,6 +92,9 @@ namespace Basic
 
         private void openReccommend(object sender, EventArgs e)
         {
+            Finished finished = new Finished(account,recommend.id);
+            HttpContent content = new StringContent(JsonConvert.SerializeObject(finished),Encoding.UTF8,"application/json");
+            client.PostAsync(baseUrl + "/finished", content);
             PoemDetail detail = new PoemDetail(account,recommend);
             detail.Show();
         }

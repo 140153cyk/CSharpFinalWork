@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\PoemDataService\\GameServer\\GameServer.csproj",
+      "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\Server\\GameServer\\GameServer.csproj",
       "projectName": "GameServer",
-      "projectPath": "D:\\c#大作业\\C-FinalWork\\PoemDataService\\GameServer\\GameServer.csproj",
+      "projectPath": "D:\\c#大作业\\C-FinalWork\\Server\\GameServer\\GameServer.csproj",
       "packagesPath": "C:\\Users\\14025\\.nuget\\packages\\",
-      "outputPath": "D:\\c#大作业\\C-FinalWork\\PoemDataService\\GameServer\\obj\\",
+      "outputPath": "D:\\c#大作业\\C-FinalWork\\Server\\GameServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -52,10 +52,9 @@ namespace Basic
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-            var task= client.GetStringAsync(baseUrl + "/" + account);
-            UserInfo info = JsonConvert.DeserializeObject<UserInfo>(task.Result);
-            if (info == null || info.password != password) return false;
-            return true;
+            var task= client.GetStringAsync(baseUrl + "?account=" + account+"&password="+password);
+            bool  flag = JsonConvert.DeserializeObject<Boolean>(task.Result);
+            return flag;
         }
 
         private void uiButton2_Click(object sender, EventArgs e)

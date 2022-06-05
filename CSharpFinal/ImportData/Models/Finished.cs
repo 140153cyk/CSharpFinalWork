@@ -10,6 +10,12 @@ namespace Models
     {
         public int id { get; set; }
         public string account { get; set; }
-        public int PoemId { get; set; } 
+        public int PoemId { get; set; }
+
+        public Finished(string account, int poemId)
+        {
+            this.account = account;
+            PoemId = poemId;
+        }
     }
 }

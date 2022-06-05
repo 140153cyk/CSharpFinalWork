@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vv/VwrH6+z7n4NEVqeKT6ZxEgf5ty/kRNZWEeznag2fQia5q+FVl9vvMLlSZuss66xSdpSBgvgWeAMlKXw2O7A==",
+  "dgSpecHash": "XTrcCLvgqnaUSfF3U4X5CCv7EhWZ56gaaK10rP32bdFLJ8sly2xBXeDtFcfuFjsHaOopevEbCfd87WBwNcYXtg==",
   "success": true,
-  "projectFilePath": "D:\\c#大作业\\C-FinalWork\\PoemDataService\\GameServer\\GameServer.csproj",
+  "projectFilePath": "D:\\c#大作业\\C-FinalWork\\Server\\GameServer\\GameServer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

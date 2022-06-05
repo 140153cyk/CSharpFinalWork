@@ -38,20 +38,20 @@ namespace PoemDataService.Controllers
             
         }
         [HttpGet]
-        public ActionResult<List<Poem>>  GetPoem(string title,string author,string content,int skip,int take)
+        public ActionResult<List<Poem>>  SearchPoem(string title,string author,string content,int skip,int take)
         {
             IQueryable<Poem> query = db.Poems;
             if (title != null)
             {
                 query = query.Where(p =>
-                  p.title == title
-                );
+                  p.title.Contains(title)
+                ).OrderBy(p=>p.title.Length);
             }
             if (author != null)
             {
                 query = query.Where(p =>
-                  p.author == author
-                );
+                  p.author.Contains(author)
+                ).OrderBy(p=>p.author.Length);
             }
             if (content != null)
             {
