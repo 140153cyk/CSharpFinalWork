@@ -10,13 +10,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Client;
 
 
 namespace GameWinForm
 {
     public partial class DrawAndGuess : Form
     {
-
+        DrawAndGuessClient client;
+        public BindingList<PlayerAndScore> Players { set; get; }
+        //玩家信息
+        public string Answer { set; get; } = "";
+        //画画相关的属性
         public Color PenColor { set; get; } = Color.Black;
         public int SelectPenOrEraser { set; get; } = 0;
         public Bitmap Bitmap { set; get; }
@@ -24,14 +29,30 @@ namespace GameWinForm
         public int count { set; get; }
         public ConcurrentQueue<Line> Lines { set; get; } = new ConcurrentQueue<Line>();
         private bool CanMove { set; get; }
-        public List<PlayerAndScore> playerAndScores { set; get; } = new List<PlayerAndScore>();
-        public DrawAndGuess()
+
+        public DrawAndGuess(DrawAndGuessClient c, List<string> players)
         {
+            client = c;
+            client.StartReceive();
+
+            //初始化玩家和得分列表
+            Players = new BindingList<PlayerAndScore>();
+            foreach (string player in players)
+            {
+                Players.Add(new PlayerAndScore(player,0));
+            }
+
             InitializeComponent();
+            //设置界面初始状态
+
+            //数据绑定
+            this.textBoxSend.DataBindings.Add("Text", this, "Answer");
+            this.uiDataGridViewScore.DataSource = Players;
+
             ColorPicker.Value = Color.Black;
             RadioButtonGroupPen.SelectedIndex = 0;
             CanMove = false;
-            Bitmap = new Bitmap(pictureBoxDrawing.Width,pictureBoxDrawing.Height);
+            Bitmap = new Bitmap(pictureBoxDrawing.Width, pictureBoxDrawing.Height);
             pictureBoxDrawing.Image = Bitmap;
         }
 
@@ -144,5 +165,10 @@ namespace GameWinForm
     {
         public string Name { set; get; }
         public int Score { set; get; }
+        public PlayerAndScore(string name, int score)
+        {
+            Name = name;
+            Score = score;
+        }
     }
 }

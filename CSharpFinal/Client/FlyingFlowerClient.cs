@@ -14,6 +14,12 @@ namespace Client
 
         //将玩家状态修改为淘汰，s为“{玩家姓名}”
         public Action<string> KnockOutPlayer = (s) => { };
+        //显示当前玩家的回答
+        public Action<string> ShowAnswer = (s) => { };
+        //当前玩家s回答正确
+        public Action<string> AnswerRight = (s) => { };
+        //当前玩家s回答错误
+        public Action<string> AnswerWrong = (s) => { };
         public string KeyWord { get; set; } = "";
 
 
@@ -73,11 +79,11 @@ namespace Client
                 //诗句且有关键字
                 if (IsPoem(words) && Regex.IsMatch(words, @"\w*" + KeyWord + @"\w*"))
                 {
-                    ShowMessage("系统 ： 回答正确");
+                    AnswerRight(speaker);
                 }
                 else
                 {
-                    ShowMessage("系统 ： 回答错误," + speaker + "淘汰");
+                    AnswerWrong(speaker);
                     PlayersInGame.Remove(speaker);
                     KnockOutPlayer(speaker);
                 }
@@ -164,9 +170,10 @@ namespace Client
                     if (type == 7)
                     {
                         message=Encoding.UTF8.GetString(buffer, 0, r - 1);
-                        ShowMessage(message);
+                        ShowAnswer(message);
                         Match match = regex.Match(message);
                         string speaker = match.Value;
+                        match = match.NextMatch();
                         match = match.NextMatch();
                         string words = match.Value;
                         Judge(speaker, words);
@@ -191,7 +198,7 @@ namespace Client
                         }
                         else
                         {
-                            ShowMessage("系统 ： 轮到"+message+"了");
+                            NotMyTurn(message);
                         }
                     }
                 }

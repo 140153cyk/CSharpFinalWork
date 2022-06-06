@@ -68,6 +68,11 @@ namespace Client
         /// </summary>
         public Action MyTurn = () => { };
 
+        /// <summary>
+        /// 不是自己的回合
+        /// </summary>
+        public Action<string> NotMyTurn = (str) => { };
+
         protected Regex regex = new Regex(@"\w+");
         /// <summary>
         /// 房间ID
