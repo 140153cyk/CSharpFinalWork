@@ -88,11 +88,19 @@ namespace Basic
 
     private void uiButton1_Click(object sender, EventArgs e)
     {
-      var myReply = new newReply (account, uiTextBox1.Text,commentId);
-      var json = JsonConvert.SerializeObject(myReply);
-      HttpContent data = new StringContent(json);
-      data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-      var task = client.PostAsync("https://localhost:5001/api/reply", data);
+      if (uiTextBox1.Text == "")
+      {
+        MessageBox.Show("回复不能为空！");
+      }
+      else
+      {
+        var myReply = new newReply(account, uiTextBox1.Text, commentId);
+        var json = JsonConvert.SerializeObject(myReply);
+        HttpContent data = new StringContent(json);
+        data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+        var task = client.PostAsync("https://localhost:5001/api/reply", data);
+        HttpGet();
+      }
       HttpGet();
     }
 

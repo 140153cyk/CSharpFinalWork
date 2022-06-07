@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "XTrcCLvgqnaUSfF3U4X5CCv7EhWZ56gaaK10rP32bdFLJ8sly2xBXeDtFcfuFjsHaOopevEbCfd87WBwNcYXtg==",
+  "dgSpecHash": "WUNLqRTh6SeZeZWKPGAZmq6dGupXG3FnUOO2opquOxGnPTGMsULIrYMhat97EhkOZ6A2taSLBJ04DaldtTYSEg==",
   "success": true,
-  "projectFilePath": "D:\\c#大作业\\C-FinalWork\\Server\\GameServer\\GameServer.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\Server\\GameServer\\GameServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zl\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -23,23 +23,26 @@ namespace Basic
     public class newComment
     {
 
-      public string Account { get; set; }
+      public string userAccount { get; set; }
       public int poemId { get; set; }
+      public string Detail { get; set; }
       public DateTime created { get; set; }
-      public newComment(string account, int poemId)
+      public newComment(string account, int poemId, string detail)
       {
 
-        this.Account = account;
+        this.userAccount = account;
         this.poemId = poemId;
+        this.Detail = detail;
         this.created = DateTime.Now;
       }
       public override string ToString()
 
       {
 
-        return $" {Account}:{poemId}:{created}";
+        return $" {userAccount}:{poemId}:{created}:{Detail}";
 
       }
+   
     }
     public Comments(string account,int id)
         {
@@ -88,11 +91,19 @@ namespace Basic
 
     private void uiButton2_Click(object sender, EventArgs e)
     {
-      var myComment = new newComment(account, poemId);
-      var json = JsonConvert.SerializeObject(myComment);
-      HttpContent data = new StringContent(json);
-      data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-      var task = client.PostAsync("https://localhost:5001/api/comment", data);
+      if (uiTextBox1.Text == "")
+      {
+        MessageBox.Show("评论不能为空！");
+      }
+      else
+      {
+        var myComment = new newComment(account, poemId, uiTextBox1.Text);
+        var json = JsonConvert.SerializeObject(myComment);
+        HttpContent data = new StringContent(json);
+        data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+        var task = client.PostAsync("https://localhost:5001/api/comment", data);
+        getComments(poemId);
+      }
       getComments(poemId);
     }
 

@@ -138,6 +138,7 @@
     <EmbeddedResource Include="Robot.resx">
       <DependentUpon>Robot.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Models.Comment1.datasource" />
     <None Include="Properties\DataSources\Models.Poem.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
