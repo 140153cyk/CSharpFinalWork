@@ -67,7 +67,7 @@ namespace Server
             }
             player.Send(ConvertMessageForServer(2, playerList));
             Players.TryAdd(player, playerName);
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
             SendMessage(ConvertMessageForServer(3, playerName + " 加入房间"));
         }
 

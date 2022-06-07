@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 
@@ -12,7 +11,7 @@ namespace Server
     public class FlyingFlowerRoom : BasicRoom
     {
         private string currentKeyWord;
-        private readonly string[] KeyWords = { "月", "酒", "花", "风", "春", "夏", "秋", "冬", "夜", "叶" };
+        private readonly string[] KeyWords = { "月", "酒", "花", "风", "春", "秋", "冬", "夜", "叶" };
         private Socket currentPlayer;
 
         enum PlayerState
@@ -43,6 +42,8 @@ namespace Server
             {
                 playerState = PlayerState.noResponse;
                 ReadyPlayers.TryDequeue(out currentPlayer);
+
+                Thread.Sleep(3000);
                 SendMessage(ConvertMessageForServer(10, Players[currentPlayer]));
                 //等待玩家反应
                 while (playerState == PlayerState.noResponse) ;

@@ -119,6 +119,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RoomForm.resx">
       <DependentUpon>RoomForm.cs</DependentUpon>
@@ -130,6 +131,7 @@
       <DependentUpon>WaitingRoom.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\GameWinForm.RemainPlayer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,6 +150,39 @@
       <Project>{09e336b5-37ed-4ca8-a13b-2cc69df981e4}</Project>
       <Name>Client</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Moon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flower.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spring.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Autumn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wind.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Night.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Leaf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
