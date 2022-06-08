@@ -19,7 +19,7 @@ namespace Client
         /// <summary>
         /// 游戏结束，进行结算，s是胜利者名字
         /// </summary>
-        public Action<string> GameOver = (s)=>{};
+        public Action<string> GameOver = (s) => { };
 
         protected List<string> PlayersInRoom = new List<string>();
 
@@ -31,38 +31,43 @@ namespace Client
         /// <summary>
         /// 在发言框中发言
         /// </summary>
-        public Action<string> ShowMessage = (s) => {};
+        public Action<string> ShowMessage = (s) => { };
 
         /// <summary>
         /// 新建游戏窗口，并且展示所有玩家，s是玩家列表，格式为“{玩家名字} {准备状态}\n”
         /// </summary>
-        public Action<string> CreateFormAndShowPlayerState = (s) => {};
+        public Action<string> CreateFormAndShowPlayerState = (s) => { };
 
         /// <summary>
         /// 刷新房间列表,s格式为“{房间ID} {房间名} {游玩状态} {当前人数} {最大游玩人数} ”
         /// </summary>
-        public Action<string> ShowRooms = (s) => {};
+        public Action<string> ShowRooms = (s) => { };
 
         /// <summary>
         /// 展示画
         /// </summary>
-        public Action<string> ShowPaint = (s) => {};
+        public Action<string> ShowPaint = (s) => { };
 
         /// <summary>
         /// 房间中新加入玩家,s格式为“{玩家名字}”
         /// </summary>
-        public Action<string> PlayerGetIn = (s) => {};
+        public Action<string> PlayerGetIn = (s) => { };
 
         /// <summary>
         /// 玩家准备，s格式为“{玩家名字}”
         /// </summary>
-        public Action<string> PlayerGetReady = (s) => {};
+        public Action<string> PlayerGetReady = (s) => { };
 
         /// <summary>
         /// 将玩家从列表中删除，s为“{退出者姓名}”
         /// </summary>
-        public Action<string> PlayerQuitRoom = (s) => {};
-        
+        public Action<string> PlayerQuitRoom = (s) => { };
+
+        /// <summary>
+        /// ***调试用
+        /// </summary>
+        public Action<string> ShowWarning=(s) =>{};
+
         /// <summary>
         /// 展示轮到自己（画画/飞花）的界面，该函数还负责倒计时，飞花令15秒，画画1分钟。在飞花令中，如果计时结束，应该调用其TellServerAnswerWrong函数。
         /// </summary>

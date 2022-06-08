@@ -114,6 +114,7 @@ namespace Server
                     }
                     byte type = buffer[0];
                     buffer = RemoveFirstByte(buffer);
+                    Console.WriteLine("type : "+type.ToString());
                     //处理新建房间的请求,消息体格式为“{房间类型} {房间名字} {最大游玩数量} {玩家名字}”
                     if (type == 0)
                     {
@@ -163,7 +164,7 @@ namespace Server
                         Match m = regex.Match(message);
                         string RoomID = m.Value;
                         BasicRoom room = GetConcreteRoom(Int32.Parse(RoomID));
-                        if (room.PlayerGetReady(client)) break;
+                        room.PlayerGetReady(client);
                     }
                     //玩家发送了文字消息,消息体格式为“{房间ID} {玩家发的信息}”
                     if (type == 10)

@@ -88,6 +88,11 @@ namespace GameWinForm
                 OnShowWaitingForm(str);
             };
 
+            //***
+            client.ShowWarning = (s) =>
+            {
+                MessageBox.Show(s);
+            };
         }
 
         private void uiButtonCreate_Click(object sender, EventArgs e)
