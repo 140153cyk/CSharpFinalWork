@@ -33,7 +33,7 @@ namespace Server
 
         public override void StartGame()
         {
-            Thread.Sleep(3000);
+            Thread.Sleep(1000);
             Random random = new Random();
             currentKeyWord = KeyWords[random.Next(0, 10)];
             IsPlaying = true;

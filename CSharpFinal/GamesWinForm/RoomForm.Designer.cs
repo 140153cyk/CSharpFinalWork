@@ -382,7 +382,7 @@ namespace GameWinForm
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(782, 453);
             this.Name = "RoomForm";
-            this.Text = "飞花令";
+            this.Text = "  ";
             this.uiPanelWindow.ResumeLayout(false);
             this.uiPanelRoom.ResumeLayout(false);
             this.uiPanelRoomInfo.ResumeLayout(false);

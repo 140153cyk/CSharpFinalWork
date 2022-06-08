@@ -19,6 +19,7 @@ namespace GameWinForm
         public string KeyWord { set; get; } = "月";
         public string Answer { set; get; }
         public int Time { set; get; } = 15;
+        public bool isMyTurn = false;
         public FlyFlowerForm(FlyingFlowerClient c, List<string> players)
         {
             client = c;
@@ -37,6 +38,7 @@ namespace GameWinForm
             //数据绑定
             this.uiTextBoxAnswer.DataBindings.Add("Text", this, "Answer");
             this.uiDataGridViewPlayers.DataSource = PlayersRemain;
+            
 
             //接收关键字，并且设置游戏背景
             while (client.KeyWord == "") { }
@@ -46,6 +48,7 @@ namespace GameWinForm
             //轮到自己
             client.MyTurn = () =>
             {
+                isMyTurn = true;
                 //设置作答人，设置按钮可以使用，设置开始计时，设置“对错图片”不可见，清空上一轮的答案
                 if (this.uiLabelAnswerPlayer.InvokeRequired)
                 {
@@ -53,23 +56,20 @@ namespace GameWinForm
                     {
                         this.uiLabelAnswerPlayer.Text = "作答人：你";
                         this.uiButtonSend.Enabled = true;
-                        this.timer.Start();
-                        this.pictureBoxAnswer.Enabled = false;
-                        this.uiLabelAnswer.Text = "";
+                        initTurn();
                     }));
                 }
                 else
                 {
                     this.uiLabelAnswerPlayer.Text = "作答人：你";
                     this.uiButtonSend.Enabled = true;
-                    this.timer.Start();
-                    this.pictureBoxAnswer.Enabled = false;
-                    this.uiLabelAnswer.Text = "";
+                    initTurn();
                 }
             };
             //不是自己的回合
             client.NotMyTurn = (str) =>
             {
+                isMyTurn=false;
                 //设置作答人，设置按钮不可使用，设置开始计时，设置“对错图片”不可见，清空上轮答案
                 if (this.uiLabelAnswerPlayer.InvokeRequired)
                 {
@@ -77,18 +77,14 @@ namespace GameWinForm
                     {
                         this.uiLabelAnswerPlayer.Text = "作答人：" + str;
                         this.uiButtonSend.Enabled = false;
-                        this.timer.Start();
-                        this.pictureBoxAnswer.Enabled = false;
-                        this.uiLabelAnswer.Text = "";
+                        initTurn();
                     }));
                 }
                 else
                 {
                     this.uiLabelAnswerPlayer.Text = "作答人：" + str;
                     this.uiButtonSend.Enabled = false;
-                    this.timer.Start();
-                    this.pictureBoxAnswer.Enabled = false;
-                    this.uiLabelAnswer.Text = "";
+                    initTurn();
                 }
             };
             //淘汰str
@@ -96,37 +92,24 @@ namespace GameWinForm
             {
                 PlayersRemain.Remove(PlayersRemain.FirstOrDefault(Name => Name.Equals(str)));
                 this.uiDataGridViewPlayers.Refresh();
-                if (PlayersRemain.Count > 1) return;
-                //如果剩下的玩家只剩一个：
-                if (this.uiLabelAnswer.InvokeRequired)
-                {
-                    this.Invoke(new Action(delegate ()
-                    {
-                        this.uiLabelAnswer.Text = PlayersRemain.FirstOrDefault().Name + " 胜利";
-                    }));
-                }
-                else
-                {
-                    this.uiLabelAnswer.Text = PlayersRemain.FirstOrDefault().Name + " 胜利";
-                }
             };
             //展示回答
             client.ShowAnswer = (str) =>
             {
                 Regex regex = new Regex(@"\w+");
                 Match match = regex.Match(str);
-                match.NextMatch();
-                match.NextMatch();
                 if (this.uiLabelAnswer.InvokeRequired)
                 {
                     this.Invoke(new Action(delegate ()
                     {
                         this.uiLabelAnswer.Text = match.Value;
+                        this.timer.Stop();
                     }));
                 }
                 else
                 {
                     this.uiLabelAnswer.Text = match.Value;
+                    this.timer.Stop();
                 }
             };
             //回答正确，展示勾的图片
@@ -136,13 +119,11 @@ namespace GameWinForm
                 {
                     this.Invoke(new Action(delegate ()
                     {
-                        this.pictureBoxAnswer.Enabled = true;
                         this.pictureBoxAnswer.Image = global::GamesWinForm.Properties.Resources.correct;
                     }));
                 }
                 else
                 {
-                    this.pictureBoxAnswer.Enabled = true;
                     this.pictureBoxAnswer.Image = global::GamesWinForm.Properties.Resources.correct;
                 }
             };
@@ -161,6 +142,23 @@ namespace GameWinForm
                 {
                     this.pictureBoxAnswer.Enabled = true;
                     this.pictureBoxAnswer.Image = global::GamesWinForm.Properties.Resources.wrong;
+                }
+            };
+            //str获胜
+            client.GameOver = (str) =>
+            {
+                if (this.uiLabelAnswer.InvokeRequired)
+                {
+                    this.Invoke(new Action(delegate ()
+                    {
+                        this.pictureBoxAnswer.Image = null;
+                        this.uiLabelAnswer.Text = str + " 获胜";
+                    }));
+                }
+                else
+                {
+                    this.pictureBoxAnswer.Image = null;
+                    this.uiLabelAnswer.Text = str + " 获胜";
                 }
             };
         }
@@ -205,6 +203,16 @@ namespace GameWinForm
                     break;
             }
         }
+        
+        //每一轮开始时用于初始化界面
+        //初始化计时器、勾/叉、玩家答案
+        private void initTurn()
+        {
+            Time = 15;
+            this.timer.Start();
+            this.pictureBoxAnswer.Image = null;
+            this.uiLabelAnswer.Text = "";
+        }
 
         private void uiButtonSend_Click(object sender, EventArgs e)
         {
@@ -212,7 +220,6 @@ namespace GameWinForm
             //按钮只能用一次。
             this.uiButtonSend.Enabled = false;
             client.SendMessageToServer(Answer);
-            Answer = "";
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -223,8 +230,11 @@ namespace GameWinForm
             if (Time <= 0)
             {
                 this.timer.Stop();
-                this.uiButtonSend.Enabled = false;
-                this.uiButtonSend.PerformClick();
+                /*if (isMyTurn)
+                {
+                    this.uiButtonSend.Enabled = false;
+                    this.uiButtonSend.PerformClick();
+                }*/
             }
         }
 

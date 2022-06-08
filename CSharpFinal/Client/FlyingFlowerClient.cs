@@ -62,11 +62,12 @@ namespace Client
             {
                 PlayersInGame.Add(player);
             }
-            while (PlayersInGame.Count > 0)
+            while (PlayersInGame.Count > 1)
             {
                 //游戏进行中
             }
             IsPlaying=false;
+            Thread.Sleep(1000);
             GameOver(PlayersInGame[0]);
         }
 
@@ -170,12 +171,11 @@ namespace Client
                     if (type == 7)
                     {
                         message=Encoding.UTF8.GetString(buffer, 0, r - 1);
-                        ShowAnswer(message);
                         Match match = regex.Match(message);
                         string speaker = match.Value;
                         match = match.NextMatch();
-                        match = match.NextMatch();
                         string words = match.Value;
+                        ShowAnswer(words);
                         Judge(speaker, words);
                     }
                     //代表游戏开始，信息体格式为“{关键字/诗句}”
@@ -212,9 +212,10 @@ namespace Client
         public override void SendMessageToServer(string s)
         {
             SendMessage(s);
+            Thread.Sleep(1000);
             if (CurrentPlayer != Name) return;
             //飞花令开始了，检测诗句正确性
-            if(IsPoem(s) && Regex.IsMatch(s, @"\w*" + KeyWord + @"\w*"))
+            if (IsPoem(s) && Regex.IsMatch(s, @"\w*" + KeyWord + @"\w*"))
             {
                 TellServerAnswerCorrect();
             }
