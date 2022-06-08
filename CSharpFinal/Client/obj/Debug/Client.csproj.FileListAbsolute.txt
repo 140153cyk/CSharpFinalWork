@@ -6,3 +6,4 @@ D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.GenerateRe
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.exe
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.pdb
+D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.AssemblyReference.cache

@@ -29,6 +29,7 @@ namespace PoemDataService.Controllers
         {
             try
             {
+                if (AlreadyFinished(finished.account,finished.PoemId)) return NoContent();
                 db.Finisheds.Add(finished);
                 db.SaveChanges();
             }
