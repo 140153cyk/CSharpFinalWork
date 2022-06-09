@@ -115,7 +115,7 @@ namespace Client
             try
             {
                 SocketOfClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                IPAddress ip = IPAddress.Parse("127.0.0.1");
+                IPAddress ip = IPAddress.Parse("192.168.43.18");
                 IPEndPoint point = new IPEndPoint(ip, 50000);
                 SocketOfClient.Connect(point);
 

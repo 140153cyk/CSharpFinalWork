@@ -7,3 +7,13 @@ D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.CoreCompil
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.exe
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.pdb
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\obj\Debug\Client.Properties.Resources.resources
+D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\obj\Debug\Client.csproj.GenerateResource.cache
+D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\obj\Debug\Client.exe
+D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\obj\Debug\Client.pdb
+D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\bin\Debug\Client.exe.config
+D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\bin\Debug\Client.exe
+D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\bin\Debug\Client.pdb

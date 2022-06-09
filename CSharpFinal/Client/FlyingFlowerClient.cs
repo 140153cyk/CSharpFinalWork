@@ -12,6 +12,8 @@ namespace Client
     {        
         private List<string> PlayersInGame = new List<string>();
 
+        private List<string> history = new List<string>();
+
         //将玩家状态修改为淘汰，s为“{玩家姓名}”
         public Action<string> KnockOutPlayer = (s) => { };
         //显示当前玩家的回答
@@ -57,6 +59,7 @@ namespace Client
         protected override void StartGame()
         {
             PlayersInGame.Clear();
+            history.Clear();
             IsPlaying =true;
             foreach(var player in PlayersInRoom)
             {
@@ -77,10 +80,11 @@ namespace Client
             //在游戏中，轮到该玩家作答
             if(speaker == CurrentPlayer)
             {
-                //诗句且有关键字
-                if (IsPoem(words) && Regex.IsMatch(words, @"\w*" + KeyWord + @"\w*"))
+                //诗句且有关键字且没有发过
+                if (IsPoem(words) && Regex.IsMatch(words, @"\w*" + KeyWord + @"\w*") && !history.Exists(s => s == words))
                 {
                     AnswerRight(speaker);
+                    history.Add(words);
                 }
                 else
                 {
@@ -93,7 +97,11 @@ namespace Client
 
 
 
-        //***
+        /// <summary>
+        /// 判断是否是诗句
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
         private bool IsPoem(string message)
         {
             return true;
@@ -215,7 +223,7 @@ namespace Client
             Thread.Sleep(1000);
             if (CurrentPlayer != Name) return;
             //飞花令开始了，检测诗句正确性
-            if (IsPoem(s) && Regex.IsMatch(s, @"\w*" + KeyWord + @"\w*"))
+            if (IsPoem(s) && Regex.IsMatch(s, @"\w*" + KeyWord + @"\w*")&&!history.Exists(str=>str == s))
             {
                 TellServerAnswerCorrect();
             }
