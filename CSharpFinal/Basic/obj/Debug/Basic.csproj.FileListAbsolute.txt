@@ -83,3 +83,4 @@ D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\GamesWinForm.exe.config
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\Client.pdb
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\Client.exe.config
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.PoemSquare.resources
+D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\serverIp.xml

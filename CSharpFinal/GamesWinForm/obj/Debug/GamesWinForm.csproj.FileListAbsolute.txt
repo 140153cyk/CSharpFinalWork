@@ -21,3 +21,4 @@ D:\c#大作业\C-FinalWork\CSharpFinal\GamesWinForm\obj\Debug\GamesWinForm.cspro
 D:\c#大作业\C-FinalWork\CSharpFinal\GamesWinForm\obj\Debug\GamesWinForm.exe
 D:\c#大作业\C-FinalWork\CSharpFinal\GamesWinForm\obj\Debug\GamesWinForm.pdb
 D:\c#大作业\C-FinalWork\CSharpFinal\GamesWinForm\bin\Debug\Newtonsoft.Json.dll
+D:\c#大作业\C-FinalWork\CSharpFinal\GamesWinForm\bin\Debug\serverIp.xml

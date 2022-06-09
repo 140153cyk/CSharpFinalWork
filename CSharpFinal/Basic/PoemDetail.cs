@@ -24,7 +24,7 @@ namespace Basic
         public PoemDetail(string account,Poem po)
         {
             XmlDocument serverDoc = new XmlDocument();
-            serverDoc.Load("../../../serverIp.xml");
+            serverDoc.Load("serverIp.xml");
             XmlNode node = serverDoc.SelectSingleNode("serverIp");
             baseUrl = "https://" + node.InnerText + ":5001/api";
             //this.poem = poem;

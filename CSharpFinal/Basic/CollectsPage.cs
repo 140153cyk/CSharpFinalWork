@@ -22,7 +22,7 @@ namespace Basic
         public CollectsPage(string account)
         {
             XmlDocument serverDoc = new XmlDocument();
-            serverDoc.Load("../../../serverIp.xml");
+            serverDoc.Load("serverIp.xml");
             XmlNode node = serverDoc.SelectSingleNode("serverIp");
             baseUrl = "https://" + node.InnerText + ":5001/api";
 

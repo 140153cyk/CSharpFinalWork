@@ -29,7 +29,7 @@ namespace Basic
                 MainPage main = new MainPage(AccountText.Text);
                 main.FormClosed += (x, y) => this.Close();
                 main.Show();
-                this.Visible=false;
+                this.Visible = false;
             }
             else
             {
@@ -42,7 +42,7 @@ namespace Basic
             String account = AccountText.Text;
             String password = PasswordText.Text;
             XmlDocument serverDoc = new XmlDocument();
-            serverDoc.Load("../../../serverIp.xml");
+            serverDoc.Load("serverIp.xml");
             XmlNode node=serverDoc.SelectSingleNode("serverIp");
             string baseUrl = "https://"+node.InnerText+":5001/api/userinfo";
 

@@ -139,7 +139,7 @@ namespace GameWinForm
                 WaitingRoom form = new WaitingRoom(client,RoomID,RoomName,Type,str);
                 this.Hide();
                 form.Show();
-                this.Dispose();
+                form.FormClosing += (x,y)=>this.Show();
             }));
         }
         public void ShowInfoForm(string str)

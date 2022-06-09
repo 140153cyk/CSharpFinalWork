@@ -106,7 +106,7 @@ namespace Client
         public Client(string name)
         {
             XmlDocument serverDoc = new XmlDocument();
-            serverDoc.Load("../../../serverIp.xml");
+            serverDoc.Load("serverIp.xml");
             XmlNode node = serverDoc.SelectSingleNode("serverIp");
             serverIP = node.InnerText;
             Name = name;

@@ -176,5 +176,10 @@
       <Name>ImportData</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="serverIp.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
