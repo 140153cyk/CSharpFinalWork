@@ -1,9 +1,0 @@
-D:\c#大作业\C-FinalWork\CSharpFinal\Client\bin\Debug\Client.exe.config
-D:\c#大作业\C-FinalWork\CSharpFinal\Client\bin\Debug\Client.exe
-D:\c#大作业\C-FinalWork\CSharpFinal\Client\bin\Debug\Client.pdb
-D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.Properties.Resources.resources
-D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.GenerateResource.cache
-D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
-D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.exe
-D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.pdb
-D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.AssemblyReference.cache
