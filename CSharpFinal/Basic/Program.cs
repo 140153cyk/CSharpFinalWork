@@ -16,7 +16,7 @@ namespace Basic
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Comments("11",1));
+            Application.Run(new LoginPage());
         }
     }
 }

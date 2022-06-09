@@ -12,6 +12,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+
 namespace Basic
 {
   
@@ -22,6 +24,8 @@ namespace Basic
     private int commentId;
     private int poemId;
     private string name;
+    private string baseUrl;
+    private XmlNode Node;
     public class newReply
     {
 
@@ -29,6 +33,7 @@ namespace Basic
       public int CommentId { get; set; }
       public string Content { get; set; }
       public DateTime created { get; set; }
+      
       public newReply(string account,string content, int commentId)
       {
 
@@ -48,6 +53,9 @@ namespace Basic
     public Replys(string account,int Id,string name,int poemId)
     {
       InitializeComponent();
+      XmlDocument serverDoc = new XmlDocument();
+      serverDoc.Load("../../../serverIp.xml");
+      Node = serverDoc.SelectSingleNode("serverIp");
       HttpClientHandler handler = new HttpClientHandler();
       handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
       client = new HttpClient(handler);
@@ -63,7 +71,7 @@ namespace Basic
     public void HttpGet()
     {
       Comment a = new Comment();
-      var task = client.GetStringAsync("https://localhost:5001/api/comment?poemId=" + poemId);
+      var task = client.GetStringAsync("https://"+Node.InnerText+":5001/api/comment?poemId=" + poemId);
       var model =
           JsonConvert.DeserializeObject<List<Comment>>(task.Result);
       var query = from s1 in model
@@ -98,7 +106,7 @@ namespace Basic
         var json = JsonConvert.SerializeObject(myReply);
         HttpContent data = new StringContent(json);
         data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-        var task = client.PostAsync("https://localhost:5001/api/reply", data);
+        var task = client.PostAsync("https://"+Node.InnerText+":5001/api/reply", data);
         HttpGet();
       }
       HttpGet();
