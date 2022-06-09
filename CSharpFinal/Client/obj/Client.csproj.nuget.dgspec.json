@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Client\\Client.csproj": {}
+  },
+  "projects": {
+    "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Client\\Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Client\\Client.csproj",
+        "projectName": "Client",
+        "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Client\\Client.csproj",
+        "packagesPath": "C:\\Users\\14025\\.nuget\\packages\\",
+        "outputPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\14025\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

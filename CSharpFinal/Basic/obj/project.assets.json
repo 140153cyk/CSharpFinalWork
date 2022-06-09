@@ -236,6 +236,10 @@
       },
       "Client/1.0.0": {
         "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
         "compile": {
           "bin/placeholder/Client.dll": {}
         },
@@ -508,6 +512,10 @@
       },
       "Client/1.0.0": {
         "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
         "compile": {
           "bin/placeholder/Client.dll": {}
         },
@@ -780,6 +788,10 @@
       },
       "Client/1.0.0": {
         "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
         "compile": {
           "bin/placeholder/Client.dll": {}
         },
@@ -1052,6 +1064,10 @@
       },
       "Client/1.0.0": {
         "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
         "compile": {
           "bin/placeholder/Client.dll": {}
         },

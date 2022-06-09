@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -24,10 +26,17 @@ namespace Client
         public Action<string> AnswerWrong = (s) => { };
         public string KeyWord { get; set; } = "";
 
+        private HttpClient dataClient;
+
 
         public FlyingFlowerClient(string name) : base(name)
         {
-            
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
+            dataClient = new HttpClient(handler);
+            dataClient.DefaultRequestHeaders.Accept.Clear();
+            dataClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
         }
 
         public override void CreateRoom(string roomName, int MaxMem)
@@ -104,7 +113,9 @@ namespace Client
         /// <returns></returns>
         private bool IsPoem(string message)
         {
-            return true;
+            var task = dataClient.GetStringAsync("https://"+base.serverIP+":5001/poem/exists?text="+message);
+            return JsonConvert.DeserializeObject<Boolean>(task.Result);
+
         }
         
         protected override void Receive()

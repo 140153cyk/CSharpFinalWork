@@ -11,11 +11,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Xml;
 
 namespace Client
 {
     abstract public class Client
     {
+        public string serverIP { get; set; }
         /// <summary>
         /// 游戏结束，进行结算，s是胜利者名字
         /// </summary>
@@ -103,6 +105,10 @@ namespace Client
         protected Socket SocketOfClient { get; set; }
         public Client(string name)
         {
+            XmlDocument serverDoc = new XmlDocument();
+            serverDoc.Load("../../../serverIp.xml");
+            XmlNode node = serverDoc.SelectSingleNode("serverIp");
+            serverIP = node.InnerText;
             Name = name;
             IsPlaying = false;
             ConnectToServer();
@@ -115,7 +121,7 @@ namespace Client
             try
             {
                 SocketOfClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                IPAddress ip = IPAddress.Parse("192.168.43.18");
+                IPAddress ip = IPAddress.Parse(serverIP);
                 IPEndPoint point = new IPEndPoint(ip, 50000);
                 SocketOfClient.Connect(point);
 

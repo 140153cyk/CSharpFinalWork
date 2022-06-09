@@ -17,3 +17,5 @@ D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\o
 D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\bin\Debug\Client.exe.config
 D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\bin\Debug\Client.exe
 D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\bin\Debug\Client.pdb
+D:\c#大作业\C-FinalWork\CSharpFinal\Client\bin\Debug\Newtonsoft.Json.dll
+D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.CopyComplete
