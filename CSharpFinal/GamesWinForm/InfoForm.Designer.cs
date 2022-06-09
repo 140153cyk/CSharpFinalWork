@@ -39,11 +39,16 @@ namespace GameWinForm
             // 
             this.uiPanelWindow.Controls.Add(this.uiLabelInfo);
             this.uiPanelWindow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiPanelWindow.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.uiPanelWindow.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanelWindow.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiPanelWindow.Location = new System.Drawing.Point(0, 0);
-            this.uiPanelWindow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uiPanelWindow.Margin = new System.Windows.Forms.Padding(2);
+            this.uiPanelWindow.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanelWindow.Name = "uiPanelWindow";
+            this.uiPanelWindow.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiPanelWindow.Size = new System.Drawing.Size(284, 161);
+            this.uiPanelWindow.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanelWindow.TabIndex = 0;
             this.uiPanelWindow.Text = null;
             this.uiPanelWindow.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,6 +61,7 @@ namespace GameWinForm
             this.uiLabelInfo.Location = new System.Drawing.Point(24, 50);
             this.uiLabelInfo.Name = "uiLabelInfo";
             this.uiLabelInfo.Size = new System.Drawing.Size(239, 70);
+            this.uiLabelInfo.Style = Sunny.UI.UIStyle.Orange;
             this.uiLabelInfo.TabIndex = 0;
             this.uiLabelInfo.Text = "请输入房间名";
             this.uiLabelInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
