@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[8.0.29, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "SunnyUI": {
               "target": "Package",
               "version": "[3.1.9, )"

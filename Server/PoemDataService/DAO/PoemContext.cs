@@ -28,6 +28,8 @@ namespace PoemDataService.DAO
 
         public DbSet<Reply> Replies { get; set; }//所有的二级评论
 
+        public DbSet<GuessPara> GuessParas { get; set; }//你画我猜的题库
+
      
     }
 }

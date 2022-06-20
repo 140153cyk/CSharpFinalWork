@@ -1534,28 +1534,29 @@
       "ImportData >= 1.0.0",
       "MySql.Data >= 8.0.29",
       "MySql.Data.EntityFramework >= 8.0.29",
+      "Newtonsoft.Json >= 13.0.1",
       "SunnyUI >= 3.1.9"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zl\\.nuget\\packages\\": {},
+    "C:\\Users\\14025\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\Basic\\Basic.csproj",
+      "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Basic\\Basic.csproj",
       "projectName": "Basic",
-      "projectPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\Basic\\Basic.csproj",
-      "packagesPath": "C:\\Users\\zl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\Basic\\obj\\",
+      "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Basic\\Basic.csproj",
+      "packagesPath": "C:\\Users\\14025\\.nuget\\packages\\",
+      "outputPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\Basic\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\zl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\14025\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1569,11 +1570,11 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\GamesWinForm\\GamesWinForm.csproj": {
-              "projectPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\GamesWinForm\\GamesWinForm.csproj"
+            "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\GamesWinForm\\GamesWinForm.csproj": {
+              "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\GamesWinForm\\GamesWinForm.csproj"
             },
-            "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
-              "projectPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\CSharpFinal\\ImportData\\ImportData.csproj"
+            "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj": {
+              "projectPath": "D:\\c#大作业\\C-FinalWork\\CSharpFinal\\ImportData\\ImportData.csproj"
             }
           }
         }
@@ -1593,6 +1594,10 @@
           "MySql.Data.EntityFramework": {
             "target": "Package",
             "version": "[8.0.29, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
           },
           "SunnyUI": {
             "target": "Package",

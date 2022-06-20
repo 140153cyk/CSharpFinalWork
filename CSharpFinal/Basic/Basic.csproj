@@ -163,6 +163,9 @@
     <PackageReference Include="MySql.Data.EntityFramework">
       <Version>8.0.29</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
     <PackageReference Include="SunnyUI">
       <Version>3.1.9</Version>
     </PackageReference>

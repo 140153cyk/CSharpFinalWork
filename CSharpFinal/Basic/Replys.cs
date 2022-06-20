@@ -54,7 +54,7 @@ namespace Basic
     {
       InitializeComponent();
       XmlDocument serverDoc = new XmlDocument();
-      serverDoc.Load("../../../serverIp.xml");
+      serverDoc.Load("serverIp.xml");
       Node = serverDoc.SelectSingleNode("serverIp");
       HttpClientHandler handler = new HttpClientHandler();
       handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;

@@ -957,23 +957,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zl\\.nuget\\packages\\": {},
+    "C:\\Users\\14025\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\Server\\PoemDataService\\PoemDataService.csproj",
+      "projectUniqueName": "D:\\c#大作业\\C-FinalWork\\Server\\PoemDataService\\PoemDataService.csproj",
       "projectName": "PoemDataService",
-      "projectPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\Server\\PoemDataService\\PoemDataService.csproj",
-      "packagesPath": "C:\\Users\\zl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zl\\Source\\Repos\\CSharpFinalWork\\Server\\PoemDataService\\obj\\",
+      "projectPath": "D:\\c#大作业\\C-FinalWork\\Server\\PoemDataService\\PoemDataService.csproj",
+      "packagesPath": "C:\\Users\\14025\\.nuget\\packages\\",
+      "outputPath": "D:\\c#大作业\\C-FinalWork\\Server\\PoemDataService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\zl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\14025\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1023,12 +1023,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.13, 5.0.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1037,7 +1031,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -75,7 +75,16 @@ namespace PoemDataService.Controllers
             return inSentence.IsMatch(paragraph.value)||atStart.IsMatch(paragraph.value);
         }
 
-
+        [HttpGet("guess")]
+        public string GetGuess()
+        {
+            Random random = new Random();
+            int skip=random.Next(db.GuessParas.Count());
+            GuessPara guessPara = db.GuessParas.Skip(skip).First();
+            Paragraph paragraph = db.Paragraphs.FirstOrDefault(p => p.id == guessPara.paraId);
+            string[] sentences = paragraph.value.Split(new char[] { '£¬', '¡£', '£¡', '£¿' });
+            return sentences[guessPara.paraNum];
+        }
 
     }
 }
