@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Threading;
 
 namespace Basic
 {
@@ -26,6 +27,7 @@ namespace Basic
     private string name;
     private string baseUrl;
     private XmlNode Node;
+    private bool alreadyPrase;
     public class newReply
     {
 
@@ -84,9 +86,21 @@ namespace Basic
       replyBindingSource.DataSource = a.Replys;
       uiDataGridView1.DataSource = replyBindingSource;
     }
+    public void JudePrase()
+    {
+      Reply reply = (Reply)replyBindingSource.Current;
+      var task1 = client.GetStringAsync("https://" + Node.InnerText+ ":5001/api/replyprase?account=" + account + "&Id=" + reply.Id);
+      alreadyPrase = Boolean.Parse(task1.Result);
+      //MessageBox.Show(""+alreadyPrase);
+      if (alreadyPrase)
+      {
+        uiButton2.Text = "已赞";
+      }
+      else uiButton2.Text = "赞";
+    }
     private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
     {
-      
+      JudePrase();
     }
 
     private void uiLabel1_Click(object sender, EventArgs e)
@@ -107,14 +121,47 @@ namespace Basic
         HttpContent data = new StringContent(json);
         data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
         var task = client.PostAsync("https://"+Node.InnerText+":5001/api/reply", data);
+        Thread.Sleep(100);
         HttpGet();
       }
-      HttpGet();
+
     }
 
     private void uiPanel1_Click(object sender, EventArgs e)
     {
 
+    }
+
+    private void uiButton2_Click(object sender, EventArgs e)
+    {
+      if (uiButton2.Text == "已赞")
+      {
+        Reply reply = (Reply)replyBindingSource.Current;
+        var task1 = client.DeleteAsync("https://" + Node.InnerText + ":5001/api/replyprase?account=" + account + "&Id=" + reply.Id);
+        reply.prase = reply.prase - 1;
+        var json = JsonConvert.SerializeObject(reply);
+        //MessageBox.Show(json);
+        HttpContent data = new StringContent(json);
+        data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+        var task2 = client.PutAsync("https://" + Node.InnerText + ":5001/api/reply/" + reply.Id, data);
+        Thread.Sleep(100);
+        HttpGet();
+        JudePrase();
+      }
+      else
+      {
+        Reply reply = (Reply)replyBindingSource.Current;
+        var task1 = client.PostAsync("https://" + Node.InnerText + ":5001/api/replyprase?account=" + account + "&replyId=" + reply.Id, null);
+        reply.prase = reply.prase + 1;
+        var json = JsonConvert.SerializeObject(reply);
+        //MessageBox.Show(json);
+        HttpContent data = new StringContent(json);
+        data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+        var task2 = client.PutAsync("https://" + Node.InnerText + ":5001/api/reply/" + reply.Id, data);
+        Thread.Sleep(100);
+        HttpGet();
+        JudePrase();
+      }
     }
   }
 }

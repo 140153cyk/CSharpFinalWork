@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CSharpFinal\\Basic",
+    "\\CSharpFinal\\Basic\\Properties",
+    "\\Server",
+    "\\Server\\PoemDataService",
+    "\\Server\\PoemDataService\\Controllers"
   ],
-  "SelectedNode": "\\CSharpFinal.sln",
+  "SelectedNode": "\\Server\\PoemDataService\\Controllers\\CommentPraseController.cs",
   "PreviewInSolutionExplorer": false
 }

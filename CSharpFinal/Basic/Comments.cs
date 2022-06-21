@@ -21,7 +21,8 @@ namespace Basic
           private HttpClient client;
           private string account;
           private int poemId;
-    private string baseUrl; 
+         private string baseUrl;
+          private bool alreadyPrase;
     public class newComment
     {
 
@@ -52,7 +53,7 @@ namespace Basic
             XmlDocument serverDoc = new XmlDocument();
             serverDoc.Load("serverIp.xml");
             XmlNode node = serverDoc.SelectSingleNode("serverIp");
-             baseUrl = "https://" + node.InnerText + ":5001/api/comment";
+             baseUrl = "https://" + node.InnerText + ":5001/api";
             HttpClientHandler handler = new HttpClientHandler();
             handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
             client = new HttpClient(handler);
@@ -62,29 +63,54 @@ namespace Basic
             poemId = id;
             getComments(id);
     }
-
-  
-
+    public void JudePrase()
+    {
+      Comment comment = (Comment)commentBindingSource.Current;
+      var task1 = client.GetStringAsync(baseUrl + "/commentprase?account=" + account + "&Id=" + comment.Id);
+      alreadyPrase = Boolean.Parse(task1.Result);
+      //MessageBox.Show(""+alreadyPrase);
+      if (alreadyPrase)
+      {
+        uiButton1.Text = "已赞";
+      }
+      else uiButton1.Text = "赞";
+    }
+   
     private void uiButton1_Click(object sender, EventArgs e)
     {
-      int i=0;  
-      if(uiButton1.FillColor == Color.White)
+      if(uiButton1.Text == "已赞")
       {
-        i++;
-        uiButton1.FillColor = Color.Red;
-        uiButton1.Text = "赞" + i;
+        Comment comment=(Comment)commentBindingSource.Current;
+        var task1 = client.DeleteAsync(baseUrl + "/commentprase?account=" + account + "&Id=" + comment.Id);
+        comment.Prase = comment.Prase - 1;
+        var json = JsonConvert.SerializeObject(comment);
+        //MessageBox.Show(json);
+        HttpContent data = new StringContent(json);
+        data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+        var task2 = client.PutAsync(baseUrl+ "/comment/"+comment.Id, data);
+        System.Threading.Thread.Sleep(100);
+        getComments(poemId);
+        JudePrase();
       }
       else
       {
-        i--;
-        uiButton1.FillColor = Color.White;
-        uiButton1.Text = "赞" + i;
+        Comment comment = (Comment)commentBindingSource.Current;
+        var task1 = client.PostAsync(baseUrl + "/commentprase?account=" + account + "&commentId=" + comment.Id, null);
+        comment.Prase = comment.Prase + 1;
+        var json = JsonConvert.SerializeObject(comment);
+        //MessageBox.Show(json);
+        HttpContent data = new StringContent(json);
+        data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+        var task2 = client.PutAsync(baseUrl + "/comment/" + comment.Id, data);
+        System.Threading.Thread.Sleep(100);
+        getComments(poemId);
+        JudePrase();
       }
     }
 
     public void getComments(int id)
     {
-      var task = client.GetStringAsync(baseUrl+"?poemId=" + id);
+      var task = client.GetStringAsync(baseUrl+"/comment?poemId=" + id);
       commentBindingSource.DataSource =
           JsonConvert.DeserializeObject<List<Comment>>(task.Result);
       commentGridView.DataSource = commentBindingSource;
@@ -92,7 +118,7 @@ namespace Basic
     }
     private void Comments_Load(object sender, EventArgs e)
     {
-
+      
     }
 
     private void uiButton2_Click(object sender, EventArgs e)
@@ -103,22 +129,22 @@ namespace Basic
       }
       else
       {
-        
         var myComment = new newComment(account, poemId, uiTextBox1.Text);
         var json = JsonConvert.SerializeObject(myComment);
         HttpContent data = new StringContent(json);
         data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-        var task = client.PostAsync(baseUrl, data);
+        var task = client.PostAsync(baseUrl + "/comment", data);
+        System.Threading.Thread.Sleep(100);
         getComments(poemId);
       }
-      getComments(poemId);
+      
     }
 
     private void commentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
     {
-      
+      JudePrase();
     }
-
+ 
     private void uiButton3_Click(object sender, EventArgs e)
     {
       Comment comment = (Comment)commentBindingSource.Current;
