@@ -70,6 +70,12 @@
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyComments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyComments.Designer.cs">
+      <DependentUpon>MyComments.cs</DependentUpon>
+    </Compile>
     <Compile Include="PoemDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComments.resx">
+      <DependentUpon>MyComments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PoemDetail.resx">
       <DependentUpon>PoemDetail.cs</DependentUpon>

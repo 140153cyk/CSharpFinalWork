@@ -104,5 +104,11 @@ namespace Basic
             CollectsPage collects = new CollectsPage(account);
             collects.Show();
         }
+
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+            MyComments myComments = new MyComments(account);
+            myComments.Show();
+        }
     }
 }

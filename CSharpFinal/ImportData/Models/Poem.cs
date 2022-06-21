@@ -27,5 +27,10 @@ namespace Models
             this.biography = biography;
             this.volume = volume;
         }
+
+        public override string ToString()
+        {
+            return title;
+        }
     }
 }

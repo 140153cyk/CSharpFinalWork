@@ -44,6 +44,7 @@ namespace Basic
 
             
             title.Text = this.poem.title;
+            poetText.Text = poem.author;
             poem.paragraphs=poem.paragraphs.OrderBy(p => p.paraNum).ToList();
             StringBuilder sb = new StringBuilder();
             foreach(Models.Paragraph p in poem.paragraphs)
@@ -98,5 +99,5 @@ namespace Basic
     {
 
     }
-  }
+    }
 }

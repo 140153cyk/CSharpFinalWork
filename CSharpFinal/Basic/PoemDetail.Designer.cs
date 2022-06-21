@@ -37,10 +37,16 @@ namespace Basic
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.uiPanel3 = new Sunny.UI.UIPanel();
             this.Paragraph = new Sunny.UI.UITextBox();
+            this.uiPanel4 = new Sunny.UI.UIPanel();
             this.title = new Sunny.UI.UIScrollingText();
+            this.uiPanel5 = new Sunny.UI.UIPanel();
+            this.poetText = new Sunny.UI.UIScrollingText();
+            this.uiScrollingText1 = new Sunny.UI.UIScrollingText();
             this.poemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uiPanel1.SuspendLayout();
             this.uiPanel3.SuspendLayout();
+            this.uiPanel4.SuspendLayout();
+            this.uiPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,13 +58,13 @@ namespace Basic
             this.uiPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel1.Location = new System.Drawing.Point(13, 354);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel1.Location = new System.Drawing.Point(10, 298);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Padding = new System.Windows.Forms.Padding(33, 19, 33, 19);
+            this.uiPanel1.Padding = new System.Windows.Forms.Padding(25, 15, 25, 15);
             this.uiPanel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanel1.Size = new System.Drawing.Size(661, 102);
+            this.uiPanel1.Size = new System.Drawing.Size(536, 82);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel1.TabIndex = 0;
             this.uiPanel1.Text = null;
@@ -75,14 +81,14 @@ namespace Basic
             this.commentBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.commentBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.commentBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.commentBtn.Location = new System.Drawing.Point(478, 19);
+            this.commentBtn.Location = new System.Drawing.Point(361, 15);
             this.commentBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.commentBtn.Name = "commentBtn";
             this.commentBtn.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.commentBtn.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
             this.commentBtn.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.commentBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.commentBtn.Size = new System.Drawing.Size(150, 64);
+            this.commentBtn.Size = new System.Drawing.Size(150, 52);
             this.commentBtn.Style = Sunny.UI.UIStyle.Orange;
             this.commentBtn.TabIndex = 2;
             this.commentBtn.Text = "评论";
@@ -100,14 +106,14 @@ namespace Basic
             this.collectBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.collectBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.collectBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.collectBtn.Location = new System.Drawing.Point(33, 19);
+            this.collectBtn.Location = new System.Drawing.Point(25, 15);
             this.collectBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.collectBtn.Name = "collectBtn";
             this.collectBtn.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.collectBtn.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
             this.collectBtn.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.collectBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.collectBtn.Size = new System.Drawing.Size(150, 64);
+            this.collectBtn.Size = new System.Drawing.Size(150, 52);
             this.collectBtn.Style = Sunny.UI.UIStyle.Orange;
             this.collectBtn.TabIndex = 1;
             this.collectBtn.Text = "收藏";
@@ -124,12 +130,12 @@ namespace Basic
             this.uiPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel2.Location = new System.Drawing.Point(468, 12);
-            this.uiPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel2.Location = new System.Drawing.Point(392, 10);
+            this.uiPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiPanel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel2.Name = "uiPanel2";
             this.uiPanel2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanel2.Size = new System.Drawing.Size(206, 342);
+            this.uiPanel2.Size = new System.Drawing.Size(154, 288);
             this.uiPanel2.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel2.TabIndex = 2;
             this.uiPanel2.Text = null;
@@ -139,18 +145,18 @@ namespace Basic
             // uiPanel3
             // 
             this.uiPanel3.Controls.Add(this.Paragraph);
-            this.uiPanel3.Controls.Add(this.title);
+            this.uiPanel3.Controls.Add(this.uiPanel4);
             this.uiPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel3.Location = new System.Drawing.Point(13, 12);
-            this.uiPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel3.Location = new System.Drawing.Point(10, 10);
+            this.uiPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiPanel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel3.Name = "uiPanel3";
-            this.uiPanel3.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.uiPanel3.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.uiPanel3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanel3.Size = new System.Drawing.Size(455, 342);
+            this.uiPanel3.Size = new System.Drawing.Size(382, 288);
             this.uiPanel3.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel3.TabIndex = 3;
             this.uiPanel3.Text = null;
@@ -159,8 +165,7 @@ namespace Basic
             // 
             // Paragraph
             // 
-            this.Paragraph.AllowDrop = true;
-            this.Paragraph.BackColor = System.Drawing.Color.Transparent;
+            this.Paragraph.AutoSize = true;
             this.Paragraph.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.Paragraph.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
             this.Paragraph.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
@@ -170,41 +175,115 @@ namespace Basic
             this.Paragraph.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Paragraph.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Paragraph.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.Paragraph.Font = new System.Drawing.Font("隶书", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Paragraph.Location = new System.Drawing.Point(13, 85);
+            this.Paragraph.Font = new System.Drawing.Font("隶书", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Paragraph.Location = new System.Drawing.Point(10, 83);
             this.Paragraph.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Paragraph.MinimumSize = new System.Drawing.Size(1, 16);
             this.Paragraph.Multiline = true;
             this.Paragraph.Name = "Paragraph";
-            this.Paragraph.Padding = new System.Windows.Forms.Padding(20);
             this.Paragraph.ReadOnly = true;
             this.Paragraph.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.Paragraph.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.Paragraph.ShowScrollBar = true;
             this.Paragraph.ShowText = false;
-            this.Paragraph.Size = new System.Drawing.Size(429, 245);
+            this.Paragraph.Size = new System.Drawing.Size(362, 195);
             this.Paragraph.Style = Sunny.UI.UIStyle.Orange;
-            this.Paragraph.TabIndex = 1;
+            this.Paragraph.TabIndex = 3;
             this.Paragraph.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Paragraph.WatermarkColor = System.Drawing.Color.Black;
             this.Paragraph.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.Paragraph.TextChanged += new System.EventHandler(this.Paragraph_TextChanged);
+            // 
+            // uiPanel4
+            // 
+            this.uiPanel4.Controls.Add(this.title);
+            this.uiPanel4.Controls.Add(this.uiPanel5);
+            this.uiPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uiPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.uiPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.uiPanel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiPanel4.Location = new System.Drawing.Point(10, 10);
+            this.uiPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel4.Name = "uiPanel4";
+            this.uiPanel4.Padding = new System.Windows.Forms.Padding(10);
+            this.uiPanel4.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiPanel4.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
+            this.uiPanel4.Size = new System.Drawing.Size(362, 73);
+            this.uiPanel4.Style = Sunny.UI.UIStyle.Orange;
+            this.uiPanel4.TabIndex = 2;
+            this.uiPanel4.Text = null;
+            this.uiPanel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // title
             // 
-            this.title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.title.Dock = System.Windows.Forms.DockStyle.Fill;
             this.title.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.title.Font = new System.Drawing.Font("华文行楷", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.title.Font = new System.Drawing.Font("隶书", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.title.Location = new System.Drawing.Point(13, 12);
+            this.title.Location = new System.Drawing.Point(10, 10);
             this.title.MinimumSize = new System.Drawing.Size(1, 1);
             this.title.Name = "title";
+            this.title.Radius = 1;
             this.title.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.title.Size = new System.Drawing.Size(429, 73);
+            this.title.Size = new System.Drawing.Size(342, 27);
             this.title.Style = Sunny.UI.UIStyle.Orange;
-            this.title.TabIndex = 0;
-            this.title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.title.TabIndex = 2;
             this.title.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiPanel5
+            // 
+            this.uiPanel5.Controls.Add(this.poetText);
+            this.uiPanel5.Controls.Add(this.uiScrollingText1);
+            this.uiPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.uiPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.uiPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.uiPanel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiPanel5.Location = new System.Drawing.Point(10, 37);
+            this.uiPanel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel5.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel5.Name = "uiPanel5";
+            this.uiPanel5.Padding = new System.Windows.Forms.Padding(5);
+            this.uiPanel5.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
+            this.uiPanel5.RectColor = System.Drawing.Color.Transparent;
+            this.uiPanel5.Size = new System.Drawing.Size(342, 26);
+            this.uiPanel5.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel5.TabIndex = 1;
+            this.uiPanel5.Text = null;
+            this.uiPanel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // poetText
+            // 
+            this.poetText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.poetText.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.poetText.Font = new System.Drawing.Font("隶书", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.poetText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.poetText.Location = new System.Drawing.Point(5, 5);
+            this.poetText.MinimumSize = new System.Drawing.Size(1, 1);
+            this.poetText.Name = "poetText";
+            this.poetText.Radius = 1;
+            this.poetText.RectColor = System.Drawing.Color.Transparent;
+            this.poetText.Size = new System.Drawing.Size(182, 16);
+            this.poetText.Style = Sunny.UI.UIStyle.Custom;
+            this.poetText.TabIndex = 1;
+            this.poetText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiScrollingText1
+            // 
+            this.uiScrollingText1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.uiScrollingText1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.uiScrollingText1.Font = new System.Drawing.Font("隶书", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiScrollingText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiScrollingText1.Location = new System.Drawing.Point(187, 5);
+            this.uiScrollingText1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiScrollingText1.Name = "uiScrollingText1";
+            this.uiScrollingText1.Radius = 1;
+            this.uiScrollingText1.RectColor = System.Drawing.Color.Transparent;
+            this.uiScrollingText1.Size = new System.Drawing.Size(150, 16);
+            this.uiScrollingText1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiScrollingText1.TabIndex = 0;
+            this.uiScrollingText1.Text = "查看诗人详情";
+            this.uiScrollingText1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // poemBindingSource
             // 
@@ -212,18 +291,21 @@ namespace Basic
             // 
             // PoemDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 468);
+            this.ClientSize = new System.Drawing.Size(556, 390);
             this.Controls.Add(this.uiPanel3);
             this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.uiPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PoemDetail";
-            this.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.Text = "诗词详情";
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel3.ResumeLayout(false);
+            this.uiPanel3.PerformLayout();
+            this.uiPanel4.ResumeLayout(false);
+            this.uiPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.poemBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -237,8 +319,12 @@ namespace Basic
         private Sunny.UI.UIButton commentBtn;
         private Sunny.UI.UIButton collectBtn;
         private System.Windows.Forms.BindingSource poemBindingSource;
-        private Sunny.UI.UIScrollingText title;
+        private Sunny.UI.UIPanel uiPanel4;
         private Sunny.UI.UITextBox Paragraph;
+        private Sunny.UI.UIScrollingText title;
+        private Sunny.UI.UIPanel uiPanel5;
+        private Sunny.UI.UIScrollingText poetText;
+        private Sunny.UI.UIScrollingText uiScrollingText1;
     }
 }
 
