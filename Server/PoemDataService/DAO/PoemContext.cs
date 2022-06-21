@@ -1,4 +1,4 @@
-﻿
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PoemDataService.Models;
@@ -27,7 +27,8 @@ namespace PoemDataService.DAO
         public DbSet<Comment> Comments { get; set; }//所有的一级评论
 
         public DbSet<Reply> Replies { get; set; }//所有的二级评论
-
+       public DbSet<CommentPrase> CommentsPrases { get; set;}
+      public DbSet<ReplyPrase> replyPrases { get; set; } 
      
     }
 }

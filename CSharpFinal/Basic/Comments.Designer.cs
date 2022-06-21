@@ -41,14 +41,12 @@
             this.uiButton3 = new Sunny.UI.UIButton();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.commentGridView = new Sunny.UI.UIDataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userAccountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.poemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.poemsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.praseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uiPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commentGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commentBindingSource)).BeginInit();
@@ -59,14 +57,21 @@
             this.uiButton1.BackColor = System.Drawing.SystemColors.Control;
             this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiButton1.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
+            this.uiButton1.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
+            this.uiButton1.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton1.Location = new System.Drawing.Point(237, 391);
             this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton1.Name = "uiButton1";
             this.uiButton1.Radius = 25;
             this.uiButton1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiButton1.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
+            this.uiButton1.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
+            this.uiButton1.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.uiButton1.Size = new System.Drawing.Size(75, 35);
-            this.uiButton1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiButton1.Style = Sunny.UI.UIStyle.Orange;
             this.uiButton1.TabIndex = 2;
             this.uiButton1.Text = "赞";
             this.uiButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -77,13 +82,21 @@
             // 
             this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiButton2.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
+            this.uiButton2.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
+            this.uiButton2.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton2.Location = new System.Drawing.Point(901, 391);
             this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton2.Name = "uiButton2";
             this.uiButton2.Radius = 25;
+            this.uiButton2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiButton2.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
+            this.uiButton2.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
+            this.uiButton2.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.uiButton2.Size = new System.Drawing.Size(75, 35);
-            this.uiButton2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiButton2.Style = Sunny.UI.UIStyle.Orange;
             this.uiButton2.TabIndex = 3;
             this.uiButton2.Text = "评论";
             this.uiButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -99,14 +112,16 @@
             this.uiPanel1.Controls.Add(this.uiButton2);
             this.uiPanel1.Controls.Add(this.uiButton1);
             this.uiPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiPanel1.FillColor = System.Drawing.Color.White;
+            this.uiPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.uiPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel1.Location = new System.Drawing.Point(0, 0);
             this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
+            this.uiPanel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiPanel1.Size = new System.Drawing.Size(1482, 753);
-            this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel1.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "uiPanel1";
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,13 +157,21 @@
             // 
             this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiButton3.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
+            this.uiButton3.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
+            this.uiButton3.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.uiButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton3.Location = new System.Drawing.Point(360, 391);
             this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton3.Name = "uiButton3";
             this.uiButton3.Radius = 25;
+            this.uiButton3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiButton3.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
+            this.uiButton3.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
+            this.uiButton3.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.uiButton3.Size = new System.Drawing.Size(100, 35);
-            this.uiButton3.Style = Sunny.UI.UIStyle.Custom;
+            this.uiButton3.Style = Sunny.UI.UIStyle.Orange;
             this.uiButton3.TabIndex = 6;
             this.uiButton3.Text = "查看回复";
             this.uiButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -188,11 +211,9 @@
             this.commentGridView.ColumnHeadersHeight = 32;
             this.commentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.commentGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
             this.userAccountDataGridViewTextBoxColumn,
             this.detailDataGridViewTextBoxColumn,
             this.poemIdDataGridViewTextBoxColumn,
-            this.poemsDataGridViewTextBoxColumn,
             this.praseDataGridViewTextBoxColumn,
             this.createdDataGridViewTextBoxColumn});
             this.commentGridView.DataSource = this.commentBindingSource;
@@ -231,62 +252,50 @@
             this.commentGridView.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.commentGridView.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.commentGridView.SelectedIndex = -1;
+            this.commentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.commentGridView.Size = new System.Drawing.Size(803, 307);
             this.commentGridView.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.commentGridView.Style = Sunny.UI.UIStyle.Orange;
             this.commentGridView.TabIndex = 4;
             this.commentGridView.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.commentGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commentGridView_CellContentClick);
             this.commentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commentGridView_CellContentClick);
             // 
-            // idDataGridViewTextBoxColumn
+            // commentBindingSource
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 125;
+            this.commentBindingSource.DataSource = typeof(Models.Comment);
             // 
             // userAccountDataGridViewTextBoxColumn
             // 
             this.userAccountDataGridViewTextBoxColumn.DataPropertyName = "UserAccount";
-            this.userAccountDataGridViewTextBoxColumn.HeaderText = "UserAccount";
+            this.userAccountDataGridViewTextBoxColumn.HeaderText = "用户名";
             this.userAccountDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.userAccountDataGridViewTextBoxColumn.Name = "userAccountDataGridViewTextBoxColumn";
             this.userAccountDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userAccountDataGridViewTextBoxColumn.Width = 125;
+            this.userAccountDataGridViewTextBoxColumn.Width = 150;
             // 
             // detailDataGridViewTextBoxColumn
             // 
             this.detailDataGridViewTextBoxColumn.DataPropertyName = "Detail";
-            this.detailDataGridViewTextBoxColumn.HeaderText = "Detail";
+            this.detailDataGridViewTextBoxColumn.HeaderText = "评论";
             this.detailDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.detailDataGridViewTextBoxColumn.Name = "detailDataGridViewTextBoxColumn";
             this.detailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.detailDataGridViewTextBoxColumn.Width = 125;
+            this.detailDataGridViewTextBoxColumn.Width = 200;
             // 
             // poemIdDataGridViewTextBoxColumn
             // 
             this.poemIdDataGridViewTextBoxColumn.DataPropertyName = "PoemId";
-            this.poemIdDataGridViewTextBoxColumn.HeaderText = "PoemId";
+            this.poemIdDataGridViewTextBoxColumn.HeaderText = "诗词编号";
             this.poemIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.poemIdDataGridViewTextBoxColumn.Name = "poemIdDataGridViewTextBoxColumn";
             this.poemIdDataGridViewTextBoxColumn.ReadOnly = true;
             this.poemIdDataGridViewTextBoxColumn.Width = 125;
             // 
-            // poemsDataGridViewTextBoxColumn
-            // 
-            this.poemsDataGridViewTextBoxColumn.DataPropertyName = "Poems";
-            this.poemsDataGridViewTextBoxColumn.HeaderText = "Poems";
-            this.poemsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.poemsDataGridViewTextBoxColumn.Name = "poemsDataGridViewTextBoxColumn";
-            this.poemsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.poemsDataGridViewTextBoxColumn.Width = 125;
-            // 
             // praseDataGridViewTextBoxColumn
             // 
             this.praseDataGridViewTextBoxColumn.DataPropertyName = "Prase";
-            this.praseDataGridViewTextBoxColumn.HeaderText = "Prase";
+            this.praseDataGridViewTextBoxColumn.HeaderText = "点赞数";
             this.praseDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.praseDataGridViewTextBoxColumn.Name = "praseDataGridViewTextBoxColumn";
             this.praseDataGridViewTextBoxColumn.ReadOnly = true;
@@ -295,15 +304,11 @@
             // createdDataGridViewTextBoxColumn
             // 
             this.createdDataGridViewTextBoxColumn.DataPropertyName = "Created";
-            this.createdDataGridViewTextBoxColumn.HeaderText = "Created";
+            this.createdDataGridViewTextBoxColumn.HeaderText = "评论时间";
             this.createdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.createdDataGridViewTextBoxColumn.Name = "createdDataGridViewTextBoxColumn";
             this.createdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.createdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // commentBindingSource
-            // 
-            this.commentBindingSource.DataSource = typeof(Models.Comment);
+            this.createdDataGridViewTextBoxColumn.Width = 150;
             // 
             // Comments
             // 
@@ -329,13 +334,11 @@
     private Sunny.UI.UIDataGridView commentGridView;
     private Sunny.UI.UIButton uiButton3;
     private Sunny.UI.UITextBox uiTextBox1;
-    private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+    private System.Windows.Forms.BindingSource commentBindingSource;
     private System.Windows.Forms.DataGridViewTextBoxColumn userAccountDataGridViewTextBoxColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn detailDataGridViewTextBoxColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn poemIdDataGridViewTextBoxColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn poemsDataGridViewTextBoxColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn praseDataGridViewTextBoxColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn createdDataGridViewTextBoxColumn;
-    private System.Windows.Forms.BindingSource commentBindingSource;
   }
 }
