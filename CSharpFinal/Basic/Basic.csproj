@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include=".Designer.cs" />
     <Compile Include="CollectsPage.cs">
       <SubType>Form</SubType>
     </Compile>

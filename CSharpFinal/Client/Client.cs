@@ -108,7 +108,7 @@ namespace Client
             XmlDocument serverDoc = new XmlDocument();
             serverDoc.Load("serverIp.xml");
             XmlNode node = serverDoc.SelectSingleNode("serverIp");
-            serverIP = "127.0.0.1";
+            serverIP = node.InnerText;
             Name = name;
             IsPlaying = false;
             ConnectToServer();
