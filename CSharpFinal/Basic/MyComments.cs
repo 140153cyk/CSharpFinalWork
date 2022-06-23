@@ -20,11 +20,14 @@ namespace Basic
         public string account { get; set; }
         public HttpClient client { get; set; }
         public string baseUrl { get; set; }
+
+        public int page { get; set; } = 1;
         public MyComments(string account)
         {
 
             this.account = account;
             InitializeComponent();
+            pageText.Text = ""+ page;
             XmlDocument serverDoc = new XmlDocument();
             serverDoc.Load("serverIp.xml");
             XmlNode node = serverDoc.SelectSingleNode("serverIp");
@@ -36,10 +39,42 @@ namespace Basic
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-            var task = client.GetStringAsync(baseUrl + "/comment?account=" + account+"&skip=0&take=4");
-            myCommentsSource.DataSource= JsonConvert.DeserializeObject<List<Comment>>(task.Result);
+            getPageComments(1);
+        }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            getPageComments(page - 1);
+            pageText.Text = "" + page;
+        }
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            getPageComments(page + 1);
+            pageText.Text = "" + page;
+
+        }
+        public void getPageComments(int pageNum)
+        {
+            page = pageNum;
+            var task = client.GetStringAsync(baseUrl + "/comment?account=" + account + "&skip=" + (page - 1) * 6 + "&take=6");
+            myCommentsSource.DataSource = JsonConvert.DeserializeObject<List<Comment>>(task.Result);
             commentsGridview.DataSource = null;
             commentsGridview.DataSource = myCommentsSource;
+            judgeBtnState();
+        }
+        public void judgeBtnState()
+        {
+            if (page > 1) beforeBtn.Enabled = true;
+            else beforeBtn.Enabled = false;
+            if (myCommentsSource.Count == 6) nextBtn.Enabled = true;
+            else nextBtn.Enabled = false;
+        }
+
+        private void commentsGridview_DoubleClick(object sender, EventArgs e)
+        {
+            Comment current = (Comment)myCommentsSource.Current;
+            Replys replys = new Replys(account, current);
+            replys.Show();
         }
     }
 }

@@ -48,9 +48,8 @@ namespace PoemDataService.Controllers
     {
       try
       {
-        db.CommentsPrases.Remove(
-            db.CommentsPrases.FirstOrDefault(c => c.Account == account && c.commentId == Id)
-            );
+        CommentPrase prase = db.CommentsPrases.FirstOrDefault(c => c.Account == account && c.commentId == Id);
+        db.CommentsPrases.Remove(prase );
         db.SaveChanges();
         return NoContent();
       }

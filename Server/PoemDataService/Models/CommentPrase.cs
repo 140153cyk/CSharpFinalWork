@@ -19,5 +19,9 @@ namespace PoemDataService.Models
       Account = account;
       commentId = id;
     }
-  }
+
+        public CommentPrase()
+        {
+        }
+    }
 }

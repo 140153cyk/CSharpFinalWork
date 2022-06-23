@@ -30,37 +30,39 @@ namespace Basic
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PoemSquare));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.uiPanel3 = new Sunny.UI.UIPanel();
             this.searchArgBox = new Sunny.UI.UITextBox();
             this.searchBtn = new Sunny.UI.UIButton();
             this.searchTypeBox = new Sunny.UI.UIComboBox();
+            this.poemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.uiPanel4 = new Sunny.UI.UIPanel();
+            this.uiPanel5 = new Sunny.UI.UIPanel();
             this.pageNum = new Sunny.UI.UITextBox();
             this.nextBtn = new Sunny.UI.UIButton();
             this.beforeBtn = new Sunny.UI.UIButton();
             this.searchGridView = new Sunny.UI.UIDataGridView();
-            this.poemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uiPanel1.SuspendLayout();
             this.uiPanel3.SuspendLayout();
-            this.uiPanel2.SuspendLayout();
-            this.uiPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.poemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBindingSource)).BeginInit();
+            this.uiPanel4.SuspendLayout();
+            this.uiPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // uiPanel1
@@ -72,13 +74,13 @@ namespace Basic
             this.uiPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel1.Location = new System.Drawing.Point(20, 20);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel1.Location = new System.Drawing.Point(10, 10);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Padding = new System.Windows.Forms.Padding(30, 40, 30, 40);
+            this.uiPanel1.Padding = new System.Windows.Forms.Padding(15, 20, 15, 20);
             this.uiPanel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanel1.Size = new System.Drawing.Size(1212, 140);
+            this.uiPanel1.Size = new System.Drawing.Size(748, 70);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel1.TabIndex = 0;
             this.uiPanel1.Text = null;
@@ -92,14 +94,14 @@ namespace Basic
             this.uiPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel3.Location = new System.Drawing.Point(133, 40);
+            this.uiPanel3.Location = new System.Drawing.Point(118, 20);
             this.uiPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel3.Name = "uiPanel3";
             this.uiPanel3.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
-            this.uiPanel3.RectColor = System.Drawing.Color.Transparent;
-            this.uiPanel3.Size = new System.Drawing.Size(912, 60);
-            this.uiPanel3.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiPanel3.Size = new System.Drawing.Size(478, 30);
+            this.uiPanel3.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel3.TabIndex = 2;
             this.uiPanel3.Text = null;
             this.uiPanel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -124,7 +126,7 @@ namespace Basic
             this.searchArgBox.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.searchArgBox.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.searchArgBox.ShowText = false;
-            this.searchArgBox.Size = new System.Drawing.Size(852, 60);
+            this.searchArgBox.Size = new System.Drawing.Size(418, 30);
             this.searchArgBox.Style = Sunny.UI.UIStyle.Orange;
             this.searchArgBox.TabIndex = 0;
             this.searchArgBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,14 +142,14 @@ namespace Basic
             this.searchBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.searchBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.searchBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.searchBtn.Location = new System.Drawing.Point(1045, 40);
+            this.searchBtn.Location = new System.Drawing.Point(596, 20);
             this.searchBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.searchBtn.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
             this.searchBtn.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.searchBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.searchBtn.Size = new System.Drawing.Size(137, 60);
+            this.searchBtn.Size = new System.Drawing.Size(137, 30);
             this.searchBtn.Style = Sunny.UI.UIStyle.Orange;
             this.searchBtn.TabIndex = 1;
             this.searchBtn.Text = "搜索";
@@ -170,33 +172,41 @@ namespace Basic
             "内容"});
             this.searchTypeBox.ItemSelectBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.searchTypeBox.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.searchTypeBox.Location = new System.Drawing.Point(30, 40);
+            this.searchTypeBox.Location = new System.Drawing.Point(15, 20);
             this.searchTypeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchTypeBox.MinimumSize = new System.Drawing.Size(63, 0);
             this.searchTypeBox.Name = "searchTypeBox";
             this.searchTypeBox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.searchTypeBox.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.searchTypeBox.Size = new System.Drawing.Size(103, 60);
+            this.searchTypeBox.Size = new System.Drawing.Size(103, 30);
             this.searchTypeBox.Style = Sunny.UI.UIStyle.Orange;
             this.searchTypeBox.TabIndex = 0;
             this.searchTypeBox.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.searchTypeBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // poemBindingSource
+            // 
+            this.poemBindingSource.DataSource = typeof(Models.Poem);
+            // 
+            // searchBindingSource
+            // 
+            this.searchBindingSource.DataSource = typeof(Models.Poem);
+            // 
             // uiPanel2
             // 
-            this.uiPanel2.Controls.Add(this.uiPanel4);
-            this.uiPanel2.Controls.Add(this.searchGridView);
-            this.uiPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.uiPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uiPanel2.BackgroundImage")));
+            this.uiPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.uiPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.uiPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel2.Location = new System.Drawing.Point(20, 160);
+            this.uiPanel2.Location = new System.Drawing.Point(630, 80);
             this.uiPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel2.Name = "uiPanel2";
-            this.uiPanel2.Padding = new System.Windows.Forms.Padding(20);
             this.uiPanel2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanel2.Size = new System.Drawing.Size(1212, 589);
+            this.uiPanel2.Size = new System.Drawing.Size(128, 294);
             this.uiPanel2.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel2.TabIndex = 1;
             this.uiPanel2.Text = null;
@@ -205,25 +215,46 @@ namespace Basic
             // 
             // uiPanel4
             // 
-            this.uiPanel4.Controls.Add(this.pageNum);
-            this.uiPanel4.Controls.Add(this.nextBtn);
-            this.uiPanel4.Controls.Add(this.beforeBtn);
-            this.uiPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.uiPanel4.Controls.Add(this.uiPanel5);
+            this.uiPanel4.Controls.Add(this.searchGridView);
+            this.uiPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel4.Location = new System.Drawing.Point(20, 507);
-            this.uiPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel4.Location = new System.Drawing.Point(10, 80);
+            this.uiPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.uiPanel4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel4.Name = "uiPanel4";
-            this.uiPanel4.Padding = new System.Windows.Forms.Padding(200, 10, 200, 10);
-            this.uiPanel4.RectColor = System.Drawing.Color.Transparent;
-            this.uiPanel4.Size = new System.Drawing.Size(1172, 62);
-            this.uiPanel4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiPanel4.TabIndex = 1;
+            this.uiPanel4.Padding = new System.Windows.Forms.Padding(10);
+            this.uiPanel4.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiPanel4.Size = new System.Drawing.Size(620, 294);
+            this.uiPanel4.Style = Sunny.UI.UIStyle.Orange;
+            this.uiPanel4.TabIndex = 2;
             this.uiPanel4.Text = null;
             this.uiPanel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiPanel5
+            // 
+            this.uiPanel5.Controls.Add(this.pageNum);
+            this.uiPanel5.Controls.Add(this.nextBtn);
+            this.uiPanel5.Controls.Add(this.beforeBtn);
+            this.uiPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.uiPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.uiPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.uiPanel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiPanel5.Location = new System.Drawing.Point(10, 222);
+            this.uiPanel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel5.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel5.Name = "uiPanel5";
+            this.uiPanel5.Padding = new System.Windows.Forms.Padding(200, 10, 200, 10);
+            this.uiPanel5.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.uiPanel5.Size = new System.Drawing.Size(600, 62);
+            this.uiPanel5.Style = Sunny.UI.UIStyle.Orange;
+            this.uiPanel5.TabIndex = 1;
+            this.uiPanel5.Text = null;
+            this.uiPanel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // pageNum
             // 
@@ -244,11 +275,12 @@ namespace Basic
             this.pageNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pageNum.MinimumSize = new System.Drawing.Size(1, 16);
             this.pageNum.Name = "pageNum";
+            this.pageNum.Radius = 1;
             this.pageNum.ReadOnly = true;
             this.pageNum.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.pageNum.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.pageNum.ShowText = false;
-            this.pageNum.Size = new System.Drawing.Size(616, 42);
+            this.pageNum.Size = new System.Drawing.Size(44, 42);
             this.pageNum.Style = Sunny.UI.UIStyle.Orange;
             this.pageNum.TabIndex = 3;
             this.pageNum.Text = "1";
@@ -266,7 +298,7 @@ namespace Basic
             this.nextBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.nextBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.nextBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.nextBtn.Location = new System.Drawing.Point(893, 10);
+            this.nextBtn.Location = new System.Drawing.Point(321, 10);
             this.nextBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
@@ -310,19 +342,19 @@ namespace Basic
             // searchGridView
             // 
             this.searchGridView.AllowUserToAddRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.searchGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.searchGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.searchGridView.AutoGenerateColumns = false;
             this.searchGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.searchGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.searchGridView.ColumnHeadersHeight = 32;
             this.searchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.searchGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -330,65 +362,57 @@ namespace Basic
             this.titleDataGridViewTextBoxColumn,
             this.authorDataGridViewTextBoxColumn});
             this.searchGridView.DataSource = this.poemBindingSource;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.searchGridView.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.searchGridView.DefaultCellStyle = dataGridViewCellStyle6;
             this.searchGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchGridView.EnableHeadersVisualStyles = false;
             this.searchGridView.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.searchGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(169)))), ((int)(((byte)(69)))));
-            this.searchGridView.Location = new System.Drawing.Point(20, 20);
+            this.searchGridView.Location = new System.Drawing.Point(10, 10);
             this.searchGridView.Name = "searchGridView";
             this.searchGridView.ReadOnly = true;
             this.searchGridView.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.searchGridView.RowHeadersWidth = 82;
             this.searchGridView.RowHeight = 37;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.searchGridView.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.searchGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.searchGridView.RowTemplate.Height = 37;
             this.searchGridView.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.searchGridView.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.searchGridView.SelectedIndex = -1;
-            this.searchGridView.Size = new System.Drawing.Size(1172, 549);
+            this.searchGridView.Size = new System.Drawing.Size(600, 274);
             this.searchGridView.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.searchGridView.Style = Sunny.UI.UIStyle.Orange;
             this.searchGridView.TabIndex = 0;
             this.searchGridView.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.searchGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchGridView_CellDoubleClick);
-            // 
-            // poemBindingSource
-            // 
-            this.poemBindingSource.DataSource = typeof(Models.Poem);
-            // 
-            // searchBindingSource
-            // 
-            this.searchBindingSource.DataSource = typeof(Models.Poem);
+            this.searchGridView.DoubleClick += new System.EventHandler(this.searchGridView_CellDoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("隶书", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle19.Padding = new System.Windows.Forms.Padding(5);
-            this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("隶书", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5);
+            this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.idDataGridViewTextBoxColumn.HeaderText = "编号";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
@@ -397,26 +421,26 @@ namespace Basic
             // 
             // titleDataGridViewTextBoxColumn
             // 
+            this.titleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.titleDataGridViewTextBoxColumn.DataPropertyName = "title";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("隶书", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle20.Padding = new System.Windows.Forms.Padding(5);
-            this.titleDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("隶书", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
+            this.titleDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.titleDataGridViewTextBoxColumn.HeaderText = "标题";
             this.titleDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
             this.titleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.titleDataGridViewTextBoxColumn.Width = 200;
             // 
             // authorDataGridViewTextBoxColumn
             // 
             this.authorDataGridViewTextBoxColumn.DataPropertyName = "author";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("隶书", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle21.Padding = new System.Windows.Forms.Padding(5);
-            this.authorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("隶书", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
+            this.authorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.authorDataGridViewTextBoxColumn.HeaderText = "诗人";
             this.authorDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
@@ -425,21 +449,23 @@ namespace Basic
             // 
             // PoemSquare
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1252, 769);
+            this.ClientSize = new System.Drawing.Size(768, 384);
+            this.Controls.Add(this.uiPanel4);
             this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.uiPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PoemSquare";
-            this.Padding = new System.Windows.Forms.Padding(20);
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "诗词广场";
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel3.ResumeLayout(false);
-            this.uiPanel2.ResumeLayout(false);
-            this.uiPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.searchGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.poemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBindingSource)).EndInit();
+            this.uiPanel4.ResumeLayout(false);
+            this.uiPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.searchGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -448,17 +474,18 @@ namespace Basic
 
         private Sunny.UI.UIPanel uiPanel1;
         private Sunny.UI.UIComboBox searchTypeBox;
-        private Sunny.UI.UIPanel uiPanel2;
         private Sunny.UI.UIPanel uiPanel3;
         private Sunny.UI.UITextBox searchArgBox;
         private Sunny.UI.UIButton searchBtn;
-        private Sunny.UI.UIDataGridView searchGridView;
         private System.Windows.Forms.BindingSource poemBindingSource;
         private System.Windows.Forms.BindingSource searchBindingSource;
+        private Sunny.UI.UIPanel uiPanel2;
         private Sunny.UI.UIPanel uiPanel4;
+        private Sunny.UI.UIPanel uiPanel5;
+        private Sunny.UI.UITextBox pageNum;
         private Sunny.UI.UIButton nextBtn;
         private Sunny.UI.UIButton beforeBtn;
-        private Sunny.UI.UITextBox pageNum;
+        private Sunny.UI.UIDataGridView searchGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;

@@ -190,6 +190,10 @@
               "target": "Package",
               "version": "[6.4.4, )"
             },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.43, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.29, )"
@@ -201,6 +205,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "ScrapySharp": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             },
             "SunnyUI": {
               "target": "Package",

@@ -129,13 +129,14 @@ namespace Basic
       }
       else
       {
-        var myComment = new newComment(account, poemId, uiTextBox1.Text);
-        var json = JsonConvert.SerializeObject(myComment);
-        HttpContent data = new StringContent(json);
-        data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-        var task = client.PostAsync(baseUrl + "/comment", data);
-        System.Threading.Thread.Sleep(100);
-        getComments(poemId);
+            var myComment = new newComment(account, poemId, uiTextBox1.Text);
+            var json = JsonConvert.SerializeObject(myComment);
+            HttpContent data = new StringContent(json);
+            data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+            var task = client.PostAsync(baseUrl + "/comment", data);
+            System.Threading.Thread.Sleep(100);
+            getComments(poemId);
+            uiTextBox1.Text = "";
       }
       
     }
@@ -148,7 +149,7 @@ namespace Basic
     private void uiButton3_Click(object sender, EventArgs e)
     {
       Comment comment = (Comment)commentBindingSource.Current;
-      Replys replys = new Replys(account, comment.Id, comment.UserAccount,poemId);
+      Replys replys = new Replys(account, comment);
       replys.Show();
     }
   }

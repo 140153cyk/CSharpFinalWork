@@ -22,37 +22,34 @@ namespace Basic
   {
     private HttpClient client;
     private string account;
-    private int commentId;
-    private int poemId;
-    private string name;
-    private string baseUrl;
+    private Comment comment;
     private XmlNode Node;
     private bool alreadyPrase;
     public class newReply
     {
 
       public string UserAccount { get; set; }
-      public int CommentId { get; set; }
+      public int commentID { get; set; }
       public string Content { get; set; }
       public DateTime created { get; set; }
       
-      public newReply(string account,string content, int commentId)
+      public newReply(string account,string content, int commentID)
       {
 
         UserAccount = account;
         Content = content;
-        CommentId= commentId;
+        this.commentID= commentID;
         created = DateTime.Now;
       }
       public override string ToString()
 
       {
 
-        return $" {UserAccount}:{CommentId}:{Content}:{created}";
+        return $" {UserAccount}:{commentID}:{Content}:{created}";
 
       }
     }
-    public Replys(string account,int Id,string name,int poemId)
+    public Replys(string account,Comment comment)
     {
       InitializeComponent();
       XmlDocument serverDoc = new XmlDocument();
@@ -64,20 +61,19 @@ namespace Basic
       client.DefaultRequestHeaders.Accept.Clear();
       client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
       this.account = account;
-      commentId = Id;
-      this.poemId = poemId;
-      this.name = name;
+            this.comment = comment;
+            commentText.Text = "诗评内容："+comment.Detail;
       HttpGet();
-      uiLabel1.Text = "评论"+commentId + "的回复";
+      
     }
     public void HttpGet()
     {
       Comment a = new Comment();
-      var task = client.GetStringAsync("https://"+Node.InnerText+":5001/api/comment?poemId=" + poemId);
+      var task = client.GetStringAsync("https://"+Node.InnerText+":5001/api/comment?poemId=" + comment.PoemId);
       var model =
           JsonConvert.DeserializeObject<List<Comment>>(task.Result);
       var query = from s1 in model
-                  where commentId == s1.Id
+                  where comment.Id == s1.Id
                   select s1;
       foreach (var comment in query)
       {
@@ -116,7 +112,7 @@ namespace Basic
       }
       else
       {
-        var myReply = new newReply(account, uiTextBox1.Text, commentId);
+        var myReply = new newReply(account, uiTextBox1.Text, comment.Id);
         var json = JsonConvert.SerializeObject(myReply);
         HttpContent data = new StringContent(json);
         data.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");

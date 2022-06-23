@@ -30,6 +30,9 @@ namespace PoemDataService.DAO
 
         public DbSet<GuessPara> GuessParas { get; set; }//你画我猜的题库
 
-     
+        public DbSet<CommentPrase> CommentsPrases { get; set; }
+        public DbSet<ReplyPrase> replyPrases { get; set; }
+
+        public DbSet<Poet> Poets { get; set; }
     }
 }

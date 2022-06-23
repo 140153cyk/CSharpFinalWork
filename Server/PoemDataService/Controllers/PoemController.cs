@@ -63,7 +63,7 @@ namespace PoemDataService.Controllers
             return query.Include(p=>p.paragraphs).Skip(skip).Take(take).ToList();         
         }
 
-
+        //飞花令游戏提供判断诗句是否存在
         [HttpGet("exists")]
         public bool ExistsSentence(string text)
         {
@@ -74,7 +74,7 @@ namespace PoemDataService.Controllers
             Regex atStart = new Regex("^" + text + "[，。？！]");
             return inSentence.IsMatch(paragraph.value)||atStart.IsMatch(paragraph.value);
         }
-
+        //供你画我猜游戏提供题目
         [HttpGet("guess")]
         public string GetGuess()
         {
@@ -84,6 +84,18 @@ namespace PoemDataService.Controllers
             Paragraph paragraph = db.Paragraphs.FirstOrDefault(p => p.id == guessPara.paraId);
             string[] sentences = paragraph.value.Split(new char[] { '，', '。', '！', '？' });
             return sentences[guessPara.paraNum];
+        }
+        //获取所有诗人
+        [HttpGet("poets")]
+        public string[] GetPoets()
+        {
+            List<string> poets = new List<string>();
+            foreach(Poem p in db.Poems)
+            {
+                if (poets.Contains(p.author)) continue;
+                poets.Add(p.author);
+            }
+            return poets.ToArray();
         }
 
     }

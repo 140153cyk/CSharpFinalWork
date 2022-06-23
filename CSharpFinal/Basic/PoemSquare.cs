@@ -69,13 +69,6 @@ namespace Basic
 
         }
 
-        private void searchGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Poem searchPoem = (Poem)searchBindingSource.Current;
-            PoemDetail detail = new PoemDetail(account, searchPoem);
-            detail.Show();
-        }
-
         private void beforeBtn_Click(object sender, EventArgs e)
         {
             int page = Int32.Parse(pageNum.Text);
@@ -96,6 +89,13 @@ namespace Basic
             else nextBtn.Enabled = false;
             if (page + 1 > 1) beforeBtn.Enabled = true;
             else beforeBtn.Enabled = false;
+        }
+
+        private void searchGridView_CellDoubleClick(object sender, EventArgs e)
+        {
+            Poem searchPoem = (Poem)searchBindingSource.Current;
+            PoemDetail detail = new PoemDetail(account, searchPoem);
+            detail.Show();
         }
     }
 }

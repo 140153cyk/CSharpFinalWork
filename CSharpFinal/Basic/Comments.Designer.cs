@@ -31,9 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.uiButton2 = new Sunny.UI.UIButton();
             this.uiPanel1 = new Sunny.UI.UIPanel();
@@ -41,12 +42,11 @@
             this.uiButton3 = new Sunny.UI.UIButton();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.commentGridView = new Sunny.UI.UIDataGridView();
-            this.commentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userAccountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.poemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.praseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uiPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commentGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commentBindingSource)).BeginInit();
@@ -116,11 +116,11 @@
             this.uiPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel1.Location = new System.Drawing.Point(0, 0);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanel1.Size = new System.Drawing.Size(1482, 753);
+            this.uiPanel1.Size = new System.Drawing.Size(1054, 452);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "uiPanel1";
@@ -186,7 +186,7 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel1.Location = new System.Drawing.Point(0, 0);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(1482, 75);
+            this.uiLabel1.Size = new System.Drawing.Size(1054, 75);
             this.uiLabel1.Style = Sunny.UI.UIStyle.Orange;
             this.uiLabel1.TabIndex = 5;
             this.uiLabel1.Text = "妙 语 诗 评";
@@ -195,6 +195,7 @@
             // 
             // commentGridView
             // 
+            this.commentGridView.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.commentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.commentGridView.AutoGenerateColumns = false;
@@ -213,18 +214,17 @@
             this.commentGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.userAccountDataGridViewTextBoxColumn,
             this.detailDataGridViewTextBoxColumn,
-            this.poemIdDataGridViewTextBoxColumn,
             this.praseDataGridViewTextBoxColumn,
             this.createdDataGridViewTextBoxColumn});
             this.commentGridView.DataSource = this.commentBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.commentGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.commentGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.commentGridView.EnableHeadersVisualStyles = false;
             this.commentGridView.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.commentGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(169)))), ((int)(((byte)(69)))));
@@ -232,22 +232,22 @@
             this.commentGridView.Name = "commentGridView";
             this.commentGridView.ReadOnly = true;
             this.commentGridView.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.commentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.commentGridView.RowHeadersWidth = 51;
-            this.commentGridView.RowHeight = 27;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.commentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.commentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.commentGridView.RowHeadersWidth = 51;
+            this.commentGridView.RowHeight = 27;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.commentGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.commentGridView.RowTemplate.Height = 27;
             this.commentGridView.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.commentGridView.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
@@ -261,13 +261,10 @@
             this.commentGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commentGridView_CellContentClick);
             this.commentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commentGridView_CellContentClick);
             // 
-            // commentBindingSource
-            // 
-            this.commentBindingSource.DataSource = typeof(Models.Comment);
-            // 
             // userAccountDataGridViewTextBoxColumn
             // 
             this.userAccountDataGridViewTextBoxColumn.DataPropertyName = "UserAccount";
+            this.userAccountDataGridViewTextBoxColumn.Frozen = true;
             this.userAccountDataGridViewTextBoxColumn.HeaderText = "用户名";
             this.userAccountDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.userAccountDataGridViewTextBoxColumn.Name = "userAccountDataGridViewTextBoxColumn";
@@ -276,21 +273,14 @@
             // 
             // detailDataGridViewTextBoxColumn
             // 
+            this.detailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.detailDataGridViewTextBoxColumn.DataPropertyName = "Detail";
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.detailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.detailDataGridViewTextBoxColumn.HeaderText = "评论";
             this.detailDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.detailDataGridViewTextBoxColumn.Name = "detailDataGridViewTextBoxColumn";
             this.detailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.detailDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // poemIdDataGridViewTextBoxColumn
-            // 
-            this.poemIdDataGridViewTextBoxColumn.DataPropertyName = "PoemId";
-            this.poemIdDataGridViewTextBoxColumn.HeaderText = "诗词编号";
-            this.poemIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.poemIdDataGridViewTextBoxColumn.Name = "poemIdDataGridViewTextBoxColumn";
-            this.poemIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.poemIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // praseDataGridViewTextBoxColumn
             // 
@@ -310,12 +300,17 @@
             this.createdDataGridViewTextBoxColumn.ReadOnly = true;
             this.createdDataGridViewTextBoxColumn.Width = 150;
             // 
+            // commentBindingSource
+            // 
+            this.commentBindingSource.DataSource = typeof(Models.Comment);
+            // 
             // Comments
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 753);
+            this.ClientSize = new System.Drawing.Size(1054, 452);
             this.Controls.Add(this.uiPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Comments";
             this.Text = "Comments";
             this.Load += new System.EventHandler(this.Comments_Load);
@@ -335,10 +330,9 @@
     private Sunny.UI.UIButton uiButton3;
     private Sunny.UI.UITextBox uiTextBox1;
     private System.Windows.Forms.BindingSource commentBindingSource;
-    private System.Windows.Forms.DataGridViewTextBoxColumn userAccountDataGridViewTextBoxColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn detailDataGridViewTextBoxColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn poemIdDataGridViewTextBoxColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn praseDataGridViewTextBoxColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn createdDataGridViewTextBoxColumn;
-  }
+        private System.Windows.Forms.DataGridViewTextBoxColumn userAccountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn detailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn praseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createdDataGridViewTextBoxColumn;
+    }
 }

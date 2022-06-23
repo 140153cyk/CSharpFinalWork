@@ -29,6 +29,61 @@
           "buildTransitive/EntityFramework.targets": {}
         }
       },
+      "FSharp.Core/4.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FSharp.Core.dll": {},
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FSharp.Core.dll": {},
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "resource": {
+          "lib/net45/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net45/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net45/en/FSharp.Core.resources.dll": {
+            "locale": "en"
+          },
+          "lib/net45/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net45/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net45/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net45/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net45/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net45/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net45/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net45/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net45/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "Google.Protobuf/3.19.4": {
         "type": "package",
         "dependencies": {
@@ -39,6 +94,15 @@
         },
         "runtime": {
           "lib/net45/Google.Protobuf.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.11.43": {
+        "type": "package",
+        "compile": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
         }
       },
       "K4os.Compression.LZ4/1.2.6": {
@@ -153,6 +217,22 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "ScrapySharp/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.5.2",
+          "HtmlAgilityPack": "1.7.4",
+          "System.Runtime.Caching": "4.5.0-preview1-26216-02"
+        },
+        "compile": {
+          "lib/netstandard2.0/ScrapySharp.Core.dll": {},
+          "lib/netstandard2.0/ScrapySharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ScrapySharp.Core.dll": {},
+          "lib/netstandard2.0/ScrapySharp.dll": {}
+        }
+      },
       "SunnyUI/3.1.9": {
         "type": "package",
         "dependencies": {
@@ -222,6 +302,24 @@
           "lib/net46/System.Numerics.Vectors.dll": {}
         }
       },
+      "System.Runtime.Caching/4.5.0-preview1-26216-02": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Runtime.Caching"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net45/_._": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/5.0.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -264,9 +362,11 @@
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
           "EntityFramework": "6.4.4",
+          "HtmlAgilityPack": "1.11.43",
           "MySql.Data": "8.0.29",
           "MySql.Data.EntityFramework": "8.0.29",
           "Newtonsoft.Json": "13.0.1",
+          "ScrapySharp": "3.0.0",
           "SunnyUI": "3.1.9"
         },
         "compile": {
@@ -305,6 +405,61 @@
           "buildTransitive/EntityFramework.targets": {}
         }
       },
+      "FSharp.Core/4.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FSharp.Core.dll": {},
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FSharp.Core.dll": {},
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "resource": {
+          "lib/net45/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net45/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net45/en/FSharp.Core.resources.dll": {
+            "locale": "en"
+          },
+          "lib/net45/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net45/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net45/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net45/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net45/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net45/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net45/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net45/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net45/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "Google.Protobuf/3.19.4": {
         "type": "package",
         "dependencies": {
@@ -315,6 +470,15 @@
         },
         "runtime": {
           "lib/net45/Google.Protobuf.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.11.43": {
+        "type": "package",
+        "compile": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
         }
       },
       "K4os.Compression.LZ4/1.2.6": {
@@ -429,6 +593,22 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "ScrapySharp/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.5.2",
+          "HtmlAgilityPack": "1.7.4",
+          "System.Runtime.Caching": "4.5.0-preview1-26216-02"
+        },
+        "compile": {
+          "lib/netstandard2.0/ScrapySharp.Core.dll": {},
+          "lib/netstandard2.0/ScrapySharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ScrapySharp.Core.dll": {},
+          "lib/netstandard2.0/ScrapySharp.dll": {}
+        }
+      },
       "SunnyUI/3.1.9": {
         "type": "package",
         "dependencies": {
@@ -498,6 +678,18 @@
           "lib/net46/System.Numerics.Vectors.dll": {}
         }
       },
+      "System.Runtime.Caching/4.5.0-preview1-26216-02": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Runtime.Caching"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/net45/_._": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/5.0.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -540,9 +732,11 @@
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
           "EntityFramework": "6.4.4",
+          "HtmlAgilityPack": "1.11.43",
           "MySql.Data": "8.0.29",
           "MySql.Data.EntityFramework": "8.0.29",
           "Newtonsoft.Json": "13.0.1",
+          "ScrapySharp": "3.0.0",
           "SunnyUI": "3.1.9"
         },
         "compile": {
@@ -581,6 +775,61 @@
           "buildTransitive/EntityFramework.targets": {}
         }
       },
+      "FSharp.Core/4.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FSharp.Core.dll": {},
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FSharp.Core.dll": {},
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "resource": {
+          "lib/net45/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net45/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net45/en/FSharp.Core.resources.dll": {
+            "locale": "en"
+          },
+          "lib/net45/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net45/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net45/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net45/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net45/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net45/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net45/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net45/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net45/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "Google.Protobuf/3.19.4": {
         "type": "package",
         "dependencies": {
@@ -591,6 +840,15 @@
         },
         "runtime": {
           "lib/net45/Google.Protobuf.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.11.43": {
+        "type": "package",
+        "compile": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
         }
       },
       "K4os.Compression.LZ4/1.2.6": {
@@ -705,6 +963,22 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "ScrapySharp/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.5.2",
+          "HtmlAgilityPack": "1.7.4",
+          "System.Runtime.Caching": "4.5.0-preview1-26216-02"
+        },
+        "compile": {
+          "lib/netstandard2.0/ScrapySharp.Core.dll": {},
+          "lib/netstandard2.0/ScrapySharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ScrapySharp.Core.dll": {},
+          "lib/netstandard2.0/ScrapySharp.dll": {}
+        }
+      },
       "SunnyUI/3.1.9": {
         "type": "package",
         "dependencies": {
@@ -774,6 +1048,18 @@
           "lib/net46/System.Numerics.Vectors.dll": {}
         }
       },
+      "System.Runtime.Caching/4.5.0-preview1-26216-02": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Runtime.Caching"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/5.0.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -816,9 +1102,11 @@
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
           "EntityFramework": "6.4.4",
+          "HtmlAgilityPack": "1.11.43",
           "MySql.Data": "8.0.29",
           "MySql.Data.EntityFramework": "8.0.29",
           "Newtonsoft.Json": "13.0.1",
+          "ScrapySharp": "3.0.0",
           "SunnyUI": "3.1.9"
         },
         "compile": {
@@ -857,6 +1145,61 @@
           "buildTransitive/EntityFramework.targets": {}
         }
       },
+      "FSharp.Core/4.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FSharp.Core.dll": {},
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FSharp.Core.dll": {},
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "resource": {
+          "lib/net45/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net45/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net45/en/FSharp.Core.resources.dll": {
+            "locale": "en"
+          },
+          "lib/net45/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net45/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net45/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net45/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net45/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net45/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net45/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net45/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net45/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "Google.Protobuf/3.19.4": {
         "type": "package",
         "dependencies": {
@@ -867,6 +1210,15 @@
         },
         "runtime": {
           "lib/net45/Google.Protobuf.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.11.43": {
+        "type": "package",
+        "compile": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
         }
       },
       "K4os.Compression.LZ4/1.2.6": {
@@ -981,6 +1333,22 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "ScrapySharp/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.5.2",
+          "HtmlAgilityPack": "1.7.4",
+          "System.Runtime.Caching": "4.5.0-preview1-26216-02"
+        },
+        "compile": {
+          "lib/netstandard2.0/ScrapySharp.Core.dll": {},
+          "lib/netstandard2.0/ScrapySharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ScrapySharp.Core.dll": {},
+          "lib/netstandard2.0/ScrapySharp.dll": {}
+        }
+      },
       "SunnyUI/3.1.9": {
         "type": "package",
         "dependencies": {
@@ -1050,6 +1418,18 @@
           "lib/net46/System.Numerics.Vectors.dll": {}
         }
       },
+      "System.Runtime.Caching/4.5.0-preview1-26216-02": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Runtime.Caching"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/5.0.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1092,9 +1472,11 @@
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
           "EntityFramework": "6.4.4",
+          "HtmlAgilityPack": "1.11.43",
           "MySql.Data": "8.0.29",
           "MySql.Data.EntityFramework": "8.0.29",
           "Newtonsoft.Json": "13.0.1",
+          "ScrapySharp": "3.0.0",
           "SunnyUI": "3.1.9"
         },
         "compile": {
@@ -1177,6 +1559,54 @@
         "tools/netcoreapp3.0/any/ef6.runtimeconfig.json"
       ]
     },
+    "FSharp.Core/4.5.2": {
+      "sha512": "apbdQOjzsjQ637kTWQuW29jqwY18jsHMyNC5A+TPJZKFEIE2cIfQWf3V7+mXrxlbX69BueYkv293/g70wuXuRw==",
+      "type": "package",
+      "path": "fsharp.core/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fsharp.core.4.5.2.nupkg.sha512",
+        "fsharp.core.nuspec",
+        "lib/net45/FSharp.Core.dll",
+        "lib/net45/FSharp.Core.optdata",
+        "lib/net45/FSharp.Core.resources.dll",
+        "lib/net45/FSharp.Core.sigdata",
+        "lib/net45/FSharp.Core.xml",
+        "lib/net45/cs/FSharp.Core.resources.dll",
+        "lib/net45/de/FSharp.Core.resources.dll",
+        "lib/net45/en/FSharp.Core.resources.dll",
+        "lib/net45/es/FSharp.Core.resources.dll",
+        "lib/net45/fr/FSharp.Core.resources.dll",
+        "lib/net45/it/FSharp.Core.resources.dll",
+        "lib/net45/ja/FSharp.Core.resources.dll",
+        "lib/net45/ko/FSharp.Core.resources.dll",
+        "lib/net45/pl/FSharp.Core.resources.dll",
+        "lib/net45/pt-BR/FSharp.Core.resources.dll",
+        "lib/net45/ru/FSharp.Core.resources.dll",
+        "lib/net45/tr/FSharp.Core.resources.dll",
+        "lib/net45/zh-Hans/FSharp.Core.resources.dll",
+        "lib/net45/zh-Hant/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/FSharp.Core.dll",
+        "lib/netstandard1.6/FSharp.Core.optdata",
+        "lib/netstandard1.6/FSharp.Core.sigdata",
+        "lib/netstandard1.6/FSharp.Core.xml",
+        "lib/netstandard1.6/cs/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/de/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/en/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/es/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/fr/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/it/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/ja/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/ko/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/pl/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/pt-BR/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/ru/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/tr/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/zh-Hans/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/zh-Hant/FSharp.Core.resources.dll"
+      ]
+    },
     "Google.Protobuf/3.19.4": {
       "sha512": "fd07/ykL4O4FhqrZIELm5lmiyOHfdPg9+o+hWr6tcfRdS7tHXnImg/2wtogLzlW2eEmr0J7j6ZrZvaWOLiJbxQ==",
       "type": "package",
@@ -1198,6 +1628,54 @@
         "lib/netstandard2.0/Google.Protobuf.dll",
         "lib/netstandard2.0/Google.Protobuf.pdb",
         "lib/netstandard2.0/Google.Protobuf.xml"
+      ]
+    },
+    "HtmlAgilityPack/1.11.43": {
+      "sha512": "C2gpt+S2tdFlQMOC3DK7rHZ8iv6EpDuIo4v0UTUSGX1F1bZ+NAQ3gp77HK8/JfCDszUm3Y2rHoyTp/TpO4KOIA==",
+      "type": "package",
+      "path": "htmlagilitypack/1.11.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "htmlagilitypack.1.11.43.nupkg.sha512",
+        "htmlagilitypack.nuspec",
+        "lib/Net35/HtmlAgilityPack.dll",
+        "lib/Net35/HtmlAgilityPack.pdb",
+        "lib/Net35/HtmlAgilityPack.xml",
+        "lib/Net40-client/HtmlAgilityPack.dll",
+        "lib/Net40-client/HtmlAgilityPack.pdb",
+        "lib/Net40-client/HtmlAgilityPack.xml",
+        "lib/Net40/HtmlAgilityPack.XML",
+        "lib/Net40/HtmlAgilityPack.dll",
+        "lib/Net40/HtmlAgilityPack.pdb",
+        "lib/Net45/HtmlAgilityPack.XML",
+        "lib/Net45/HtmlAgilityPack.dll",
+        "lib/Net45/HtmlAgilityPack.pdb",
+        "lib/NetCore45/HtmlAgilityPack.XML",
+        "lib/NetCore45/HtmlAgilityPack.dll",
+        "lib/NetCore45/HtmlAgilityPack.pdb",
+        "lib/netstandard1.3/HtmlAgilityPack.deps.json",
+        "lib/netstandard1.3/HtmlAgilityPack.dll",
+        "lib/netstandard1.3/HtmlAgilityPack.pdb",
+        "lib/netstandard1.3/HtmlAgilityPack.xml",
+        "lib/netstandard1.6/HtmlAgilityPack.deps.json",
+        "lib/netstandard1.6/HtmlAgilityPack.dll",
+        "lib/netstandard1.6/HtmlAgilityPack.pdb",
+        "lib/netstandard1.6/HtmlAgilityPack.xml",
+        "lib/netstandard2.0/HtmlAgilityPack.deps.json",
+        "lib/netstandard2.0/HtmlAgilityPack.dll",
+        "lib/netstandard2.0/HtmlAgilityPack.pdb",
+        "lib/netstandard2.0/HtmlAgilityPack.xml",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.XML",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.XML",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/uap10.0/HtmlAgilityPack.XML",
+        "lib/uap10.0/HtmlAgilityPack.dll",
+        "lib/uap10.0/HtmlAgilityPack.pdb",
+        "lib/uap10.0/HtmlAgilityPack.pri"
       ]
     },
     "K4os.Compression.LZ4/1.2.6": {
@@ -1342,6 +1820,19 @@
         "packageIcon.png"
       ]
     },
+    "ScrapySharp/3.0.0": {
+      "sha512": "qwOe4oPAFPgFP5pi9aMHo5I66Pw8EYiY93k/FQvHs3P0vgt/cnjsgMuoc6pxYXrxVbBdKSqPTkem1D4iktjHNQ==",
+      "type": "package",
+      "path": "scrapysharp/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/ScrapySharp.Core.dll",
+        "lib/netstandard2.0/ScrapySharp.dll",
+        "scrapysharp.3.0.0.nupkg.sha512",
+        "scrapysharp.nuspec"
+      ]
+    },
     "SunnyUI/3.1.9": {
       "sha512": "iWeBhesF1oTo9niGt4mkV6YqEntmNuhkEl2LL78+uRZXBc5Dpd31zYr+zZIRAl2z8v+tqaRZCAsHcO37A6B/Gw==",
       "type": "package",
@@ -1475,6 +1966,39 @@
         "ref/xamarinwatchos10/_._",
         "system.numerics.vectors.4.5.0.nupkg.sha512",
         "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.Caching/4.5.0-preview1-26216-02": {
+      "sha512": "IRlmpGTFx3HpFnBNIzrKgKM75bYMIITTBzvDOB5v/fNq/0N5P1qgOuEYfWJwcVGdSs5MFNVKmxHtj59SIxZNVg==",
+      "type": "package",
+      "path": "system.runtime.caching/4.5.0-preview1-26216-02",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netstandard2.0/System.Runtime.Caching.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netstandard2.0/System.Runtime.Caching.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net45/_._",
+        "runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll",
+        "system.runtime.caching.4.5.0-preview1-26216-02.nupkg.sha512",
+        "system.runtime.caching.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]

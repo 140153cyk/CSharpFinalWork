@@ -17,7 +17,7 @@ namespace ImportData
     {
         static void Main()
         {
-            string baseUrl = "https://localhost:5001/api/poem";
+            /*string baseUrl = "https://localhost:5001/api/poem";
             HttpClientHandler handler = new HttpClientHandler();
             handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
             HttpClient client = new HttpClient(handler);
@@ -47,8 +47,12 @@ namespace ImportData
                 var task = client.PostAsync(baseUrl, content);
                     Console.WriteLine(i);
                 });
-            }
+            }*/
+            PoemInfoCrawler crawler = new PoemInfoCrawler();
+            
+            crawler.addPoet("https://baike.baidu.com/item/李白");
 
+            Console.ReadLine();
             
         }
 
