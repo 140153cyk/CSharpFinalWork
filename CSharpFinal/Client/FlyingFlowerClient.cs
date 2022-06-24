@@ -113,8 +113,9 @@ namespace Client
         /// <returns></returns>
         private bool IsPoem(string message)
         {
-            var task = dataClient.GetStringAsync("https://"+base.serverIP+":5001/poem/exists?text="+message);
-            return JsonConvert.DeserializeObject<Boolean>(task.Result);
+            var task = dataClient.GetStringAsync("https://"+base.serverIP+":5001/api/poem/exists?text="+message);
+            bool result= JsonConvert.DeserializeObject<bool>(task.Result);
+            return result;
 
         }
         

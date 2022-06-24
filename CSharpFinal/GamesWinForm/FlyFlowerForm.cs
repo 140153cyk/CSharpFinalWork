@@ -18,7 +18,7 @@ namespace GameWinForm
         public BindingList<RemainPlayer> PlayersRemain { set; get; }
         public string KeyWord { set; get; } = "月";
         public string Answer { set; get; }
-        public int Time { set; get; } = 15;
+        public int Time { set; get; } = 30;
         public bool isMyTurn = false;
         public FlyFlowerForm(FlyingFlowerClient c, List<string> players)
         {
@@ -208,7 +208,7 @@ namespace GameWinForm
         //初始化计时器、勾/叉、玩家答案
         private void initTurn()
         {
-            Time = 15;
+            Time = 30;
             this.uiLabelTimer.Text = "0:15";
             this.timer.Start();
             this.pictureBoxAnswer.Image = null;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -44,9 +45,8 @@ namespace Server
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var task=client.GetStringAsync("https://localhost:5001/api/poem/guess");
-
-
-                string currentPoem =task.Result ;
+                string currentPoem = JsonConvert.DeserializeObject<String>(task.Result);
+                Console.WriteLine(currentPoem);
                 SendMessage(ConvertMessageForServer(8, currentPoem));
                 //获得玩家
                 ReadyPlayers.TryDequeue(out currentDrawer);

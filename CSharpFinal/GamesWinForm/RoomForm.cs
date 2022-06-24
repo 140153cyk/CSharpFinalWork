@@ -125,7 +125,7 @@ namespace GameWinForm
         {
             this.Invoke(new Action(delegate ()
             {
-                WaitingRoom form = new WaitingRoom(client,RoomID,RoomName,Type,str);
+                WaitingRoom form = new WaitingRoom(client,RoomID,RoomName,Type,str,this);
                 this.Hide();
                 form.Show();
                 form.FormClosing += (x,y)=>this.Show();

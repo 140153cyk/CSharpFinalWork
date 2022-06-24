@@ -54,3 +54,5 @@ C:\Users\zl\Source\Repos\CSharpFinalWork\Server\GameServer\obj\Debug\netcoreapp3
 C:\Users\zl\Source\Repos\CSharpFinalWork\Server\GameServer\obj\Debug\netcoreapp3.1\GameServer.dll
 C:\Users\zl\Source\Repos\CSharpFinalWork\Server\GameServer\obj\Debug\netcoreapp3.1\GameServer.pdb
 C:\Users\zl\Source\Repos\CSharpFinalWork\Server\GameServer\obj\Debug\netcoreapp3.1\GameServer.genruntimeconfig.cache
+D:\c#大作业\C-FinalWork\Server\GameServer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\c#大作业\C-FinalWork\Server\GameServer\obj\Debug\netcoreapp3.1\GameServer.csproj.CopyComplete

@@ -24,9 +24,9 @@ namespace GameWinForm
 
         protected Regex regex = new Regex(@"\w+");
         public static Action<string> OnShowGameForm;
+        public RoomForm parent { get; set; }
 
-
-        public WaitingRoom(Client.Client c, int roomID, string roomName, int type, string message)
+        public WaitingRoom(Client.Client c, int roomID, string roomName, int type, string message,RoomForm parent)
         {
             client = c;
             c.StartReceive();
@@ -42,6 +42,7 @@ namespace GameWinForm
             }
 
             InitializeComponent();
+            this.parent = parent;
             RoomID = roomID;
             RoomName = roomName;
             Type = type;
@@ -126,6 +127,7 @@ namespace GameWinForm
                     FlyFlowerForm form = new FlyFlowerForm((FlyingFlowerClient)client, list);
                     this.Hide();
                     form.Show();
+                    form.FormClosing += (x, y) => parent.Close();
                     this.Dispose();
                 }
                 else if(Type == 1)
@@ -133,6 +135,11 @@ namespace GameWinForm
                     DrawAndGuess form = new DrawAndGuess((DrawAndGuessClient)client, list);
                     this.Hide();
                     form.Show();
+                    form.FormClosing += (x, y) =>
+                    {
+                        parent.Close();
+                        this.client.QuitRoom();
+                    };
                     this.Dispose();
                 }
             }));

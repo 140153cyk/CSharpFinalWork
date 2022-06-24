@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "XTrcCLvgqnaUSfF3U4X5CCv7EhWZ56gaaK10rP32bdFLJ8sly2xBXeDtFcfuFjsHaOopevEbCfd87WBwNcYXtg==",
+  "dgSpecHash": "l0f50JKlYBp20p1z5shQvioARvOIyzkKgoH++n3hWnc3ve5hePZQ31gTeJ4ojQfeiCbyOb+vyPHywcnkYUUL0A==",
   "success": true,
   "projectFilePath": "D:\\c#大作业\\C-FinalWork\\Server\\GameServer\\GameServer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\14025\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
