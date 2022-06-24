@@ -64,6 +64,8 @@
             // 
             // uiLabelMaxNum
             // 
+            this.uiLabelMaxNum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabelMaxNum.BackColor = System.Drawing.Color.Transparent;
             this.uiLabelMaxNum.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabelMaxNum.Location = new System.Drawing.Point(46, 116);
@@ -77,6 +79,8 @@
             // 
             // uiLabelName
             // 
+            this.uiLabelName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabelName.BackColor = System.Drawing.Color.Transparent;
             this.uiLabelName.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabelName.Location = new System.Drawing.Point(46, 23);
@@ -90,6 +94,8 @@
             // 
             // uiTextBoxMaxNum
             // 
+            this.uiTextBoxMaxNum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiTextBoxMaxNum.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiTextBoxMaxNum.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
             this.uiTextBoxMaxNum.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
@@ -117,6 +123,8 @@
             // 
             // uiTextBoxName
             // 
+            this.uiTextBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiTextBoxName.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiTextBoxName.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
             this.uiTextBoxName.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
@@ -160,6 +168,8 @@
             // 
             // uiButtonCreate
             // 
+            this.uiButtonCreate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButtonCreate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButtonCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiButtonCreate.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
@@ -189,6 +199,8 @@
             this.ClientSize = new System.Drawing.Size(307, 342);
             this.Controls.Add(this.uiPanelWindow);
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.MaximumSize = new System.Drawing.Size(323, 381);
+            this.MinimumSize = new System.Drawing.Size(323, 381);
             this.Name = "CreateForm";
             this.Text = "创建房间";
             this.uiPanelWindow.ResumeLayout(false);

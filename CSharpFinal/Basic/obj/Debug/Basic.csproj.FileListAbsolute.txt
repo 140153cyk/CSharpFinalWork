@@ -106,3 +106,4 @@ D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\HtmlAgilityPack.pdb
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\ScrapySharp.Core.dll
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\bin\Debug\ScrapySharp.dll
 D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.exe.config
+D:\c#大作业\C-FinalWork\CSharpFinal\Basic\obj\Debug\Basic.PoetPage.resources

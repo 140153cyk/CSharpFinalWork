@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
@@ -37,7 +38,15 @@ namespace Server
                 IsNextTurn = false;
                 count = 0;
                 //***获得题目
-                string currentPoem = "大河之剑天上来";
+                HttpClientHandler handler = new HttpClientHandler();
+                handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
+                HttpClient client = new HttpClient(handler);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var task=client.GetStringAsync("https://localhost:5001/api/poem/guess");
+
+
+                string currentPoem =task.Result ;
                 SendMessage(ConvertMessageForServer(8, currentPoem));
                 //获得玩家
                 ReadyPlayers.TryDequeue(out currentDrawer);

@@ -86,6 +86,22 @@ namespace GameWinForm
                 }
 
             };
+            client.PlayerQuitRoom = (str) =>
+            {
+                if (this.uiDataGridViewPlayers.InvokeRequired)
+                {
+                    this.Invoke(new Action(delegate ()
+                    {
+                        RemovePlayer(str);
+                        this.uiDataGridViewPlayers.Refresh();
+                    }));
+                }
+                else
+                {
+                    RemovePlayer(str);
+                    this.uiDataGridViewPlayers.Refresh();
+                }
+            };
 
         }
 
@@ -130,6 +146,16 @@ namespace GameWinForm
                 PlayerList.Add(player);
             }
         }
+        //移除玩家
+        public void RemovePlayer(string str)
+        {
+            lock (PlayerList)
+            {
+                Player player = PlayerList.FirstOrDefault((p) => p.Name == str);
+                if (player.State == "已准备") PlayerReadyNum--;
+                PlayerList.Remove(player);
+            }
+        }
         //修改PlayerList中某玩家的状态为准备
         public void ChangeStateToReady(string name)
         {
@@ -137,6 +163,13 @@ namespace GameWinForm
             {
                 PlayerList.FirstOrDefault((player) => player.Name == name).State = "已准备";
             }
+        }
+        //窗口关闭事件，玩家退出房间
+        private void Quit(object sender, FormClosingEventArgs e)
+        {
+            client.QuitRoom();
+            e.Cancel = true;
+            this.Dispose();
         }
     }
     public class Player

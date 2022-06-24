@@ -99,5 +99,13 @@ namespace Basic
     {
 
     }
+
+        private void goToPoet(object sender, EventArgs e)
+        {
+            var task = client.GetStringAsync(baseUrl + "/poet?name=" + poem.author);
+            Poet poet = JsonConvert.DeserializeObject<Poet>(task.Result);
+            PoetPage poetPage = new PoetPage(poet);
+            poetPage.Show();
+        }
     }
 }

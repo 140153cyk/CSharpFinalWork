@@ -47,28 +47,32 @@ namespace GameWinForm
             this.uiPanelDrawAndText = new Sunny.UI.UIPanel();
             this.uiPanelScore = new Sunny.UI.UIPanel();
             this.uiDataGridViewScore = new Sunny.UI.UIDataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerAndScoreBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uiPanelDraw = new Sunny.UI.UIPanel();
             this.uiPanelText = new Sunny.UI.UIPanel();
+            this.uiLabelPainter = new Sunny.UI.UILabel();
             this.uiPanelDrawBox = new Sunny.UI.UIPanel();
+            this.uiLabelWinner = new Sunny.UI.UILabel();
             this.uiPanelPen = new Sunny.UI.UIPanel();
             this.RadioButtonGroupPen = new Sunny.UI.UIRadioButtonGroup();
             this.uiPanelTitle = new Sunny.UI.UIPanel();
+            this.uiLabelTime = new Sunny.UI.UILabel();
             this.labelPoem = new Sunny.UI.UILabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playerAndScoreBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDrawing)).BeginInit();
             this.panelWindow.SuspendLayout();
             this.uiPanelGameWin.SuspendLayout();
             this.uiPanelDrawAndText.SuspendLayout();
             this.uiPanelScore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridViewScore)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerAndScoreBindingSource)).BeginInit();
             this.uiPanelDraw.SuspendLayout();
             this.uiPanelText.SuspendLayout();
             this.uiPanelDrawBox.SuspendLayout();
             this.uiPanelPen.SuspendLayout();
             this.uiPanelTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playerAndScoreBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxSend
@@ -92,7 +96,6 @@ namespace GameWinForm
             this.textBoxSend.Size = new System.Drawing.Size(263, 30);
             this.textBoxSend.Style = Sunny.UI.UIStyle.Orange;
             this.textBoxSend.TabIndex = 6;
-            this.textBoxSend.Text = "uiTextBox1";
             this.textBoxSend.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.textBoxSend.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -117,6 +120,8 @@ namespace GameWinForm
             // 
             // textBoxChat
             // 
+            this.textBoxChat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxChat.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.textBoxChat.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
             this.textBoxChat.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
@@ -133,16 +138,17 @@ namespace GameWinForm
             this.textBoxChat.Name = "textBoxChat";
             this.textBoxChat.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.textBoxChat.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.textBoxChat.ShowScrollBar = true;
             this.textBoxChat.ShowText = false;
             this.textBoxChat.Size = new System.Drawing.Size(371, 113);
             this.textBoxChat.Style = Sunny.UI.UIStyle.Orange;
             this.textBoxChat.TabIndex = 5;
-            this.textBoxChat.Text = "uiTextBox1";
             this.textBoxChat.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.textBoxChat.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // buttonSend
             // 
+            this.buttonSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSend.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSend.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.buttonSend.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
@@ -196,6 +202,7 @@ namespace GameWinForm
             this.panelWindow.Size = new System.Drawing.Size(977, 589);
             this.panelWindow.Style = Sunny.UI.UIStyle.Orange;
             this.panelWindow.TabIndex = 9;
+            this.panelWindow.Text = null;
             this.panelWindow.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.panelWindow.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -293,7 +300,7 @@ namespace GameWinForm
             this.uiDataGridViewScore.EnableHeadersVisualStyles = false;
             this.uiDataGridViewScore.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiDataGridViewScore.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(169)))), ((int)(((byte)(69)))));
-            this.uiDataGridViewScore.Location = new System.Drawing.Point(20, 20);
+            this.uiDataGridViewScore.Location = new System.Drawing.Point(20, 17);
             this.uiDataGridViewScore.Name = "uiDataGridViewScore";
             this.uiDataGridViewScore.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -317,31 +324,11 @@ namespace GameWinForm
             this.uiDataGridViewScore.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiDataGridViewScore.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiDataGridViewScore.SelectedIndex = -1;
-            this.uiDataGridViewScore.Size = new System.Drawing.Size(174, 497);
+            this.uiDataGridViewScore.Size = new System.Drawing.Size(174, 500);
             this.uiDataGridViewScore.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiDataGridViewScore.Style = Sunny.UI.UIStyle.Orange;
             this.uiDataGridViewScore.TabIndex = 0;
             this.uiDataGridViewScore.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "玩家";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // scoreDataGridViewTextBoxColumn
-            // 
-            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "Score";
-            this.scoreDataGridViewTextBoxColumn.HeaderText = "得分";
-            this.scoreDataGridViewTextBoxColumn.MinimumWidth = 70;
-            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
-            this.scoreDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // playerAndScoreBindingSource
-            // 
-            this.playerAndScoreBindingSource.DataSource = typeof(GameWinForm.PlayerAndScore);
             // 
             // uiPanelDraw
             // 
@@ -365,10 +352,11 @@ namespace GameWinForm
             // 
             // uiPanelText
             // 
+            this.uiPanelText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiPanelText.Controls.Add(this.uiLabelPainter);
             this.uiPanelText.Controls.Add(this.textBoxSend);
             this.uiPanelText.Controls.Add(this.textBoxChat);
             this.uiPanelText.Controls.Add(this.buttonSend);
-            this.uiPanelText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiPanelText.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanelText.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanelText.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -384,8 +372,23 @@ namespace GameWinForm
             this.uiPanelText.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanelText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // uiLabelPainter
+            // 
+            this.uiLabelPainter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiLabelPainter.BackColor = System.Drawing.Color.Transparent;
+            this.uiLabelPainter.Font = new System.Drawing.Font("华文行楷", 16F);
+            this.uiLabelPainter.Location = new System.Drawing.Point(396, 11);
+            this.uiLabelPainter.Name = "uiLabelPainter";
+            this.uiLabelPainter.Size = new System.Drawing.Size(264, 34);
+            this.uiLabelPainter.Style = Sunny.UI.UIStyle.Orange;
+            this.uiLabelPainter.TabIndex = 8;
+            this.uiLabelPainter.Text = "画家：";
+            this.uiLabelPainter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabelPainter.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // uiPanelDrawBox
             // 
+            this.uiPanelDrawBox.Controls.Add(this.uiLabelWinner);
             this.uiPanelDrawBox.Controls.Add(this.pictureBoxDrawing);
             this.uiPanelDrawBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.uiPanelDrawBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
@@ -399,9 +402,25 @@ namespace GameWinForm
             this.uiPanelDrawBox.Size = new System.Drawing.Size(676, 397);
             this.uiPanelDrawBox.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanelDrawBox.TabIndex = 8;
-            this.uiPanelDrawBox.Text = "画画界面";
+            this.uiPanelDrawBox.Text = null;
             this.uiPanelDrawBox.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanelDrawBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiLabelWinner
+            // 
+            this.uiLabelWinner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiLabelWinner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiLabelWinner.Font = new System.Drawing.Font("华文行楷", 20F);
+            this.uiLabelWinner.Location = new System.Drawing.Point(30, 32);
+            this.uiLabelWinner.Name = "uiLabelWinner";
+            this.uiLabelWinner.Size = new System.Drawing.Size(617, 338);
+            this.uiLabelWinner.Style = Sunny.UI.UIStyle.Orange;
+            this.uiLabelWinner.TabIndex = 10;
+            this.uiLabelWinner.Text = "赢家是：";
+            this.uiLabelWinner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabelWinner.Visible = false;
+            this.uiLabelWinner.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiPanelPen
             // 
@@ -449,6 +468,7 @@ namespace GameWinForm
             // 
             // uiPanelTitle
             // 
+            this.uiPanelTitle.Controls.Add(this.uiLabelTime);
             this.uiPanelTitle.Controls.Add(this.labelPoem);
             this.uiPanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.uiPanelTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
@@ -462,29 +482,74 @@ namespace GameWinForm
             this.uiPanelTitle.Size = new System.Drawing.Size(977, 58);
             this.uiPanelTitle.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanelTitle.TabIndex = 13;
-            this.uiPanelTitle.Text = "题目";
+            this.uiPanelTitle.Text = null;
             this.uiPanelTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanelTitle.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // uiLabelTime
+            // 
+            this.uiLabelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiLabelTime.BackColor = System.Drawing.Color.Transparent;
+            this.uiLabelTime.Font = new System.Drawing.Font("微软雅黑", 18F);
+            this.uiLabelTime.Location = new System.Drawing.Point(791, 12);
+            this.uiLabelTime.Name = "uiLabelTime";
+            this.uiLabelTime.Size = new System.Drawing.Size(174, 34);
+            this.uiLabelTime.Style = Sunny.UI.UIStyle.Orange;
+            this.uiLabelTime.TabIndex = 13;
+            this.uiLabelTime.Text = "1:00";
+            this.uiLabelTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabelTime.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // labelPoem
             // 
-            this.labelPoem.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.labelPoem.Location = new System.Drawing.Point(318, 9);
+            this.labelPoem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPoem.BackColor = System.Drawing.Color.Transparent;
+            this.labelPoem.Font = new System.Drawing.Font("华文行楷", 20F);
+            this.labelPoem.Location = new System.Drawing.Point(162, 15);
             this.labelPoem.Name = "labelPoem";
-            this.labelPoem.Size = new System.Drawing.Size(341, 34);
+            this.labelPoem.Size = new System.Drawing.Size(560, 34);
             this.labelPoem.Style = Sunny.UI.UIStyle.Orange;
             this.labelPoem.TabIndex = 12;
-            this.labelPoem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelPoem.Text = "你 画 我 猜";
+            this.labelPoem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelPoem.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "玩家";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // scoreDataGridViewTextBoxColumn
+            // 
+            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "Score";
+            this.scoreDataGridViewTextBoxColumn.HeaderText = "得分";
+            this.scoreDataGridViewTextBoxColumn.MinimumWidth = 70;
+            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
+            this.scoreDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // playerAndScoreBindingSource
+            // 
+            this.playerAndScoreBindingSource.DataSource = typeof(GameWinForm.PlayerAndScore);
             // 
             // DrawAndGuess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(977, 589);
             this.Controls.Add(this.panelWindow);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(651, 395);
+            this.MaximumSize = new System.Drawing.Size(993, 628);
+            this.MinimumSize = new System.Drawing.Size(993, 628);
             this.Name = "DrawAndGuess";
             this.Text = "DrawAndGuess";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDrawing)).EndInit();
@@ -493,12 +558,12 @@ namespace GameWinForm
             this.uiPanelDrawAndText.ResumeLayout(false);
             this.uiPanelScore.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridViewScore)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerAndScoreBindingSource)).EndInit();
             this.uiPanelDraw.ResumeLayout(false);
             this.uiPanelText.ResumeLayout(false);
             this.uiPanelDrawBox.ResumeLayout(false);
             this.uiPanelPen.ResumeLayout(false);
             this.uiPanelTitle.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.playerAndScoreBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -525,5 +590,9 @@ namespace GameWinForm
         private BindingSource playerAndScoreBindingSource;
         private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
+        private Sunny.UI.UILabel uiLabelPainter;
+        private Sunny.UI.UILabel uiLabelTime;
+        private Timer timer;
+        private Sunny.UI.UILabel uiLabelWinner;
     }
 }

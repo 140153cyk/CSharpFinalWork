@@ -33,31 +33,30 @@ namespace GameWinForm
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiPanelWindow = new Sunny.UI.UIPanel();
             this.uiPanelRoom = new Sunny.UI.UIPanel();
             this.uiPanelRoomInfo = new Sunny.UI.UIPanel();
             this.uiDataGridViewRoomInfo = new Sunny.UI.UIDataGridView();
-            this.roomIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isPlayingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CurrentNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uiPanelButtons = new Sunny.UI.UIPanel();
             this.uiPanelEnter = new Sunny.UI.UIPanel();
-            this.uiLabelSelectedID = new Sunny.UI.UILabel();
             this.uiButtonEnter = new Sunny.UI.UIButton();
-            this.uiTextBoxRoomID = new Sunny.UI.UITextBox();
             this.uiPanelFreshCreate = new Sunny.UI.UIPanel();
             this.uiButtonFresh = new Sunny.UI.UIButton();
             this.uiButtonCreate = new Sunny.UI.UIButton();
             this.uiPanelTitle = new Sunny.UI.UIPanel();
             this.uiLabelGameName = new Sunny.UI.UILabel();
-            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CurrentPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaxPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uiLabelRoomID = new Sunny.UI.UILabel();
+            this.roomIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uiPanelWindow.SuspendLayout();
             this.uiPanelRoom.SuspendLayout();
             this.uiPanelRoomInfo.SuspendLayout();
@@ -66,7 +65,7 @@ namespace GameWinForm
             this.uiPanelEnter.SuspendLayout();
             this.uiPanelFreshCreate.SuspendLayout();
             this.uiPanelTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomInfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // uiPanelWindow
@@ -130,34 +129,36 @@ namespace GameWinForm
             // 
             // uiDataGridViewRoomInfo
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.uiDataGridViewRoomInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.uiDataGridViewRoomInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.uiDataGridViewRoomInfo.AutoGenerateColumns = false;
             this.uiDataGridViewRoomInfo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiDataGridViewRoomInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewRoomInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("微软雅黑", 12F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridViewRoomInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.uiDataGridViewRoomInfo.ColumnHeadersHeight = 30;
             this.uiDataGridViewRoomInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.uiDataGridViewRoomInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.roomIdDataGridViewTextBoxColumn,
+            this.roomIDDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
-            this.isPlayingDataGridViewTextBoxColumn,
-            this.CurrentNum,
-            this.maxNumDataGridViewTextBoxColumn});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridViewRoomInfo.DefaultCellStyle = dataGridViewCellStyle8;
+            this.stateDataGridViewTextBoxColumn,
+            this.CurrentPlayer,
+            this.MaxPlayer});
+            this.uiDataGridViewRoomInfo.DataSource = this.roomInfoBindingSource;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("微软雅黑", 12F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.uiDataGridViewRoomInfo.DefaultCellStyle = dataGridViewCellStyle18;
             this.uiDataGridViewRoomInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiDataGridViewRoomInfo.EnableHeadersVisualStyles = false;
             this.uiDataGridViewRoomInfo.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -166,22 +167,22 @@ namespace GameWinForm
             this.uiDataGridViewRoomInfo.Name = "uiDataGridViewRoomInfo";
             this.uiDataGridViewRoomInfo.ReadOnly = true;
             this.uiDataGridViewRoomInfo.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewRoomInfo.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("微软雅黑", 12F);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridViewRoomInfo.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.uiDataGridViewRoomInfo.RowHeadersWidth = 90;
             this.uiDataGridViewRoomInfo.RowHeight = 30;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 12F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.uiDataGridViewRoomInfo.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("微软雅黑", 12F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.uiDataGridViewRoomInfo.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.uiDataGridViewRoomInfo.RowTemplate.Height = 30;
             this.uiDataGridViewRoomInfo.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiDataGridViewRoomInfo.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
@@ -192,50 +193,6 @@ namespace GameWinForm
             this.uiDataGridViewRoomInfo.TabIndex = 0;
             this.uiDataGridViewRoomInfo.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.uiDataGridViewRoomInfo.SelectIndexChange += new Sunny.UI.UIDataGridView.OnSelectIndexChange(this.IndexSet);
-            this.uiDataGridViewRoomInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiDataGridViewRoomInfo_CellContentClick);
-            // 
-            // roomIdDataGridViewTextBoxColumn
-            // 
-            this.roomIdDataGridViewTextBoxColumn.DataPropertyName = "RoomId";
-            this.roomIdDataGridViewTextBoxColumn.HeaderText = "房间号";
-            this.roomIdDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.roomIdDataGridViewTextBoxColumn.Name = "roomIdDataGridViewTextBoxColumn";
-            this.roomIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "房间名";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 150;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // isPlayingDataGridViewTextBoxColumn
-            // 
-            this.isPlayingDataGridViewTextBoxColumn.DataPropertyName = "IsPlaying";
-            this.isPlayingDataGridViewTextBoxColumn.HeaderText = "状态";
-            this.isPlayingDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.isPlayingDataGridViewTextBoxColumn.Name = "isPlayingDataGridViewTextBoxColumn";
-            this.isPlayingDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // CurrentNum
-            // 
-            this.CurrentNum.DataPropertyName = "CurrentNum";
-            this.CurrentNum.HeaderText = "当前玩家数";
-            this.CurrentNum.MinimumWidth = 150;
-            this.CurrentNum.Name = "CurrentNum";
-            this.CurrentNum.ReadOnly = true;
-            this.CurrentNum.Width = 150;
-            // 
-            // maxNumDataGridViewTextBoxColumn
-            // 
-            this.maxNumDataGridViewTextBoxColumn.DataPropertyName = "MaxNum";
-            this.maxNumDataGridViewTextBoxColumn.HeaderText = "最大玩家数";
-            this.maxNumDataGridViewTextBoxColumn.MinimumWidth = 150;
-            this.maxNumDataGridViewTextBoxColumn.Name = "maxNumDataGridViewTextBoxColumn";
-            this.maxNumDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maxNumDataGridViewTextBoxColumn.Width = 150;
             // 
             // uiPanelButtons
             // 
@@ -259,9 +216,8 @@ namespace GameWinForm
             // 
             // uiPanelEnter
             // 
-            this.uiPanelEnter.Controls.Add(this.uiLabelSelectedID);
+            this.uiPanelEnter.Controls.Add(this.uiLabelRoomID);
             this.uiPanelEnter.Controls.Add(this.uiButtonEnter);
-            this.uiPanelEnter.Controls.Add(this.uiTextBoxRoomID);
             this.uiPanelEnter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiPanelEnter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanelEnter.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
@@ -279,21 +235,10 @@ namespace GameWinForm
             this.uiPanelEnter.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanelEnter.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabelSelectedID
-            // 
-            this.uiLabelSelectedID.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabelSelectedID.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabelSelectedID.Location = new System.Drawing.Point(62, 40);
-            this.uiLabelSelectedID.Name = "uiLabelSelectedID";
-            this.uiLabelSelectedID.Size = new System.Drawing.Size(112, 42);
-            this.uiLabelSelectedID.Style = Sunny.UI.UIStyle.Orange;
-            this.uiLabelSelectedID.TabIndex = 2;
-            this.uiLabelSelectedID.Text = "当前所选ID：";
-            this.uiLabelSelectedID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabelSelectedID.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // uiButtonEnter
             // 
+            this.uiButtonEnter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButtonEnter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButtonEnter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiButtonEnter.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
@@ -315,32 +260,6 @@ namespace GameWinForm
             this.uiButtonEnter.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButtonEnter.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.uiButtonEnter.Click += new System.EventHandler(this.uiButtonEnter_Click);
-            // 
-            // uiTextBoxRoomID
-            // 
-            this.uiTextBoxRoomID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBoxRoomID.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiTextBoxRoomID.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.uiTextBoxRoomID.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.uiTextBoxRoomID.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiTextBoxRoomID.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.uiTextBoxRoomID.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.uiTextBoxRoomID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBoxRoomID.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.uiTextBoxRoomID.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiTextBoxRoomID.Location = new System.Drawing.Point(66, 87);
-            this.uiTextBoxRoomID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBoxRoomID.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBoxRoomID.Name = "uiTextBoxRoomID";
-            this.uiTextBoxRoomID.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiTextBoxRoomID.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiTextBoxRoomID.ShowText = false;
-            this.uiTextBoxRoomID.Size = new System.Drawing.Size(108, 34);
-            this.uiTextBoxRoomID.Style = Sunny.UI.UIStyle.Orange;
-            this.uiTextBoxRoomID.TabIndex = 0;
-            this.uiTextBoxRoomID.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBoxRoomID.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiPanelFreshCreate
             // 
@@ -364,6 +283,8 @@ namespace GameWinForm
             // 
             // uiButtonFresh
             // 
+            this.uiButtonFresh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButtonFresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButtonFresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiButtonFresh.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
@@ -388,6 +309,8 @@ namespace GameWinForm
             // 
             // uiButtonCreate
             // 
+            this.uiButtonCreate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButtonCreate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButtonCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiButtonCreate.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
@@ -425,6 +348,7 @@ namespace GameWinForm
             this.uiPanelTitle.Size = new System.Drawing.Size(985, 71);
             this.uiPanelTitle.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanelTitle.TabIndex = 1;
+            this.uiPanelTitle.Text = null;
             this.uiPanelTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanelTitle.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -443,9 +367,65 @@ namespace GameWinForm
             this.uiLabelGameName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiLabelGameName.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // roomBindingSource
+            // CurrentPlayer
             // 
-            this.roomBindingSource.DataSource = typeof(GameWinForm.Room);
+            this.CurrentPlayer.DataPropertyName = "CurrentPlayer";
+            this.CurrentPlayer.HeaderText = "当前人数";
+            this.CurrentPlayer.MinimumWidth = 100;
+            this.CurrentPlayer.Name = "CurrentPlayer";
+            this.CurrentPlayer.ReadOnly = true;
+            // 
+            // MaxPlayer
+            // 
+            this.MaxPlayer.DataPropertyName = "MaxPlayer";
+            this.MaxPlayer.HeaderText = "最大人数";
+            this.MaxPlayer.MinimumWidth = 100;
+            this.MaxPlayer.Name = "MaxPlayer";
+            this.MaxPlayer.ReadOnly = true;
+            // 
+            // uiLabelRoomID
+            // 
+            this.uiLabelRoomID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiLabelRoomID.BackColor = System.Drawing.Color.Transparent;
+            this.uiLabelRoomID.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabelRoomID.Location = new System.Drawing.Point(62, 92);
+            this.uiLabelRoomID.Name = "uiLabelRoomID";
+            this.uiLabelRoomID.Size = new System.Drawing.Size(153, 27);
+            this.uiLabelRoomID.Style = Sunny.UI.UIStyle.Orange;
+            this.uiLabelRoomID.TabIndex = 3;
+            this.uiLabelRoomID.Text = "ID: 无";
+            this.uiLabelRoomID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabelRoomID.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // roomIDDataGridViewTextBoxColumn
+            // 
+            this.roomIDDataGridViewTextBoxColumn.DataPropertyName = "RoomID";
+            this.roomIDDataGridViewTextBoxColumn.HeaderText = "房间号";
+            this.roomIDDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.roomIDDataGridViewTextBoxColumn.Name = "roomIDDataGridViewTextBoxColumn";
+            this.roomIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "房间名";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 150;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "房间状态";
+            this.stateDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // roomInfoBindingSource
+            // 
+            this.roomInfoBindingSource.DataSource = typeof(GameWinForm.RoomInfo);
             // 
             // RoomForm
             // 
@@ -454,7 +434,8 @@ namespace GameWinForm
             this.ClientSize = new System.Drawing.Size(985, 599);
             this.Controls.Add(this.uiPanelWindow);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(782, 453);
+            this.MaximumSize = new System.Drawing.Size(1001, 638);
+            this.MinimumSize = new System.Drawing.Size(1001, 638);
             this.Name = "RoomForm";
             this.Text = "  ";
             this.uiPanelWindow.ResumeLayout(false);
@@ -465,7 +446,7 @@ namespace GameWinForm
             this.uiPanelEnter.ResumeLayout(false);
             this.uiPanelFreshCreate.ResumeLayout(false);
             this.uiPanelTitle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomInfoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -479,19 +460,20 @@ namespace GameWinForm
         private Sunny.UI.UIPanel uiPanelRoomInfo;
         private Sunny.UI.UIPanel uiPanelButtons;
         private Sunny.UI.UIDataGridView uiDataGridViewRoomInfo;
-        private BindingSource roomBindingSource;
         private DataGridViewTextBoxColumn playerNumDataGridViewTextBoxColumn;
         private Sunny.UI.UIPanel uiPanelFreshCreate;
         private Sunny.UI.UIPanel uiPanelEnter;
-        private Sunny.UI.UILabel uiLabelSelectedID;
         private Sunny.UI.UIButton uiButtonEnter;
-        private Sunny.UI.UITextBox uiTextBoxRoomID;
         private Sunny.UI.UIButton uiButtonFresh;
         private Sunny.UI.UIButton uiButtonCreate;
-        private DataGridViewTextBoxColumn roomIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn currentPlayerDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn maxPlayerDataGridViewTextBoxColumn;
+        private BindingSource roomInfoBindingSource;
+        private DataGridViewTextBoxColumn roomIDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn isPlayingDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn CurrentNum;
-        private DataGridViewTextBoxColumn maxNumDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn CurrentPlayer;
+        private DataGridViewTextBoxColumn MaxPlayer;
+        private Sunny.UI.UILabel uiLabelRoomID;
     }
 }

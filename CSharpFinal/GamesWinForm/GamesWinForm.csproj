@@ -80,7 +80,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Room.cs" />
     <Compile Include="RoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +131,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\GameWinForm.RemainPlayer.datasource" />
+    <None Include="Properties\DataSources\GameWinForm.RoomInfo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

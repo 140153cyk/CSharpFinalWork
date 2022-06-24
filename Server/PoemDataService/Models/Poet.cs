@@ -11,6 +11,7 @@ namespace PoemDataService.Models
         public string name { get; set; }
         public string introduction { get; set; }
         public string IMGPath { get; set; }//百度百科第一张图片的路径
+        
 
 
     }

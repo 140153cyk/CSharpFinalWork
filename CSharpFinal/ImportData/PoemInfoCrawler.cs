@@ -17,7 +17,6 @@ namespace ImportData
 {
     public class PoemInfoCrawler
     {
-        public string[] poets { get; set; }
         public string baseUrl { get; set; }
 
         public HttpClient apiClient { get; set; }
@@ -29,15 +28,8 @@ namespace ImportData
             apiClient = new HttpClient(handler);
             apiClient.DefaultRequestHeaders.Accept.Clear();
             apiClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-
-            var task = apiClient.GetStringAsync("https://localhost:5001/api/poem/poets");
-            poets = JsonConvert.DeserializeObject<string[]>(task.Result);
-            foreach (string poet in poets)
-            {
-                Console.WriteLine(poet);
-            }
-
-            Console.ReadLine();
+/*
+            */
         }
 
         public string crawl(string url)
@@ -63,7 +55,9 @@ namespace ImportData
             document.LoadHtml(html);
             HtmlNode node = document.DocumentNode;
             HtmlNode para = node.CssSelect("div.para").FirstOrDefault();
-            string rawIntro = para.InnerText;
+            string rawIntro;
+            if (para == null) rawIntro = "暂无介绍";
+            else rawIntro = para.InnerText;
             rawIntro = Regex.Replace(rawIntro,@"\[([1234567890-])+\]&nbsp;","");
             rawIntro = rawIntro.Replace("\n", "");
 
@@ -72,7 +66,6 @@ namespace ImportData
             if (img != null)
             {
                 src = img.GetAttributeValue("src", "https://bkimg.cdn.bcebos.com/pic/8c1001e93901213feb055d8250e736d12f2e95bd?x-bce-process=image/resize,m_lfit,w_220,limit_1/format,f_auto");
-                Console.WriteLine(src);
             }
             else
             {
@@ -80,7 +73,8 @@ namespace ImportData
             }
 
             Poet poet = new Poet(name, rawIntro, src);
-            HttpContent content = new StringContent(JsonConvert.SerializeObject(poet));
+            Console.WriteLine(poet.name);
+            HttpContent content = new StringContent(JsonConvert.SerializeObject(poet), Encoding.UTF8, "application/json");
             apiClient.PostAsync("https://localhost:5001/api/poet", content);
             
         }

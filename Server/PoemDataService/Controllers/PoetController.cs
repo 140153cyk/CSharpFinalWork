@@ -32,5 +32,11 @@ namespace PoemDataService.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpGet]
+        public ActionResult<Poet> GetPoet(string name)
+        {
+            return db.Poets.FirstOrDefault(p => p.name == name);
+        }
     } 
 }

@@ -6,7 +6,6 @@ D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.GenerateRe
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.exe
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.pdb
-D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.AssemblyReference.cache
 D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\obj\Debug\Client.csproj.AssemblyReference.cache
 D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
 D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\obj\Debug\Client.Properties.Resources.resources
@@ -20,3 +19,16 @@ D:\ChromeDownload\CSharpFinalWork-main\CSharpFinalWork-main\CSharpFinal\Client\b
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\bin\Debug\Newtonsoft.Json.dll
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.CopyComplete
 D:\c#大作业\C-FinalWork\CSharpFinal\Client\bin\Debug\serverIp.xml
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\bin\Debug\serverIp.xml
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\bin\Debug\Client.exe.config
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\bin\Debug\Client.exe
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\bin\Debug\Client.pdb
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\bin\Debug\Newtonsoft.Json.dll
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.Properties.Resources.resources
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.GenerateResource.cache
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.CopyComplete
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.exe
+D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.pdb

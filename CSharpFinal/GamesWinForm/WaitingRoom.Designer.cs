@@ -265,6 +265,8 @@ namespace GameWinForm
             // 
             // uiLabelName
             // 
+            this.uiLabelName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabelName.BackColor = System.Drawing.Color.Transparent;
             this.uiLabelName.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabelName.Location = new System.Drawing.Point(49, 18);
@@ -287,6 +289,7 @@ namespace GameWinForm
             this.MinimumSize = new System.Drawing.Size(477, 533);
             this.Name = "WaitingRoom";
             this.Text = "WaitingRoom";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Quit);
             this.uiPanelWindow.ResumeLayout(false);
             this.uiPanelInfo.ResumeLayout(false);
             this.uiPanelPlayer.ResumeLayout(false);

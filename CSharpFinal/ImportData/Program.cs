@@ -15,44 +15,53 @@ namespace ImportData
 {
     public class Program
     {
-        static void Main()
+        public static string[] poets { get; set; }
+        public static void Main()
         {
-            /*string baseUrl = "https://localhost:5001/api/poem";
+
+            string baseUrl = "https://localhost:5001/api/poem";
             HttpClientHandler handler = new HttpClientHandler();
             handler.ServerCertificateCustomValidationCallback = (message, cert, chain, err) => true;
             HttpClient client = new HttpClient(handler);
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-            for (int i = 1; i <= 900; i++)
+/*            for (int i = 1; i <= 900; i++)
             {
                 string path = $"json\\" + (i / 100) + ((i % 100) / 10) + (i % 10) + ".json";
                 List<RawPoem> rawPoems = ReadPoem(path);
                 rawPoems.ForEach(rawPoem =>
                 {
                     Poem poem = new Poem(
-                        ConvertString(rawPoem.title), 
-                        ConvertString(rawPoem.author), 
-                        ConvertString(rawPoem.biography), 
-                        ConvertString(rawPoem.volume) 
-                       );                  
+                        ConvertString(rawPoem.title),
+                        ConvertString(rawPoem.author),
+                        ConvertString(rawPoem.biography),
+                        ConvertString(rawPoem.volume)
+                       );
 
-                    for(int j = 0; j < rawPoem.paragraphs.Count; j++)
+                    for (int j = 0; j < rawPoem.paragraphs.Count; j++)
                     {
-                        poem.paragraphs.Add(new Paragraph(ConvertString(rawPoem.paragraphs[j]),j));
+                        poem.paragraphs.Add(new Paragraph(ConvertString(rawPoem.paragraphs[j]), j));
                     }
-                    
-                  
-                HttpContent content = new StringContent(JsonConvert.SerializeObject(poem), Encoding.UTF8, "application/json");
-                var task = client.PostAsync(baseUrl, content);
+
+
+                    HttpContent content = new StringContent(JsonConvert.SerializeObject(poem), Encoding.UTF8, "application/json");
+                    var task1 = client.PostAsync(baseUrl, content);
                     Console.WriteLine(i);
                 });
             }*/
-            PoemInfoCrawler crawler = new PoemInfoCrawler();
-            
-            crawler.addPoet("https://baike.baidu.com/item/李白");
 
+            PoemInfoCrawler crawler = new PoemInfoCrawler();
+            var task2 = client.GetStringAsync("https://localhost:5001/api/poem/poets");
+            poets = JsonConvert.DeserializeObject<string[]>(task2.Result);
+            foreach (string poet in poets)
+            {
+                Task.Run(()=> {
+                    crawler.addPoet(poet);
+                });
+            }
             Console.ReadLine();
+
             
         }
 

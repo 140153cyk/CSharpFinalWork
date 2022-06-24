@@ -21,7 +21,7 @@ namespace GameWinForm
 
         private void uiButton1_Click(object sender, EventArgs e)
         {
-            RoomForm form = new RoomForm(Name, 0);
+            RoomForm form = new RoomForm(Name, 1);
             form.Show();
         }
     }

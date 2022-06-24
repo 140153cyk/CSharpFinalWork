@@ -11,15 +11,15 @@ namespace Client
     public class DrawAndGuessClient : Client
     {
         /// <summary>
-        /// 不是本人画画的回合
-        /// </summary>
-        public Action NotMyTurn = ()=>{};
-        
-
-        /// <summary>
         /// 展示本轮答对的界面
         /// </summary>
         public Action ShowCorrect = () => { };
+
+        /// <summary>
+        /// 增加得分:玩家 得分
+        /// </summary>
+        public Action<string,int> AddScore = (player,score) => { };
+
 
         /// <summary>
         /// 玩家的名字和得分
@@ -146,6 +146,7 @@ namespace Client
                         ShowMessage(player + "答对了，得到了"+score.ToString()+"分");
                         //玩家得分增加
                         PlayersInGame[player] += score;
+                        AddScore(player, score);
                         //下次得分减少，最小得分量为1
                         if (currentScore > 1) currentScore--;
                     }
@@ -178,7 +179,7 @@ namespace Client
                             }
                             else if(player.Value == maxScore)
                             {
-                                winner+=player.Key;
+                                winner+="  "+player.Key;
                             }
                             else
                             {
@@ -200,8 +201,8 @@ namespace Client
                         }
                         else
                         {
-                            NotMyTurn();
-                            ShowMessage("系统 ： 轮到" + message + "画画了");
+                            NotMyTurn(CurrentPlayer);
+                            //ShowMessage("系统 ： 轮到" + message + "画画了");
                         }
                     }
                     //代表玩家的画，消息格式为“{画}”

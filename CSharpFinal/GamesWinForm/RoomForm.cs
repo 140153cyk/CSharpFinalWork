@@ -21,11 +21,13 @@ namespace GameWinForm
         //Type==0是飞花令，Type==1是你画我猜，在进入房间选择界面时传入
         public int Type { get; set; } = 0;
         //房间列表，从客户端获得，用于显示
-        public Dictionary<int, string> Rooms;
-         //所选择的房间的名称
+        public Dictionary<int, RoomInfo> Rooms;
+        //所选择或创建的房间的名称
+        //创建房间，则从CreateForm返回房间名称，在进入WaitingRoom时传入WaitingRoom
+        //选择房间，则在点击“进入房间”按钮时，从Dictionary中获得，并在进入WaitingRoom时传入WaitingRoom
         public string RoomName { set; get; }
         //所选择的房间的ID
-        public int RoomID { set; get; } = 0;
+        public int RoomID { set; get; } = -1;
 
         //创建并展示等待房间的委托
         public static Action<string> OnShowWaitingForm;
@@ -42,21 +44,18 @@ namespace GameWinForm
             Type = type;
             if (Type== 0)
             {
-                this.uiLabelGameName.Text = "飞花令";
+                this.uiLabelGameName.Text = "飞  花  令";
                 client = new FlyingFlowerClient(clientName);
             }
             else
             {
-                this.uiLabelGameName.Text = "你画我猜";
+                this.uiLabelGameName.Text = "你 画 我 猜";
                 client = new DrawAndGuessClient(clientName);
             }
-            Rooms = new Dictionary<int, string>();
+            Rooms = new Dictionary<int, RoomInfo>();
             //关联 委托 和 创建并展示等待房间的方法 
             OnShowWaitingForm += ShowWaitingRoom;
             OnShowInfoForm += ShowInfoForm;
-
-            //数据绑定
-            this.uiTextBoxRoomID.DataBindings.Add("Text", this, "RoomID");
 
 
             // 刷新房间列表,s格式为“{房间ID} {房间名} {游玩状态} {当前人数} {最大游玩人数} ”
@@ -65,29 +64,18 @@ namespace GameWinForm
                 MatchCollection matches = regex.Matches(str);
                 for(int i = 0; (5 * i) < matches.Count; i++)
                 {
-                    Rooms.Add(Int32.Parse(matches[5 * i].Value), matches[5 * i + 1].Value);
-                    if(uiDataGridViewRoomInfo.Rows.Count <= i+1) this.uiDataGridViewRoomInfo.AddRow();
-                    this.uiDataGridViewRoomInfo.Rows[i].Cells[0].Value = matches[5*i].Value;
-                    this.uiDataGridViewRoomInfo.Rows[i].Cells[1].Value = matches[5*i + 1].Value;
-                    if (matches[5 * i + 2].Value=="False")
-                    {
-                        this.uiDataGridViewRoomInfo.Rows[i].Cells[2].Value = "未开始";
-                    }
-                    else
-                    {
-                        this.uiDataGridViewRoomInfo.Rows[i].Cells[2].Value = "已开始";
-                    }
-                    this.uiDataGridViewRoomInfo.Rows[i].Cells[3].Value = matches[5*i + 3].Value;
-                    this.uiDataGridViewRoomInfo.Rows[i].Cells[4].Value = matches[5*i + 4].Value;
+                    //更新Dictionary
+                    Rooms[Int32.Parse(matches[5 * i].Value)] = new RoomInfo(Int32.Parse(matches[5 * i].Value),
+                       matches[5 * i + 1].Value,matches[5 * i + 2].Value,
+                       Int32.Parse(matches[5 * i + 3].Value),Int32.Parse(matches[5 * i + 4].Value));
+
+                    this.uiDataGridViewRoomInfo.DataSource = Rooms.Values.ToList<RoomInfo>();
                 }
             };
-
-
             client.CreateFormAndShowPlayerState = (str) =>
             {
                 OnShowWaitingForm(str);
             };
-
             //***
             client.ShowWarning = (s) =>
             {
@@ -95,27 +83,29 @@ namespace GameWinForm
             };
         }
 
+        private void form_Show(object sender, EventArgs e)
+        {
+            //client.RefreshAllRooms();
+        }
         private void uiButtonCreate_Click(object sender, EventArgs e)
         {
             CreateForm form = new CreateForm(client);
             form.ShowDialog(this);
         }
-
         private void uiButtonFresh_Click(object sender, EventArgs e)
         {
             client.RefreshAllRooms();
         }
-
         private void uiButtonEnter_Click(object sender, EventArgs e)
         {
-            if (this.uiTextBoxRoomID.Text.Length == 0)
+            if (RoomID == -1)
             {
                 InfoForm infoForm = new InfoForm("请选择房间");
                 infoForm.ShowDialog();
             }
             else
             {
-                RoomName = Rooms[RoomID];
+                RoomName = Rooms[RoomID].Name;
                 client.JoinRoom(RoomID);
             }
 
@@ -124,9 +114,8 @@ namespace GameWinForm
         {
             try
             {
-                int roomID = Int32.Parse((String)this.uiDataGridViewRoomInfo.Rows[index].Cells[0].Value);
-                RoomID = roomID;
-                this.uiTextBoxRoomID.Text = RoomID.ToString();
+                this.uiLabelRoomID.Text = "ID: " + this.uiDataGridViewRoomInfo.Rows[index].Cells[0].Value.ToString();
+                RoomID = (int)this.uiDataGridViewRoomInfo.Rows[index].Cells[0].Value;
             }
             catch(Exception e) { }
         }
@@ -152,14 +141,31 @@ namespace GameWinForm
                 this.Dispose();
             }));
         }
-        public void test()
-        {
-           
-        }
 
-        private void uiDataGridViewRoomInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+    }
 
+    public class RoomInfo
+    {
+        public int RoomID { get; set; }
+
+        public string Name { get; set; }
+        public string State { set; get; }
+        public int CurrentPlayer { set; get; }
+        public int MaxPlayer { set; get; }
+        public RoomInfo(int roomID, string name, string state, int currentPlayer, int maxPlayer)
+        {
+            RoomID = roomID;
+            Name = name;
+            if (state == "False")
+            {
+                State = "未开始";
+            }
+            else
+            {
+                State = "已开始";
+            }
+            CurrentPlayer = currentPlayer;
+            MaxPlayer = maxPlayer;
         }
     }
 }

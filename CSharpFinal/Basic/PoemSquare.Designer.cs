@@ -44,8 +44,6 @@ namespace Basic
             this.searchArgBox = new Sunny.UI.UITextBox();
             this.searchBtn = new Sunny.UI.UIButton();
             this.searchTypeBox = new Sunny.UI.UIComboBox();
-            this.poemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.uiPanel4 = new Sunny.UI.UIPanel();
             this.uiPanel5 = new Sunny.UI.UIPanel();
@@ -56,13 +54,15 @@ namespace Basic
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.poemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uiPanel1.SuspendLayout();
             this.uiPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.poemBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchBindingSource)).BeginInit();
             this.uiPanel4.SuspendLayout();
             this.uiPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.poemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // uiPanel1
@@ -75,12 +75,12 @@ namespace Basic
             this.uiPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel1.Location = new System.Drawing.Point(10, 10);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.Padding = new System.Windows.Forms.Padding(15, 20, 15, 20);
             this.uiPanel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanel1.Size = new System.Drawing.Size(748, 70);
+            this.uiPanel1.Size = new System.Drawing.Size(622, 70);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel1.TabIndex = 0;
             this.uiPanel1.Text = null;
@@ -100,7 +100,7 @@ namespace Basic
             this.uiPanel3.Name = "uiPanel3";
             this.uiPanel3.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
             this.uiPanel3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanel3.Size = new System.Drawing.Size(478, 30);
+            this.uiPanel3.Size = new System.Drawing.Size(352, 30);
             this.uiPanel3.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel3.TabIndex = 2;
             this.uiPanel3.Text = null;
@@ -126,7 +126,7 @@ namespace Basic
             this.searchArgBox.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.searchArgBox.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.searchArgBox.ShowText = false;
-            this.searchArgBox.Size = new System.Drawing.Size(418, 30);
+            this.searchArgBox.Size = new System.Drawing.Size(292, 30);
             this.searchArgBox.Style = Sunny.UI.UIStyle.Orange;
             this.searchArgBox.TabIndex = 0;
             this.searchArgBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -142,7 +142,7 @@ namespace Basic
             this.searchBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.searchBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.searchBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.searchBtn.Location = new System.Drawing.Point(596, 20);
+            this.searchBtn.Location = new System.Drawing.Point(470, 20);
             this.searchBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
@@ -184,14 +184,6 @@ namespace Basic
             this.searchTypeBox.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.searchTypeBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // poemBindingSource
-            // 
-            this.poemBindingSource.DataSource = typeof(Models.Poem);
-            // 
-            // searchBindingSource
-            // 
-            this.searchBindingSource.DataSource = typeof(Models.Poem);
-            // 
             // uiPanel2
             // 
             this.uiPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
@@ -201,7 +193,7 @@ namespace Basic
             this.uiPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel2.Location = new System.Drawing.Point(630, 80);
+            this.uiPanel2.Location = new System.Drawing.Point(504, 80);
             this.uiPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel2.Name = "uiPanel2";
@@ -222,12 +214,12 @@ namespace Basic
             this.uiPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel4.Location = new System.Drawing.Point(10, 80);
-            this.uiPanel4.Margin = new System.Windows.Forms.Padding(2);
+            this.uiPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uiPanel4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel4.Name = "uiPanel4";
-            this.uiPanel4.Padding = new System.Windows.Forms.Padding(10);
+            this.uiPanel4.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.uiPanel4.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanel4.Size = new System.Drawing.Size(620, 294);
+            this.uiPanel4.Size = new System.Drawing.Size(494, 294);
             this.uiPanel4.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel4.TabIndex = 2;
             this.uiPanel4.Text = null;
@@ -247,9 +239,9 @@ namespace Basic
             this.uiPanel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel5.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel5.Name = "uiPanel5";
-            this.uiPanel5.Padding = new System.Windows.Forms.Padding(200, 10, 200, 10);
+            this.uiPanel5.Padding = new System.Windows.Forms.Padding(150, 10, 150, 10);
             this.uiPanel5.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanel5.Size = new System.Drawing.Size(600, 62);
+            this.uiPanel5.Size = new System.Drawing.Size(474, 62);
             this.uiPanel5.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel5.TabIndex = 1;
             this.uiPanel5.Text = null;
@@ -271,7 +263,7 @@ namespace Basic
             this.pageNum.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.pageNum.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.pageNum.IntValue = 1;
-            this.pageNum.Location = new System.Drawing.Point(277, 10);
+            this.pageNum.Location = new System.Drawing.Point(220, 10);
             this.pageNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pageNum.MinimumSize = new System.Drawing.Size(1, 16);
             this.pageNum.Name = "pageNum";
@@ -280,7 +272,7 @@ namespace Basic
             this.pageNum.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.pageNum.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.pageNum.ShowText = false;
-            this.pageNum.Size = new System.Drawing.Size(44, 42);
+            this.pageNum.Size = new System.Drawing.Size(34, 42);
             this.pageNum.Style = Sunny.UI.UIStyle.Orange;
             this.pageNum.TabIndex = 3;
             this.pageNum.Text = "1";
@@ -298,14 +290,14 @@ namespace Basic
             this.nextBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.nextBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.nextBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.nextBtn.Location = new System.Drawing.Point(321, 10);
+            this.nextBtn.Location = new System.Drawing.Point(254, 10);
             this.nextBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.nextBtn.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
             this.nextBtn.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.nextBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.nextBtn.Size = new System.Drawing.Size(79, 42);
+            this.nextBtn.Size = new System.Drawing.Size(70, 42);
             this.nextBtn.Style = Sunny.UI.UIStyle.Orange;
             this.nextBtn.TabIndex = 2;
             this.nextBtn.Text = "下一页";
@@ -324,14 +316,14 @@ namespace Basic
             this.beforeBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.beforeBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.beforeBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.beforeBtn.Location = new System.Drawing.Point(200, 10);
+            this.beforeBtn.Location = new System.Drawing.Point(150, 10);
             this.beforeBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.beforeBtn.Name = "beforeBtn";
             this.beforeBtn.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.beforeBtn.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
             this.beforeBtn.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.beforeBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.beforeBtn.Size = new System.Drawing.Size(77, 42);
+            this.beforeBtn.Size = new System.Drawing.Size(70, 42);
             this.beforeBtn.Style = Sunny.UI.UIStyle.Orange;
             this.beforeBtn.TabIndex = 0;
             this.beforeBtn.Text = "上一页";
@@ -398,7 +390,7 @@ namespace Basic
             this.searchGridView.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.searchGridView.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.searchGridView.SelectedIndex = -1;
-            this.searchGridView.Size = new System.Drawing.Size(600, 274);
+            this.searchGridView.Size = new System.Drawing.Size(474, 274);
             this.searchGridView.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.searchGridView.Style = Sunny.UI.UIStyle.Orange;
             this.searchGridView.TabIndex = 0;
@@ -447,25 +439,33 @@ namespace Basic
             this.authorDataGridViewTextBoxColumn.ReadOnly = true;
             this.authorDataGridViewTextBoxColumn.Width = 150;
             // 
+            // poemBindingSource
+            // 
+            this.poemBindingSource.DataSource = typeof(Models.Poem);
+            // 
+            // searchBindingSource
+            // 
+            this.searchBindingSource.DataSource = typeof(Models.Poem);
+            // 
             // PoemSquare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 384);
+            this.ClientSize = new System.Drawing.Size(642, 384);
             this.Controls.Add(this.uiPanel4);
             this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.uiPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PoemSquare";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.Text = "诗词广场";
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.poemBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchBindingSource)).EndInit();
             this.uiPanel4.ResumeLayout(false);
             this.uiPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.poemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

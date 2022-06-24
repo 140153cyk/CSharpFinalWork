@@ -209,6 +209,7 @@ namespace GameWinForm
         private void initTurn()
         {
             Time = 15;
+            this.uiLabelTimer.Text = "0:15";
             this.timer.Start();
             this.pictureBoxAnswer.Image = null;
             this.uiLabelAnswer.Text = "";
@@ -230,11 +231,11 @@ namespace GameWinForm
             if (Time <= 0)
             {
                 this.timer.Stop();
-                /*if (isMyTurn)
+                if (isMyTurn)
                 {
                     this.uiButtonSend.Enabled = false;
                     this.uiButtonSend.PerformClick();
-                }*/
+                }
             }
         }
 

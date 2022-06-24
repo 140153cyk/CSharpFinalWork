@@ -174,6 +174,7 @@ namespace Basic
             // 
             // uiLabel2
             // 
+            this.uiLabel2.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(30, 30);
@@ -233,6 +234,7 @@ namespace Basic
             // 
             // uiLabel1
             // 
+            this.uiLabel1.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel1.Location = new System.Drawing.Point(30, 30);
