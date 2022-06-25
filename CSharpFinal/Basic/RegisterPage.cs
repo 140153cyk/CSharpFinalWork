@@ -25,6 +25,9 @@ namespace Basic
             XmlNode node = serverDoc.SelectSingleNode("serverIp");
             baseUrl = "https://" + node.InnerText + ":5001/api";
             InitializeComponent();
+            PasswordText.Style = Sunny.UI.UIStyle.Orange;
+            AccountText.Style = Sunny.UI.UIStyle.Orange;
+            ConfrimPas.Style = Sunny.UI.UIStyle.Orange;
         }
 
         private void RegisterBtn_Click(object sender, EventArgs e)

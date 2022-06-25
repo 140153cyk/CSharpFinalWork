@@ -23,7 +23,7 @@ namespace GameWinForm
         public int PlayerReadyNum { set; get; } = 0;
 
         protected Regex regex = new Regex(@"\w+");
-        public static Action<string> OnShowGameForm;
+        public  Action<string> OnShowGameForm =s=> { };
         public RoomForm parent { get; set; }
 
         public WaitingRoom(Client.Client c, int roomID, string roomName, int type, string message,RoomForm parent)

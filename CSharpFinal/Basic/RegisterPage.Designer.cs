@@ -58,13 +58,14 @@ namespace Basic
             this.uiTableLayoutPanel1.Controls.Add(this.panel4, 0, 2);
             this.uiTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiTableLayoutPanel1.Location = new System.Drawing.Point(50, 50);
+            this.uiTableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uiTableLayoutPanel1.Name = "uiTableLayoutPanel1";
             this.uiTableLayoutPanel1.RowCount = 4;
             this.uiTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.uiTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.uiTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.uiTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.uiTableLayoutPanel1.Size = new System.Drawing.Size(700, 501);
+            this.uiTableLayoutPanel1.Size = new System.Drawing.Size(700, 500);
             this.uiTableLayoutPanel1.TabIndex = 0;
             this.uiTableLayoutPanel1.TagString = null;
             // 
@@ -72,32 +73,24 @@ namespace Basic
             // 
             this.panel1.Controls.Add(this.RegisterBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 378);
+            this.panel1.Location = new System.Drawing.Point(4, 379);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(100, 20, 100, 20);
-            this.panel1.Size = new System.Drawing.Size(694, 120);
+            this.panel1.Size = new System.Drawing.Size(692, 117);
             this.panel1.TabIndex = 0;
             // 
             // RegisterBtn
             // 
             this.RegisterBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegisterBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RegisterBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.RegisterBtn.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.RegisterBtn.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.RegisterBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.RegisterBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.RegisterBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.RegisterBtn.Location = new System.Drawing.Point(100, 20);
-            this.RegisterBtn.MinimumSize = new System.Drawing.Size(1, 1);
+            this.RegisterBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RegisterBtn.MinimumSize = new System.Drawing.Size(2, 2);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Radius = 1;
-            this.RegisterBtn.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.RegisterBtn.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.RegisterBtn.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.RegisterBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.RegisterBtn.Size = new System.Drawing.Size(494, 80);
-            this.RegisterBtn.Style = Sunny.UI.UIStyle.Orange;
+            this.RegisterBtn.Size = new System.Drawing.Size(492, 77);
             this.RegisterBtn.TabIndex = 0;
             this.RegisterBtn.Text = "注册";
             this.RegisterBtn.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -109,33 +102,24 @@ namespace Basic
             this.panel2.Controls.Add(this.AccountText);
             this.panel2.Controls.Add(this.uiLabel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(20);
-            this.panel2.Size = new System.Drawing.Size(694, 119);
+            this.panel2.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.panel2.Size = new System.Drawing.Size(692, 117);
             this.panel2.TabIndex = 1;
             // 
             // AccountText
             // 
-            this.AccountText.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.AccountText.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.AccountText.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.AccountText.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.AccountText.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.AccountText.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.AccountText.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.AccountText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AccountText.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.AccountText.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.AccountText.Location = new System.Drawing.Point(200, 20);
-            this.AccountText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.AccountText.MinimumSize = new System.Drawing.Size(1, 16);
+            this.AccountText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AccountText.MinimumSize = new System.Drawing.Size(0, 16);
             this.AccountText.Name = "AccountText";
-            this.AccountText.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.AccountText.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.AccountText.ShowText = false;
-            this.AccountText.Size = new System.Drawing.Size(474, 60);
-            this.AccountText.Style = Sunny.UI.UIStyle.Orange;
+            this.AccountText.Size = new System.Drawing.Size(472, 60);
             this.AccountText.TabIndex = 1;
             this.AccountText.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.AccountText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -145,8 +129,9 @@ namespace Basic
             this.uiLabel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel1.Location = new System.Drawing.Point(20, 20);
+            this.uiLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(180, 79);
+            this.uiLabel1.Size = new System.Drawing.Size(180, 77);
             this.uiLabel1.TabIndex = 0;
             this.uiLabel1.Text = "账号：";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,34 +142,25 @@ namespace Basic
             this.panel3.Controls.Add(this.PasswordText);
             this.panel3.Controls.Add(this.uiLabel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 128);
+            this.panel3.Location = new System.Drawing.Point(4, 129);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(20);
-            this.panel3.Size = new System.Drawing.Size(694, 119);
+            this.panel3.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.panel3.Size = new System.Drawing.Size(692, 117);
             this.panel3.TabIndex = 2;
             // 
             // PasswordText
             // 
-            this.PasswordText.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.PasswordText.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.PasswordText.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.PasswordText.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.PasswordText.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.PasswordText.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.PasswordText.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.PasswordText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PasswordText.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.PasswordText.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.PasswordText.Location = new System.Drawing.Point(200, 20);
-            this.PasswordText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PasswordText.MinimumSize = new System.Drawing.Size(1, 16);
+            this.PasswordText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordText.MinimumSize = new System.Drawing.Size(0, 16);
             this.PasswordText.Name = "PasswordText";
             this.PasswordText.PasswordChar = '*';
-            this.PasswordText.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.PasswordText.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.PasswordText.ShowText = false;
-            this.PasswordText.Size = new System.Drawing.Size(474, 60);
-            this.PasswordText.Style = Sunny.UI.UIStyle.Orange;
+            this.PasswordText.Size = new System.Drawing.Size(472, 60);
             this.PasswordText.TabIndex = 1;
             this.PasswordText.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.PasswordText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -194,8 +170,9 @@ namespace Basic
             this.uiLabel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(20, 20);
+            this.uiLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(180, 79);
+            this.uiLabel2.Size = new System.Drawing.Size(180, 77);
             this.uiLabel2.TabIndex = 0;
             this.uiLabel2.Text = "密码：";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,34 +183,25 @@ namespace Basic
             this.panel4.Controls.Add(this.ConfrimPas);
             this.panel4.Controls.Add(this.uiLabel3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 253);
+            this.panel4.Location = new System.Drawing.Point(4, 254);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(20);
-            this.panel4.Size = new System.Drawing.Size(694, 119);
+            this.panel4.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.panel4.Size = new System.Drawing.Size(692, 117);
             this.panel4.TabIndex = 3;
             // 
             // ConfrimPas
             // 
-            this.ConfrimPas.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.ConfrimPas.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.ConfrimPas.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
-            this.ConfrimPas.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.ConfrimPas.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(175)))), ((int)(((byte)(83)))));
-            this.ConfrimPas.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.ConfrimPas.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ConfrimPas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ConfrimPas.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.ConfrimPas.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ConfrimPas.Location = new System.Drawing.Point(200, 20);
-            this.ConfrimPas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ConfrimPas.MinimumSize = new System.Drawing.Size(1, 16);
+            this.ConfrimPas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ConfrimPas.MinimumSize = new System.Drawing.Size(0, 16);
             this.ConfrimPas.Name = "ConfrimPas";
             this.ConfrimPas.PasswordChar = '*';
-            this.ConfrimPas.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.ConfrimPas.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.ConfrimPas.ShowText = false;
-            this.ConfrimPas.Size = new System.Drawing.Size(474, 60);
-            this.ConfrimPas.Style = Sunny.UI.UIStyle.Orange;
+            this.ConfrimPas.Size = new System.Drawing.Size(472, 60);
             this.ConfrimPas.TabIndex = 1;
             this.ConfrimPas.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.ConfrimPas.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -243,8 +211,9 @@ namespace Basic
             this.uiLabel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel3.Location = new System.Drawing.Point(20, 20);
+            this.uiLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(180, 79);
+            this.uiLabel3.Size = new System.Drawing.Size(180, 77);
             this.uiLabel3.TabIndex = 0;
             this.uiLabel3.Text = "确认密码：";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,10 +223,11 @@ namespace Basic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 601);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.uiTableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RegisterPage";
-            this.Padding = new System.Windows.Forms.Padding(50);
+            this.Padding = new System.Windows.Forms.Padding(50, 50, 50, 50);
             this.Text = "注册";
             this.uiTableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

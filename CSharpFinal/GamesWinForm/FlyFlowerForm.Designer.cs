@@ -73,11 +73,11 @@ namespace GameWinForm
             this.uiPanelWindow.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanelWindow.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiPanelWindow.Location = new System.Drawing.Point(0, 0);
-            this.uiPanelWindow.Margin = new System.Windows.Forms.Padding(2);
-            this.uiPanelWindow.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanelWindow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiPanelWindow.MinimumSize = new System.Drawing.Size(2, 2);
             this.uiPanelWindow.Name = "uiPanelWindow";
             this.uiPanelWindow.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanelWindow.Size = new System.Drawing.Size(773, 600);
+            this.uiPanelWindow.Size = new System.Drawing.Size(1526, 1136);
             this.uiPanelWindow.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanelWindow.TabIndex = 0;
             this.uiPanelWindow.Text = null;
@@ -100,7 +100,7 @@ namespace GameWinForm
             this.uiPanelGameWin.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanelGameWin.Name = "uiPanelGameWin";
             this.uiPanelGameWin.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanelGameWin.Size = new System.Drawing.Size(600, 600);
+            this.uiPanelGameWin.Size = new System.Drawing.Size(1353, 1136);
             this.uiPanelGameWin.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanelGameWin.TabIndex = 1;
             this.uiPanelGameWin.Text = null;
@@ -114,7 +114,7 @@ namespace GameWinForm
             this.pictureBoxAnswer.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxAnswer.Location = new System.Drawing.Point(249, 310);
             this.pictureBoxAnswer.Name = "pictureBoxAnswer";
-            this.pictureBoxAnswer.Size = new System.Drawing.Size(103, 98);
+            this.pictureBoxAnswer.Size = new System.Drawing.Size(856, 98);
             this.pictureBoxAnswer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxAnswer.TabIndex = 2;
             this.pictureBoxAnswer.TabStop = false;
@@ -126,9 +126,9 @@ namespace GameWinForm
             this.panelAnswerWin.Controls.Add(this.uiTextBoxAnswer);
             this.panelAnswerWin.Controls.Add(this.uiButtonSend);
             this.panelAnswerWin.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelAnswerWin.Location = new System.Drawing.Point(0, 480);
+            this.panelAnswerWin.Location = new System.Drawing.Point(0, 1016);
             this.panelAnswerWin.Name = "panelAnswerWin";
-            this.panelAnswerWin.Size = new System.Drawing.Size(600, 120);
+            this.panelAnswerWin.Size = new System.Drawing.Size(1353, 120);
             this.panelAnswerWin.TabIndex = 1;
             // 
             // uiLabelAnswerPlayer
@@ -139,7 +139,7 @@ namespace GameWinForm
             this.uiLabelAnswerPlayer.Font = new System.Drawing.Font("华文行楷", 20F);
             this.uiLabelAnswerPlayer.Location = new System.Drawing.Point(55, 12);
             this.uiLabelAnswerPlayer.Name = "uiLabelAnswerPlayer";
-            this.uiLabelAnswerPlayer.Size = new System.Drawing.Size(500, 30);
+            this.uiLabelAnswerPlayer.Size = new System.Drawing.Size(1253, 30);
             this.uiLabelAnswerPlayer.Style = Sunny.UI.UIStyle.Orange;
             this.uiLabelAnswerPlayer.TabIndex = 2;
             this.uiLabelAnswerPlayer.Text = "作答人：";
@@ -166,7 +166,7 @@ namespace GameWinForm
             this.uiTextBoxAnswer.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiTextBoxAnswer.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiTextBoxAnswer.ShowText = false;
-            this.uiTextBoxAnswer.Size = new System.Drawing.Size(302, 36);
+            this.uiTextBoxAnswer.Size = new System.Drawing.Size(1055, 36);
             this.uiTextBoxAnswer.Style = Sunny.UI.UIStyle.Orange;
             this.uiTextBoxAnswer.TabIndex = 1;
             this.uiTextBoxAnswer.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,7 +182,7 @@ namespace GameWinForm
             this.uiButtonSend.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.uiButtonSend.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(124)))), ((int)(((byte)(32)))));
             this.uiButtonSend.Font = new System.Drawing.Font("华文行楷", 20F);
-            this.uiButtonSend.Location = new System.Drawing.Point(481, 56);
+            this.uiButtonSend.Location = new System.Drawing.Point(1234, 56);
             this.uiButtonSend.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButtonSend.Name = "uiButtonSend";
             this.uiButtonSend.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
@@ -205,7 +205,7 @@ namespace GameWinForm
             this.uiLabelAnswer.Font = new System.Drawing.Font("华文行楷", 30F);
             this.uiLabelAnswer.Location = new System.Drawing.Point(12, 223);
             this.uiLabelAnswer.Name = "uiLabelAnswer";
-            this.uiLabelAnswer.Size = new System.Drawing.Size(569, 116);
+            this.uiLabelAnswer.Size = new System.Drawing.Size(1322, 116);
             this.uiLabelAnswer.Style = Sunny.UI.UIStyle.Orange;
             this.uiLabelAnswer.TabIndex = 0;
             this.uiLabelAnswer.Text = "\r\n";
@@ -220,12 +220,12 @@ namespace GameWinForm
             this.uiPanelPlayers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanelPlayers.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanelPlayers.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiPanelPlayers.Location = new System.Drawing.Point(600, 0);
+            this.uiPanelPlayers.Location = new System.Drawing.Point(1353, 0);
             this.uiPanelPlayers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanelPlayers.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanelPlayers.Name = "uiPanelPlayers";
             this.uiPanelPlayers.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanelPlayers.Size = new System.Drawing.Size(173, 600);
+            this.uiPanelPlayers.Size = new System.Drawing.Size(173, 1136);
             this.uiPanelPlayers.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanelPlayers.TabIndex = 0;
             this.uiPanelPlayers.Text = "剩余玩家";
@@ -244,7 +244,7 @@ namespace GameWinForm
             this.uiPanelPlayerBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanelPlayerBox.Name = "uiPanelPlayerBox";
             this.uiPanelPlayerBox.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanelPlayerBox.Size = new System.Drawing.Size(173, 477);
+            this.uiPanelPlayerBox.Size = new System.Drawing.Size(173, 1013);
             this.uiPanelPlayerBox.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanelPlayerBox.TabIndex = 1;
             this.uiPanelPlayerBox.Text = null;
@@ -309,7 +309,7 @@ namespace GameWinForm
             this.uiDataGridViewPlayers.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiDataGridViewPlayers.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiDataGridViewPlayers.SelectedIndex = -1;
-            this.uiDataGridViewPlayers.Size = new System.Drawing.Size(154, 441);
+            this.uiDataGridViewPlayers.Size = new System.Drawing.Size(154, 977);
             this.uiDataGridViewPlayers.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiDataGridViewPlayers.Style = Sunny.UI.UIStyle.Orange;
             this.uiDataGridViewPlayers.TabIndex = 2;
@@ -358,7 +358,7 @@ namespace GameWinForm
             this.uiLabelTimer.Size = new System.Drawing.Size(95, 58);
             this.uiLabelTimer.Style = Sunny.UI.UIStyle.Orange;
             this.uiLabelTimer.TabIndex = 2;
-            this.uiLabelTimer.Text = "0:15";
+            this.uiLabelTimer.Text = "0:30";
             this.uiLabelTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiLabelTimer.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -369,14 +369,14 @@ namespace GameWinForm
             // 
             // FlyFlowerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(773, 600);
+            this.ClientSize = new System.Drawing.Size(1526, 1136);
             this.Controls.Add(this.uiPanelWindow);
-            this.Margin = new System.Windows.Forms.Padding(1);
-            this.MaximumSize = new System.Drawing.Size(789, 639);
-            this.MinimumSize = new System.Drawing.Size(789, 639);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(1552, 1207);
+            this.MinimumSize = new System.Drawing.Size(1552, 1207);
             this.Name = "FlyFlowerForm";
             this.Text = "FlyFlowerForm";
             this.Load += new System.EventHandler(this.FlyFlowerForm_Load);

@@ -32,3 +32,4 @@ D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.C
 D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.CopyComplete
 D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.exe
 D:\C#\FinalHomeWork\CSharpFinalWork\CSharpFinal\Client\obj\Debug\Client.pdb
+D:\c#大作业\C-FinalWork\CSharpFinal\Client\obj\Debug\Client.csproj.AssemblyReference.cache

@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.commentText = new Sunny.UI.UIScrollingText();
             this.uiButton2 = new Sunny.UI.UIButton();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiButton1 = new Sunny.UI.UIButton();
@@ -45,7 +46,6 @@
             this.createdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.praseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.replyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.commentText = new Sunny.UI.UIScrollingText();
             this.uiPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.replyBindingSource)).BeginInit();
@@ -63,17 +63,32 @@
             this.uiPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel1.Location = new System.Drawing.Point(0, 0);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.uiPanel1.MinimumSize = new System.Drawing.Size(2, 2);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiPanel1.Size = new System.Drawing.Size(748, 482);
+            this.uiPanel1.Size = new System.Drawing.Size(1496, 964);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Orange;
             this.uiPanel1.TabIndex = 0;
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.uiPanel1.Click += new System.EventHandler(this.uiPanel1_Click);
+            // 
+            // commentText
+            // 
+            this.commentText.Dock = System.Windows.Forms.DockStyle.Top;
+            this.commentText.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.commentText.Font = new System.Drawing.Font("隶书", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.commentText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.commentText.Location = new System.Drawing.Point(0, 0);
+            this.commentText.MinimumSize = new System.Drawing.Size(1, 1);
+            this.commentText.Name = "commentText";
+            this.commentText.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
+            this.commentText.Size = new System.Drawing.Size(1496, 76);
+            this.commentText.Style = Sunny.UI.UIStyle.Orange;
+            this.commentText.TabIndex = 5;
+            this.commentText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiButton2
             // 
@@ -258,28 +273,13 @@
             // 
             this.replyBindingSource.DataSource = typeof(Models.Reply);
             // 
-            // commentText
-            // 
-            this.commentText.Dock = System.Windows.Forms.DockStyle.Top;
-            this.commentText.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.commentText.Font = new System.Drawing.Font("隶书", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.commentText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.commentText.Location = new System.Drawing.Point(0, 0);
-            this.commentText.MinimumSize = new System.Drawing.Size(1, 1);
-            this.commentText.Name = "commentText";
-            this.commentText.RectColor = System.Drawing.Color.Transparent;
-            this.commentText.Size = new System.Drawing.Size(748, 76);
-            this.commentText.Style = Sunny.UI.UIStyle.Custom;
-            this.commentText.TabIndex = 5;
-            this.commentText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // Replys
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 482);
+            this.ClientSize = new System.Drawing.Size(1496, 964);
             this.Controls.Add(this.uiPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Replys";
             this.Text = "Replys";
             this.uiPanel1.ResumeLayout(false);

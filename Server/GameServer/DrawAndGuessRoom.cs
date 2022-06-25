@@ -32,10 +32,10 @@ namespace Server
 
         public override void StartGame()
         {
-            Thread.Sleep(3000);
             IsPlaying = true;
             while (ReadyPlayers.Count > 0)
             {
+                Thread.Sleep(1000);
                 IsNextTurn = false;
                 count = 0;
                 //***获得题目
@@ -62,11 +62,12 @@ namespace Server
                 };
                 timer.Start();
                 timer.Elapsed += new ElapsedEventHandler(NextTurn);
-                while (!IsNextTurn && count < Players.Count) ;//时间到或者所有人答对
+                while (!IsNextTurn && count < Players.Count-1) ;//时间到或者所有人答对
                 //本轮结束
                 timer.Stop();
                 timer.Dispose();
             }
+            Thread.Sleep(1000);
             SendMessage(ConvertMessageForServer(9, ""));
             IsPlaying = false;
         }

@@ -154,7 +154,7 @@ namespace Basic
             this.uiPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiPanel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel3.Name = "uiPanel3";
-            this.uiPanel3.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.uiPanel3.Padding = new System.Windows.Forms.Padding(10);
             this.uiPanel3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiPanel3.Size = new System.Drawing.Size(382, 288);
             this.uiPanel3.Style = Sunny.UI.UIStyle.Orange;
@@ -300,9 +300,9 @@ namespace Basic
             this.Controls.Add(this.uiPanel3);
             this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.uiPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PoemDetail";
-            this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "诗词详情";
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel3.ResumeLayout(false);

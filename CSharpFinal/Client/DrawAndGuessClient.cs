@@ -57,13 +57,19 @@ namespace Client
             SocketOfClient.Send(ConvertMessageForClient(RoomId.ToString() + " " + image, 11));
         }
 
+        /// <summary>
+        /// 开启一轮游戏，如果是第一轮，初始化游戏中的得分
+        /// </summary>
         protected override void StartGame()
         {
-            PlayersInGame.Clear();
-            IsPlaying = true;
-            foreach(var player in PlayersInRoom)
+            if (!IsPlaying)
             {
-                PlayersInGame.Add(player, 0);
+                PlayersInGame.Clear();
+                IsPlaying = true;
+                foreach (var player in PlayersInRoom)
+                {
+                    PlayersInGame.Add(player, 0);
+                }
             }
         }
 

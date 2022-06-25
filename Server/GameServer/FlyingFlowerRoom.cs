@@ -36,7 +36,7 @@ namespace Server
         {
             Thread.Sleep(1000);
             Random random = new Random();
-            currentKeyWord = KeyWords[random.Next(0, 10)];
+            currentKeyWord = KeyWords[random.Next(0, 9)];
             IsPlaying = true;
             SendMessage(ConvertMessageForServer(8, currentKeyWord));
             while(ReadyPlayers.Count > 1)

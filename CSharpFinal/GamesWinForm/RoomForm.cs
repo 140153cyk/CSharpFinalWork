@@ -30,8 +30,8 @@ namespace GameWinForm
         public int RoomID { set; get; } = -1;
 
         //创建并展示等待房间的委托
-        public static Action<string> OnShowWaitingForm;
-        public static Action<string> OnShowInfoForm;
+        public Action<string> OnShowWaitingForm = (s)=> { };
+        public Action<string> OnShowInfoForm= (s) => { };
 
         protected Regex regex = new Regex(@"\w+");
 
@@ -123,13 +123,20 @@ namespace GameWinForm
         //创建并展示等待界面的窗口
         public void ShowWaitingRoom(string str)
         {
-            this.Invoke(new Action(delegate ()
+            try
             {
-                WaitingRoom form = new WaitingRoom(client,RoomID,RoomName,Type,str,this);
-                this.Hide();
-                form.Show();
-                form.FormClosing += (x,y)=>this.Show();
-            }));
+                this.BeginInvoke(new Action(delegate ()
+                {  
+                    WaitingRoom form = new WaitingRoom(client, RoomID, RoomName, Type, str, this);
+                    this.Hide();
+                    form.Show();
+                    form.FormClosing += (x, y) => this.Show();
+                }));
+            }catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            
         }
         public void ShowInfoForm(string str)
         {

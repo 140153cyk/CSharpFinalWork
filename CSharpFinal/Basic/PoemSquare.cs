@@ -34,6 +34,7 @@ namespace Basic
 
             InitializeComponent();
             searchTypeBox.SelectedIndex = 0;
+            uiPanel3.RectColor = Color.Transparent;
             
         }
 

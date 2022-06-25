@@ -238,6 +238,7 @@ namespace Server
                 FlyingFlowerRoom flyingFlowerRoom = new FlyingFlowerRoom(name, maxMem, MaxRoomID);
                 DicFlyRoom.TryAdd(MaxRoomID, flyingFlowerRoom);
                 flyingFlowerRoom.AddPlayer(RoomOwner, playerName);
+                Console.WriteLine("here");
                 RoomOwner.Send(ConvertMessageForServer(1, MaxRoomID.ToString()));
                 MaxRoomID++;
             }

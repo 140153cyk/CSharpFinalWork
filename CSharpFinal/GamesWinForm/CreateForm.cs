@@ -42,7 +42,6 @@ namespace GameWinForm
                 client.CreateRoom(RoomName, MaxNum);
                 RoomForm roomForm = (RoomForm)this.Owner;
                 roomForm.RoomName = RoomName;
-                this.Close();
             }
         }
     }

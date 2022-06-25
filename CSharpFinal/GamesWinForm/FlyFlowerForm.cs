@@ -209,7 +209,7 @@ namespace GameWinForm
         private void initTurn()
         {
             Time = 30;
-            this.uiLabelTimer.Text = "0:15";
+            this.uiLabelTimer.Text = "0:30";
             this.timer.Start();
             this.pictureBoxAnswer.Image = null;
             this.uiLabelAnswer.Text = "";
@@ -234,7 +234,7 @@ namespace GameWinForm
                 if (isMyTurn)
                 {
                     this.uiButtonSend.Enabled = false;
-                    this.uiButtonSend.PerformClick();
+                    client.SendMessageToServer("超时");
                 }
             }
         }

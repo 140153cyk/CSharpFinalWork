@@ -34,6 +34,8 @@ namespace Basic
       uiTextBox2.Multiline = true;
       uiTextBox2.AutoSize = false;
       uiTextBox2.Height = 200;
+            uiPanel4.RectColor = Color.Transparent;
+
    
     }
     public static string HttpGet(string word)
@@ -52,22 +54,6 @@ namespace Basic
       }
     }
  
-    private void uiLabel1_Click(object sender, EventArgs e)
-    {
-    }
-   
-
-  
-
-    private void Robot_Load(object sender, EventArgs e)
-    {
-
-    }
-
-    private void uiTextBox2_TextChanged_1(object sender, EventArgs e)
-    {
-
-    }
 
     private void uiButton1_Click(object sender, EventArgs e)
     {

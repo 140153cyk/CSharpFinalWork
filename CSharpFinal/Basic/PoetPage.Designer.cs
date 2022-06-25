@@ -54,14 +54,14 @@ namespace Basic
             this.IMGPanelContainer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.IMGPanelContainer.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.IMGPanelContainer.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.IMGPanelContainer.Location = new System.Drawing.Point(1058, 20);
-            this.IMGPanelContainer.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.IMGPanelContainer.MinimumSize = new System.Drawing.Size(2, 2);
+            this.IMGPanelContainer.Location = new System.Drawing.Point(411, 10);
+            this.IMGPanelContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.IMGPanelContainer.MinimumSize = new System.Drawing.Size(1, 1);
             this.IMGPanelContainer.Name = "IMGPanelContainer";
-            this.IMGPanelContainer.Padding = new System.Windows.Forms.Padding(30);
+            this.IMGPanelContainer.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.IMGPanelContainer.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.IMGPanelContainer.RectSize = 2;
-            this.IMGPanelContainer.Size = new System.Drawing.Size(442, 810);
+            this.IMGPanelContainer.Size = new System.Drawing.Size(221, 370);
             this.IMGPanelContainer.Style = Sunny.UI.UIStyle.Orange;
             this.IMGPanelContainer.TabIndex = 0;
             this.IMGPanelContainer.Text = null;
@@ -75,12 +75,12 @@ namespace Basic
             this.IMGPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.IMGPanel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.IMGPanel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.IMGPanel.Location = new System.Drawing.Point(30, 78);
+            this.IMGPanel.Location = new System.Drawing.Point(15, 63);
             this.IMGPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IMGPanel.MinimumSize = new System.Drawing.Size(1, 1);
             this.IMGPanel.Name = "IMGPanel";
             this.IMGPanel.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.IMGPanel.Size = new System.Drawing.Size(382, 702);
+            this.IMGPanel.Size = new System.Drawing.Size(191, 292);
             this.IMGPanel.Style = Sunny.UI.UIStyle.Orange;
             this.IMGPanel.TabIndex = 1;
             this.IMGPanel.Text = null;
@@ -93,12 +93,12 @@ namespace Basic
             this.uiScrollingText2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiScrollingText2.Font = new System.Drawing.Font("隶书", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiScrollingText2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiScrollingText2.Location = new System.Drawing.Point(30, 30);
+            this.uiScrollingText2.Location = new System.Drawing.Point(15, 15);
             this.uiScrollingText2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiScrollingText2.Name = "uiScrollingText2";
             this.uiScrollingText2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiScrollingText2.RectSize = 2;
-            this.uiScrollingText2.Size = new System.Drawing.Size(382, 48);
+            this.uiScrollingText2.Size = new System.Drawing.Size(191, 48);
             this.uiScrollingText2.Style = Sunny.UI.UIStyle.Orange;
             this.uiScrollingText2.TabIndex = 0;
             this.uiScrollingText2.Text = "相关图片";
@@ -110,11 +110,10 @@ namespace Basic
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Controls.Add(this.uiScrollingText1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(20, 20);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
+            this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(100, 40, 100, 40);
-            this.panel1.Size = new System.Drawing.Size(1038, 200);
+            this.panel1.Padding = new System.Windows.Forms.Padding(50, 20, 50, 20);
+            this.panel1.Size = new System.Drawing.Size(401, 100);
             this.panel1.TabIndex = 1;
             // 
             // uiScrollingText1
@@ -126,13 +125,12 @@ namespace Basic
             this.uiScrollingText1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiScrollingText1.Font = new System.Drawing.Font("隶书", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiScrollingText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
-            this.uiScrollingText1.Location = new System.Drawing.Point(100, 40);
-            this.uiScrollingText1.Margin = new System.Windows.Forms.Padding(6);
-            this.uiScrollingText1.MinimumSize = new System.Drawing.Size(2, 2);
+            this.uiScrollingText1.Location = new System.Drawing.Point(50, 20);
+            this.uiScrollingText1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiScrollingText1.Name = "uiScrollingText1";
             this.uiScrollingText1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.uiScrollingText1.RectSize = 2;
-            this.uiScrollingText1.Size = new System.Drawing.Size(838, 120);
+            this.uiScrollingText1.Size = new System.Drawing.Size(301, 60);
             this.uiScrollingText1.Style = Sunny.UI.UIStyle.Orange;
             this.uiScrollingText1.TabIndex = 0;
             this.uiScrollingText1.Text = "诗 人 简 介";
@@ -148,13 +146,13 @@ namespace Basic
             this.uiPanel2.FillColor = System.Drawing.Color.Transparent;
             this.uiPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
             this.uiPanel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel2.Location = new System.Drawing.Point(20, 220);
-            this.uiPanel2.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.uiPanel2.MinimumSize = new System.Drawing.Size(2, 2);
+            this.uiPanel2.Location = new System.Drawing.Point(10, 110);
+            this.uiPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel2.Name = "uiPanel2";
-            this.uiPanel2.Padding = new System.Windows.Forms.Padding(30);
+            this.uiPanel2.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.uiPanel2.RectColor = System.Drawing.Color.Transparent;
-            this.uiPanel2.Size = new System.Drawing.Size(1038, 610);
+            this.uiPanel2.Size = new System.Drawing.Size(401, 270);
             this.uiPanel2.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel2.TabIndex = 2;
             this.uiPanel2.Text = null;
@@ -166,7 +164,7 @@ namespace Basic
             this.introText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.introText.FillColor = System.Drawing.Color.White;
             this.introText.Font = new System.Drawing.Font("隶书", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.introText.Location = new System.Drawing.Point(133, 63);
+            this.introText.Location = new System.Drawing.Point(186, 48);
             this.introText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.introText.MinimumSize = new System.Drawing.Size(1, 1);
             this.introText.Name = "introText";
@@ -174,7 +172,7 @@ namespace Basic
             this.introText.ReadOnly = true;
             this.introText.RectSize = 2;
             this.introText.ShowText = false;
-            this.introText.Size = new System.Drawing.Size(875, 517);
+            this.introText.Size = new System.Drawing.Size(200, 207);
             this.introText.Style = Sunny.UI.UIStyle.Custom;
             this.introText.TabIndex = 2;
             this.introText.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -184,11 +182,11 @@ namespace Basic
             // 
             this.nameText.Dock = System.Windows.Forms.DockStyle.Top;
             this.nameText.Font = new System.Drawing.Font("隶书", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.nameText.Location = new System.Drawing.Point(133, 30);
+            this.nameText.Location = new System.Drawing.Point(186, 15);
             this.nameText.MinimumSize = new System.Drawing.Size(1, 1);
             this.nameText.Name = "nameText";
             this.nameText.RectSize = 2;
-            this.nameText.Size = new System.Drawing.Size(875, 33);
+            this.nameText.Size = new System.Drawing.Size(200, 33);
             this.nameText.Style = Sunny.UI.UIStyle.Custom;
             this.nameText.TabIndex = 1;
             this.nameText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -200,7 +198,7 @@ namespace Basic
             this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.uiTextBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.uiTextBox1.Font = new System.Drawing.Font("隶书", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox1.Location = new System.Drawing.Point(30, 30);
+            this.uiTextBox1.Location = new System.Drawing.Point(15, 15);
             this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox1.Multiline = true;
@@ -208,7 +206,7 @@ namespace Basic
             this.uiTextBox1.ReadOnly = true;
             this.uiTextBox1.RectSize = 2;
             this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(103, 550);
+            this.uiTextBox1.Size = new System.Drawing.Size(171, 240);
             this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
             this.uiTextBox1.TabIndex = 0;
             this.uiTextBox1.Text = "生\r\n\r\n\r\n平\r\n\r\n\r\n简\r\n\r\n\r\n介";
@@ -217,16 +215,15 @@ namespace Basic
             // 
             // PoetPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1520, 850);
+            this.ClientSize = new System.Drawing.Size(642, 390);
             this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.IMGPanelContainer);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "PoetPage";
-            this.Padding = new System.Windows.Forms.Padding(20);
+            this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.Text = "诗人简介";
             this.IMGPanelContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
