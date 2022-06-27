@@ -2,7 +2,7 @@
 c#大作业
 小组成员分工：
 杨俊奇：
-GamesWinForm
+winform游戏界面制作以及winform与client的多线程调用
 刘骁：
 server的GameServer和CSSharpFinal的Client
 臧陇：
